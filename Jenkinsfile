@@ -12,7 +12,7 @@ pipeline {
     }
 
   environment {
-    SCM_URL = "https://vostpmde37.proteccion.com.co:10443/CALCULOS_PENSIONALES_DEV/prv-cpr-calculos-web-frontend-certificacion.git"
+    SCM_URL = "https://vostpmde37.proteccion.com.co:10443/CALCULOS_PENSIONALES_TEST/prv-cpr-calculos-web-frontend-certificacion-pensionvejez-apartiredad"
     SCM_CREDENTIALS = "Master_User"; //Credenciales
     SCM_BRANCH = "master"; //Rama git
     S3_URL = "https://s3.console.aws.amazon.com/s3/buckets/s3devsecopsjenkins01/jobs";

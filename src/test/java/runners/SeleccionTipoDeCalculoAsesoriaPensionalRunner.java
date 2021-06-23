@@ -15,7 +15,7 @@ import java.io.IOException;
         features = "src/test/resources/features/seleccion_tipo_de_calculo_asesoria_pensional.feature",
         glue = {"stepdefinitions"},
         snippets = SnippetType.CAMELCASE,
-        tags = "@SeleccionAsesoriaGeneralClPotencialBeneficiario"
+        tags = ""
 )
 @RunWith(PersonalizedRunner.class)
 public class SeleccionTipoDeCalculoAsesoriaPensionalRunner {
