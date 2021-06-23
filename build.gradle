@@ -1,0 +1,108 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.60")
+    }
+}
+
+ext {
+    serenityVersion = '2.0.64'
+    serenityCucumberVersion = '1.9.43'
+}
+test {
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
+
+dependencies {
+
+    //Libreria Json
+    compile 'org.json:json:20160810'
+    implementation group: 'org.json', name: 'json', version: '20210307'
+
+    //compile group: 'org.apache.poi', name: 'poi', version: '3.9'
+     compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
+    //implementation group: 'org.apache.poi', name: 'poi', version: '5.0.0'
+    //implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+
+    testCompile "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    testCompile "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    testCompile('junit:junit:4.12')
+    testCompile('org.assertj:assertj-core:3.11.1')
+    testCompile('org.slf4j:slf4j-simple:1.7.25')
+    compile "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    compile "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    compile "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    compile "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    compile "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+   // compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
+
+
+
+
+    compile group: 'dk.kewill.thirdpartymavencentral', name: 'jt400-full', version: '7.10'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.48'
+    implementation group: 'org.jdbi', name: 'jdbi', version: '2.78'
+
+    implementation 'net.sf.jt400:jt400:9.4'
+
+    implementation 'org.jdbi:jdbi3-core:3.8.2'
+    implementation 'org.jdbi:jdbi:2.78'
+
+
+
+
+
+
+// compile group: 'io.appium', name: 'java-client', version: '7.0.0' -- App Mobile
+// https://mvnrepository.com/artifact/org.testng/testng
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    tasks.withType(Test) {
+        systemProperty "file.encoding", "UTF-8"
+        maxParallelForks = 1
+        useJUnit()
+        include('**/IniciarSesionRunner*')
+        include('**/IngresarDatosAfiliadoRunner*')
+        include('**/AutorizacionRunner*')
+        include('**/IngresarEdadDefinidaRunner*')
+        include('**/IngresarApartirEdadDefinidaRunner*')
+        include('**/VisualizacionInfoDatosBasicosAfiliadoRunner*')
+        include('**/SeleccionTipoDeCalculoPensionVejezRunner*')
+        include('**/SeleccionTipoDeCalculoAsesoriaPensionalRunner*')
+        include('**/PensionInvalidezAEdadDefinidaRunner*')
+        include('**/SeleccionarPensionMetaPlanAhorroPlanRetiroRunner*')
+        include('**/SeleccionarRegimenPrimaMediaRunner*')
+        include('**/SeleccionarPensionInvalidezAPartirEdadDefinidaRunner*')
+        include('**/IngresarDobleAsesoriaRunner*')
+        include('**/SeleccionarPensionMetaRunner*')
+        include('**/SeleccionarPlanAhorroRunner*')
+
+
+
+        reports.junitXml.setEnabled(false)
+        reports.html.setEnabled(false)
+
+    }
+    task credentials(type: Test) {
+        systemProperty 'user',
+                System.getProperty('user')
+        systemProperty 'password',
+                System.getProperty('password')
+    }
+
+}
