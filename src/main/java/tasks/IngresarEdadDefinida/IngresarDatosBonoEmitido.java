@@ -17,7 +17,6 @@ public class IngresarDatosBonoEmitido implements Task {
 
     public IngresarDatosBonoEmitido(String datos) {
         this.datos = datos;
-
     }
 
     @Override
@@ -26,8 +25,7 @@ public class IngresarDatosBonoEmitido implements Task {
                 SeleccionarCliente.actual(),
                 interactions.ConsultarAfiliadoBonoEmitido.enClienteActual(Collections.singletonList(datos)),
                 AceptarBono.enElAplicativo(),
-                Espera.cantidadDeMiliSegundos(10000)
-
+                Espera.cantidadDeMiliSegundos(5000)
         );
 
     }

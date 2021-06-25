@@ -1,25 +1,20 @@
 package tasks.IngresarEdadDefinida;
 
 import Utils.exceldata.CreateModels;
-import interactions.IngresarDatos;
-import interactions.SeleccionarCliente;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import java.util.Collections;
 import java.util.List;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
 
 public class IngresarDatosBonoModalidadUno implements Task {
 
-    private DatosAfiliado datosAfiliado;
-    private String datos;
+    private final DatosAfiliado datosAfiliado;
 
     public IngresarDatosBonoModalidadUno(String datos) {
-        this.datos = datos;
         int pos=Integer.parseInt(datos);
         datosAfiliado = CreateModels.setDatosAfiliado(pos);
     }

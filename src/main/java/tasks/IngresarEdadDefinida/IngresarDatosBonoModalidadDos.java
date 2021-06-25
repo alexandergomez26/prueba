@@ -2,15 +2,12 @@ package tasks.IngresarEdadDefinida;
 
 import Utils.exceldata.CreateModels;
 import interactions.Espera;
-import interactions.IngresarDatos;
-import interactions.SeleccionarCliente;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import java.util.Collections;
 import java.util.List;
 
 import static userinterfaces.IngresarEdadDefinidaPage.*;
@@ -18,11 +15,9 @@ import static userinterfaces.IngresarEdadDefinidaPage.BTN_CONTINUAR_REGISTRO_INF
 
 public class IngresarDatosBonoModalidadDos implements Task {
 
-        private DatosAfiliado datosAfiliado;
-    private String datos;
+        private final DatosAfiliado datosAfiliado;
 
     public IngresarDatosBonoModalidadDos(String datos) {
-        this.datos = datos;
         int pos=Integer.parseInt(datos);
         datosAfiliado = CreateModels.setDatosAfiliado(pos);
     }
@@ -48,8 +43,6 @@ public class IngresarDatosBonoModalidadDos implements Task {
                 System.out.println("Esperando");
                 actor.attemptsTo(
                 Espera.cantidadDeMiliSegundos(6000)
-
-
                 );
     }
     public static IngresarDatosBonoModalidadDos enElAplicativo(List<String> datos){

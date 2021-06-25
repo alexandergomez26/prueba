@@ -1,7 +1,6 @@
 package interactions;
 
 import Utils.exceldata.CreateModels;
-import integrations.PoolQueryProteccion;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

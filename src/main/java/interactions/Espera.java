@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 
 public class Espera implements Interaction{
-	private int miliSegundos;
+	private final int miliSegundos;
 	
 	public Espera(int miliSegundos) {
 		this.miliSegundos=miliSegundos;

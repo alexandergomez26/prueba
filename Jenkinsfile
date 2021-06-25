@@ -54,7 +54,6 @@ stage('Ejecutar Pruebas'){
     }
 }
 
-
     stage('Generar evidencia'){
             steps{
                 catchError{

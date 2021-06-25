@@ -7,16 +7,13 @@ public class DatosAfiliado {
     private String edadDefinida;
     private String nombre;
     private String salarioActual ;
-    private String numeroAsesoria ;
     private String semanas ;
     private String semanasBono ;
     private String SemanasNBono ;
     private String Bono ;
     private String resultadoSimulador ;
-    private String resultadoFinalSimulador ;
     private String datos;
     private String mesada;
-    private String mesadaColpensiones;
 
     public String getMesada() {
         return mesada;
@@ -26,13 +23,7 @@ public class DatosAfiliado {
         this.mesada = mesada;
     }
 
-    public String getMesadaColpensiones() {
-        return mesadaColpensiones;
-    }
 
-    public void setMesadaColpensiones(String mesadaColpensiones) {
-        this.mesadaColpensiones = mesadaColpensiones;
-    }
 
     public String getDatos() {
         return datos;
@@ -40,14 +31,6 @@ public class DatosAfiliado {
 
     public void setDatos(String datos) {
         this.datos = datos;
-    }
-
-    public String getResultadoFinalSimulador() {
-        return resultadoFinalSimulador;
-    }
-
-    public void setResultadoFinalSimulador(String resultadoFinalSimulador) {
-        this.resultadoFinalSimulador = resultadoFinalSimulador;
     }
 
     public String getResultadoSimulador() {
@@ -88,14 +71,6 @@ public class DatosAfiliado {
 
     public void setSemanasNBono(String semanasNBono) {
         SemanasNBono = semanasNBono;
-    }
-
-    public String getNumeroAsesoria() {
-        return numeroAsesoria;
-    }
-
-    public void setNumeroAsesoria(String numeroAsesoria) {
-        this.numeroAsesoria = numeroAsesoria;
     }
 
     public String getValorCuentaIndividual() { return valorCuentaIndividual; }

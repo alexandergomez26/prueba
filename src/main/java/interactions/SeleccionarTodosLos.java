@@ -1,19 +1,11 @@
 package interactions;
 
-import Utils.exceldata.WriteExcel;
-import models.DatosPension;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.openqa.selenium.interactions.Actions;
 
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static userinterfaces.AutorizacionPage.*;
-import static userinterfaces.AutorizacionPage.FECHA_NACIMIENTO_2;
 import static userinterfaces.FormularioDatosBasicoPage.*;
 
 public class SeleccionarTodosLos implements Interaction {

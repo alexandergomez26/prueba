@@ -6,7 +6,6 @@ import interactions.SeleccionarCliente;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-
 import java.util.Collections;
 import java.util.List;
 
@@ -26,7 +25,6 @@ public class IngresarDatosBonoEnCustodia implements Task {
                 interactions.ConsultarAfiliadoBonoEnCustodia.enClienteActual(Collections.singletonList(datos)),
                 AceptarBono.enElAplicativo(),
                 Espera.cantidadDeMiliSegundos(5000)
-
         );
 
     }

@@ -3,11 +3,9 @@ package Utils.exceldata;
 import Utils.Constants.ConstantesGenerales;
 import models.DatosAfiliado;
 import models.DatosInicioSesion;
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -56,21 +54,12 @@ public class CreateModels {
             datosAfiliado.setSalarioActual(listData.get(posicion).get(ConstantesGenerales.SALARIO_ACTUAL));
             datosAfiliado.setNombre(listData.get(posicion).get(ConstantesGenerales.NOMBRE));
             datosAfiliado.setValorCuentaIndividual(listData.get(posicion).get(ConstantesGenerales.VALOR_CUENTA_INDIVIDUAL));
-            datosAfiliado.setNumeroAsesoria(listData.get(posicion).get(ConstantesGenerales.NUMERO_ASESORIA));
             datosAfiliado.setSemanas(listData.get(posicion).get(ConstantesGenerales.SEMANAS));
             datosAfiliado.setSemanasBono(listData.get(posicion).get(ConstantesGenerales.SEMANAS_BONO));
             datosAfiliado.setSemanasNBono(listData.get(posicion).get(ConstantesGenerales.SEMANAS_NBONO));
             datosAfiliado.setBono(listData.get(posicion).get(ConstantesGenerales.BONO));
             datosAfiliado.setResultadoSimulador(listData.get(posicion).get(ConstantesGenerales.VALOR_PENSION));
             datosAfiliado.setMesada(listData.get(posicion).get(ConstantesGenerales.MESADA));
-            datosAfiliado.setMesadaColpensiones(listData.get(posicion).get(ConstantesGenerales.MESADA_COLPENSIONES));
-            datosAfiliado.setResultadoFinalSimulador(listData.get(posicion).get(ConstantesGenerales.RESULTADO_FINAL_SIMULADOR));
-
-
-
-
-
-
         }
         return datosAfiliado;
     }

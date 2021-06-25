@@ -12,10 +12,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import tasks.IngresarDatosAfiliado.IngresarDatosAfiliadoHombre;
-
 import java.util.List;
-
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
 import static userinterfaces.IngresarEdadDefinidaPage.TXT_A_RPM_NO_BONO;
@@ -27,7 +24,6 @@ public class IngresarDatosHombre implements Task {
 
     private final int posicion;
     private final DatosAfiliado datosAfiliado;
-
 
     public IngresarDatosHombre(String datos) {
         int pos=Integer.parseInt(datos);

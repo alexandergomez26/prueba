@@ -1,33 +1,27 @@
 package interactions;
 
 import Utils.exceldata.CreateModels;
-import integrations.PoolQuery;
+import integrations.PoolQueryMujeres;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
 
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static userinterfaces.FormularioDatosBasicoPage.*;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
 
 public class IngresarAPartirEdad implements Interaction {
 
-    private final PoolQuery obj = new PoolQuery();
-    private int posicion;
-    private DatosAfiliado datosAfiliado;
-    private String datos;
+    private final PoolQueryMujeres obj = new PoolQueryMujeres();
+    private final int posicion;
 
     public IngresarAPartirEdad(String datos) {
-        this.datos = datos;
         int pos=Integer.parseInt(datos);
         posicion=Integer.parseInt(datos);
-        datosAfiliado = CreateModels.setDatosAfiliado(pos);
+        DatosAfiliado datosAfiliado = CreateModels.setDatosAfiliado(pos);
     }
 
     @Override

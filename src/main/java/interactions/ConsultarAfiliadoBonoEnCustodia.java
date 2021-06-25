@@ -1,18 +1,14 @@
 package interactions;
 
 import Utils.exceldata.CreateModels;
-import integrations.ConsultarBDBonoEmitido;
 import integrations.ConsultarBDBonoEnCustodia;
 import models.DatosAfiliado;
-import models.DatosPension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-
 import java.util.List;
-
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
 import static userinterfaces.IngresarEdadDefinidaPage.TXT_A_RPM_NO_BONO;

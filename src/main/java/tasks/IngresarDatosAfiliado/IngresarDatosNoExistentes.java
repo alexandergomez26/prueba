@@ -1,7 +1,7 @@
 package tasks.IngresarDatosAfiliado;
 
 import Utils.exceldata.CreateModels;
-import integrations.PoolQueryProteccion;
+import integrations.PoolQueryMujeres;
 import interactions.Espera;
 import interactions.SeleccionarOpcionCliente;
 import models.DatosAfiliado;
@@ -16,7 +16,7 @@ import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
 
 public class IngresarDatosNoExistentes implements Task {
 
-    private final PoolQueryProteccion obj = new PoolQueryProteccion();
+    private final PoolQueryMujeres obj = new PoolQueryMujeres();
     private final int posicion;
     private final DatosAfiliado datosAfiliado;
 

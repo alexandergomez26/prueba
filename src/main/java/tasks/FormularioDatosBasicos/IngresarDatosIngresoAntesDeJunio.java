@@ -1,14 +1,9 @@
 package tasks.FormularioDatosBasicos;
 
 import Utils.exceldata.CreateModels;
-import integrations.PoolQueryProteccion;
 import interactions.AceptarBono;
-import interactions.Espera;
-import interactions.IngresarBeneficiario;
-import interactions.IngresarDatosBasicosClientePotencial;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
@@ -16,7 +11,6 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import java.util.Collections;
 import java.util.List;
 
 import static userinterfaces.FormularioDatosBasicoPage.*;

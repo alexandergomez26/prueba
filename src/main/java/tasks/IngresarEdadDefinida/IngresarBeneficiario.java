@@ -1,17 +1,13 @@
 package tasks.IngresarEdadDefinida;
 
-import Utils.exceldata.WriteExcel;
 import interactions.AceptarBono;
 import interactions.IngresarDatos;
 import interactions.SeleccionarCliente;
-import models.DatosBeneficiario;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-
 import static userinterfaces.AutorizacionPage.FECHA;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
 import java.util.Collections;
@@ -25,7 +21,6 @@ public class IngresarBeneficiario implements Task {
 
     public IngresarBeneficiario(String datos) {
         this.datos = datos;
-        int pos=Integer.parseInt(datos);
     }
 
     @Override
@@ -44,15 +39,6 @@ public class IngresarBeneficiario implements Task {
                 Click.on(OPCT_DIA_NACIMIENTO_BENEFICIARIO),
                 AceptarBono.enElAplicativo()
         );
-/*
-        DatosBeneficiario datosBeneficiario = new DatosBeneficiario("29/05/1990", "Conyuge", "M");
-        try {
-            WriteExcel.saveBeneficiario(datosBeneficiario);
-        } catch (InvalidFormatException e) {
-            e.printStackTrace();
-        }
-
-*/
 
     }
     public static IngresarBeneficiario enElAplicativo(List<String> datos){

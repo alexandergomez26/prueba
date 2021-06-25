@@ -1,24 +1,16 @@
 package tasks.IngresarEdadDefinida;
 
 import Utils.exceldata.CreateModels;
-import integrations.PoolQuery;
-import interactions.Espera;
-import interactions.IngresarDatos;
-import interactions.SeleccionarCliente;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import java.util.Collections;
 import java.util.List;
 
 import static userinterfaces.FormularioDatosBasicoPage.BTN_ACEPTAR_INFO_BONO;
-import static userinterfaces.FormularioDatosBasicoPage.BTN_CONTINUAR_FORM_DATOS_BASICOS;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
 
 public class IngresarARPMNoBono implements Task {
