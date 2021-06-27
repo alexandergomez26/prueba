@@ -14,7 +14,7 @@ import java.io.IOException;
         snippets = SnippetType.CAMELCASE,
         monochrome = true,
         plugin = {"html:target/cucumber-html-report", "json:target/cucumber-json-report.json" },
-        tags = "@IngresoAPartirEdadDefinidaClActualMujer"
+        tags = ""
 )
 
 @RunWith(PersonalizedRunner.class)
