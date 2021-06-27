@@ -14,19 +14,15 @@ import java.io.IOException;
         glue = {"stepdefinitions"},
         snippets = SnippetType.CAMELCASE,
         monochrome = true,
-        plugin = {"html:target/cucumber-html-report", "json:target/cucumber-json-report.json"},
+        plugin = {"html:target/cucumber-html-report", "json:target/cucumber-json-report.json" },
         tags = ""
 )
 
 @RunWith(PersonalizedRunner.class)
 public class IngresarApartirEdadDefinidaRunner {
+
     @BeforeSuite
     public static void test() throws IOException, InvalidFormatException {
         DataToFeature.overrideFeatureFiles("src/test/resources/features/ingreso_a_partir_edad_definida.feature");
     }
-    @AfterClass
-    public static void finalTest() throws IOException {
-        DataToFeature.overwriteOriginalFeature("src/test/resources/features/ingreso_a_partir_edad_definida.feature");
-    }
-
 }
