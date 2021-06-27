@@ -1,6 +1,7 @@
 package models;
 
 public class DatosPension {
+
     private String fechaNacimiento;
     private String semanasCotizadas;
     private String saldoCai;
@@ -22,102 +23,11 @@ public class DatosPension {
     private String fidelidadPropia;
 
 
-
-    public DatosPension(String mesadaColpensiones, String fidelidadPersonalizada) {
-        this.mesadaColpensiones = mesadaColpensiones;
-        this.fidelidadPersonalizada = fidelidadPersonalizada;
-    }
-
-    public DatosPension(String valorPension, String mesada, String fidelidadPersonalizada) {
-        this.valorPension = valorPension;
-        this.mesada = mesada;
-        this.fidelidadPersonalizada = fidelidadPersonalizada;
-    }
-
     public DatosPension(String valorPension, String mesada, String fidelidadPropia, int var) {
         this.valorPension = valorPension;
         this.mesada = mesada;
         this.fidelidadPropia = fidelidadPropia;
     }
-
-    public DatosPension(String fechaNacimiento, String semanasCotizadas, String salarioBasico, String fechaPrimeraSolicitud, String genero, String edad) {
-        this.fechaNacimiento = fechaNacimiento;
-        this.semanasCotizadas = semanasCotizadas;
-        this.salarioBasico = salarioBasico;
-        this.fechaPrimeraSolicitud = fechaPrimeraSolicitud;
-        this.genero = genero;
-        this.edad = edad;
-
-    }
-
-    public DatosPension(String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud, String genero, String edad, String valorPension) {
-        this.fechaNacimiento = fechaNacimiento;
-        this.semanasCotizadas = semanasCotizadas;
-        this.saldoCai = saldoCai;
-        this.salarioBasico = salarioBasico;
-        this.fechaPrimeraSolicitud = fechaPrimeraSolicitud;
-        this.genero = genero;
-        this.edad = edad;
-        this.valorPension = valorPension;
-    }
-
-    public DatosPension(String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud, String genero,
-                        String edad, String valorPension, String fechaCuentaIndividual) {
-        this.fechaNacimiento = fechaNacimiento;
-        this.semanasCotizadas = semanasCotizadas;
-        this.saldoCai = saldoCai;
-        this.salarioBasico = salarioBasico;
-        this.fechaPrimeraSolicitud = fechaPrimeraSolicitud;
-        this.genero = genero;
-        this.edad = edad;
-        this.valorPension = valorPension;
-        this.fechaCuentaIndividual = fechaCuentaIndividual;
-
-    }
-
-    public DatosPension(String fechaNacimiento, String semanasCotizadas, String salarioBasico, String genero, String edad,
-                        String mesadaColpensiones, String ibl, String bono, int var) {
-        this.fechaNacimiento = fechaNacimiento;
-        this.semanasCotizadas = semanasCotizadas;
-        this.salarioBasico = salarioBasico;
-        this.genero = genero;
-        this.edad = edad;
-        this.mesadaColpensiones = mesadaColpensiones;
-        this.ibl = ibl;
-        this.bono = bono;
-
-    }
-
-    public DatosPension(String fechaNacimiento, String semanasCotizadas, String salarioBasico, String genero, String edad,
-                        String mesadaColpensiones, String ibl) {
-        this.fechaNacimiento = fechaNacimiento;
-        this.semanasCotizadas = semanasCotizadas;
-        this.salarioBasico = salarioBasico;
-        this.genero = genero;
-        this.edad = edad;
-        this.mesadaColpensiones = mesadaColpensiones;
-        this.ibl = ibl;
-
-    }
-
-
-
-    public DatosPension(int var, String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud,
-                        String genero, String edad, String valorPension, String mesada, String fechaCuentaIndividual) {
-        this.fechaNacimiento = fechaNacimiento;
-        this.semanasCotizadas = semanasCotizadas;
-        this.saldoCai = saldoCai;
-        this.salarioBasico = salarioBasico;
-        this.fechaPrimeraSolicitud = fechaPrimeraSolicitud;
-        this.genero = genero;
-        this.edad = edad;
-        this.valorPension = valorPension;
-        this.mesada = mesada;
-        this.fechaCuentaIndividual = fechaCuentaIndividual;
-
-
-    }
-
 
     public DatosPension(String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud,
                         String genero, String edad, String valorPension, String mesadaModalidadDos, String bono, String fechaCuentaIndividual) {
@@ -132,39 +42,6 @@ public class DatosPension {
         this.mesadaModalidadDos = mesadaModalidadDos;
         this.bono = bono;
         this.fechaCuentaIndividual = fechaCuentaIndividual;
-
-
-    }
-
-    public DatosPension(String fechaNacimiento, String semanasCotizadas, String salarioBasico, String genero, String edad, String mesadaColpensiones,
-                        String parentescoBeneficiario, String fechaNacimientoBeneficiario, String generoBeneficiario, String ibl, int var) {
-        this.fechaNacimiento = fechaNacimiento;
-        this.semanasCotizadas = semanasCotizadas;
-        this.salarioBasico = salarioBasico;
-        this.genero = genero;
-        this.edad = edad;
-        this.mesadaColpensiones = mesadaColpensiones;
-        this.parentescoBeneficiario = parentescoBeneficiario;
-        this.fechaNacimientoBeneficiario = fechaNacimientoBeneficiario;
-        this.generoBeneficiario = generoBeneficiario;
-        this.ibl = ibl;
-    }
-
-    public DatosPension(String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud,
-                        String genero, String edad, String valorPension, String mesada, String parentescoBeneficiario, String fechaNacimientoBeneficiario,
-                        String generoBeneficiario) {
-        this.fechaNacimiento = fechaNacimiento;
-        this.semanasCotizadas = semanasCotizadas;
-        this.saldoCai = saldoCai;
-        this.salarioBasico = salarioBasico;
-        this.fechaPrimeraSolicitud = fechaPrimeraSolicitud;
-        this.genero = genero;
-        this.edad = edad;
-        this.valorPension = valorPension;
-        this.mesada = mesada;
-        this.parentescoBeneficiario = parentescoBeneficiario;
-        this.fechaNacimientoBeneficiario = fechaNacimientoBeneficiario;
-        this.generoBeneficiario = generoBeneficiario;
     }
 
     public DatosPension(String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud,
@@ -183,14 +60,7 @@ public class DatosPension {
         this.fechaNacimientoBeneficiario = fechaNacimientoBeneficiario;
         this.generoBeneficiario = generoBeneficiario;
         this.fechaCuentaIndividual = fechaCuentaIndividual;
-
     }
-
-
-    public DatosPension() {
-
-    }
-
 
     public String getMedasaModalidadDos() {
         return mesadaModalidadDos;
@@ -208,8 +78,6 @@ public class DatosPension {
     public String getBono() {
         return bono;
     }
-
-
 
     public void setBono(String bono) {
         this.bono = bono;
@@ -278,8 +146,7 @@ public class DatosPension {
 
     public Double getMesadaColpensionesNumero() {
         mesadaColpensiones = mesadaColpensiones.replace("$", "").replace(".", "").replace(",", "");
-        Double mColpensiones = Double.parseDouble(mesadaColpensiones);
-        return mColpensiones;
+        return Double.parseDouble(mesadaColpensiones);
     }
 
     public String getValorPension() {
@@ -288,14 +155,12 @@ public class DatosPension {
 
     public Double getValorPensionNumero() {
         valorPension = valorPension.replace("$", "").replace(".", "");
-        Double pension = Double.parseDouble(valorPension);
-        return pension;
+        return Double.parseDouble(valorPension);
     }
 
     public Double getBonoNumero () {
         bono = bono.replace("$", "").replace(".", "").split(",")[0];
-        Double bonoHoy = Double.parseDouble(bono);
-        return bonoHoy;
+        return Double.parseDouble(bono);
     }
 
 
@@ -340,8 +205,7 @@ public class DatosPension {
 
         public Double getSaldoCaiNumero () {
             saldoCai = saldoCai.replace("$", "").replace(".", "");
-            Double cai = Double.parseDouble(saldoCai);
-            return cai;
+            return Double.parseDouble(saldoCai);
         }
 
 
@@ -351,24 +215,20 @@ public class DatosPension {
 
         public Double getIblNumero () {
             ibl = ibl.replace("$", "").replace(".", "").split(",")[0];
-            Double iblNum = Double.parseDouble(ibl);
-            return iblNum;
+            return Double.parseDouble(ibl);
         }
 
         public Double getSemanasCotizadasNumero () {
-            Double semanas = Double.parseDouble(semanasCotizadas);
-            return semanas;
+            return Double.parseDouble(semanasCotizadas);
         }
 
         public Double getSalarioBasicoNumero () {
             salarioBasico = salarioBasico.replace("$", "").replace(".", "");
-            Double salario = Double.parseDouble(salarioBasico);
-            return salario;
+            return Double.parseDouble(salarioBasico);
         }
 
         public int getEdadNumero () {
-            int edadNumero = Integer.parseInt(edad);
-            return edadNumero;
+            return Integer.parseInt(edad);
         }
 
 
@@ -419,22 +279,19 @@ public class DatosPension {
 
     public String getFidelidadPersonalizada() {
         fidelidadPersonalizada = fidelidadPersonalizada.replace(".", "," ).replace("%", "" ).split("")[0];
-        String fidelidad = fidelidadPersonalizada + "%";
-        return fidelidad;
+        return fidelidadPersonalizada + "%";
 
     }
 
     public String getFidelidadPersonalizada2() {
         fidelidadPersonalizada = fidelidadPersonalizada.replace(".", "," ).replace("%", "" );
-        String fidelidad = fidelidadPersonalizada + "%";
-        return fidelidad;
+        return fidelidadPersonalizada + "%";
 
     }
 
     public String getFidelidadPersonalizadaColpensiones() {
         fidelidadPersonalizada = fidelidadPersonalizada.replace(".", "," );
-        String fidelidad = fidelidadPersonalizada + "%";
-        return fidelidad;
+        return fidelidadPersonalizada + "%";
 
     }
 
@@ -444,14 +301,12 @@ public class DatosPension {
 
     public String getFidelidadPropia() {
         fidelidadPropia = fidelidadPropia.replace(".", "," ).split(" ")[4];
-        String fidelidad2 = fidelidadPropia;
-        return fidelidad2;
+        return fidelidadPropia;
     }
 
     public String getFidelidadPropia2() {
         fidelidadPropia = fidelidadPropia.replace(".", "," ).split(" ")[5];
-        String fidelidad2 = fidelidadPropia;
-        return fidelidad2;
+        return fidelidadPropia;
     }
 
     public void setFidelidadPropia(String fidelidadPropia) {

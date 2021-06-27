@@ -5,7 +5,6 @@ import Utils.exceldata.DataToFeature;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ import java.io.IOException;
         snippets = SnippetType.CAMELCASE,
         monochrome = true,
         plugin = {"html:target/cucumber-html-report", "json:target/cucumber-json-report.json" },
-        tags = ""
+        tags = "@IngresoAPartirEdadDefinidaClActualMujer"
 )
 
 @RunWith(PersonalizedRunner.class)

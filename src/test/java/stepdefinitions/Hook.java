@@ -69,8 +69,6 @@ public class Hook {
                 IngresarDatosBonoEnCustodia.enClienteActual(datos));
     }
 
-
-
     @Cuando("^ingresa datos de hombres existentes en cliente actual (.*)$")
     public void ingresaDatosdeHombresExistentesEnClienteActual(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(
@@ -100,7 +98,6 @@ public class Hook {
         theActorInTheSpotlight().attemptsTo(
                 IngresarARPMNoBono.enElAplicativo(datos));
     }
-
 
     @Cuando("^ingresa datos no existentes en cliente potencial (.*)$")
     public void ingresaDatosNoExistentesEnClientePotencial(List<String>datos) {

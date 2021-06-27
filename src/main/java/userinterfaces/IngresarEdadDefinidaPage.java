@@ -9,14 +9,8 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target RBTN_PENSION_VEJEZ= Target.the("RadioButton para seleccionar la opción pensión vejez")
             .locatedBy("//label[@id='radioButtonProduct']/span/p");
 
-    public static Target RBTN_PENSION_INVALIDEZ_SOBREVIVENCIA= Target.the("RadioButton para seleccionar la opción pensión invalidez y sobrevivencia")
-            .locatedBy("//span[@class='control__label']//p[contains(text(),'Pensión invalidez y sobrevivencia:')]");
-
     public static Target BTN_CALCULAR= Target.the("Botón que dirige a ingresar la edad de pensión")
             .located(By.id("BtnTypePensionCard"));
-
-    public static Target TXT_EDAD_DEFINIDA= Target.the("Caja de texto para ingresar la edad definida")
-            .located(By.id("input-radio-defined-age"));
 
     public static Target TXT_A_PARTIR_EDAD_DEFINIDA= Target.the("Caja de texto para ingresar la edad definida")
             .located(By.id("input-radio-from-defined-age"));
@@ -24,18 +18,11 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target BTN_REALIZAR_SIMULACION= Target.the("Botón para realizar la simulación")
             .located(By.id("BtnEnterAgeSubmit"));
 
-    public static Target TXT_PROYECCION_EDAD_DEFINIDA= Target.the("Texto de validación proyección edad definida")
-            .locatedBy("//h4[contains(.,'Resultados de pensión en retiro programado a una edad definida')]");
-
-    public static Target TXT_PROYECCION_A_PARTIR_EDAD_DEFINIDA= Target.the("Texto de validación proyección edad definida")
-            .locatedBy("//h4[contains(text(),'Resultados de pensión en retiro programado a una edad definida')]");
-
     public static Target CHECK_SELECCIONADO= Target.the("Check seleccionado")
             .locatedBy("(//label[@id='radioButtonProduct'])[1]//span[@class='control--icon']");
 
     public static Target CHECK_APARTIR_EDAD_DEFINIDA= Target.the("seleccionar a partir de una edad definida")
             .locatedBy("div.App section.Home--content section.Home--transaction section.CalculationTypes.mt-4 div.expandable.EnterPensionAge__card.expandable--external.prot-border-top.card div.expandable__card-body.card-body div.collapse-body.EnterPensionAge__card-body.collapse.show div.row.align-items-center.border-box:nth-child(2) div.col-4 label.control.control--radio.control__radio--with_label > div.control__indicator:nth-child(3)");
-
 
     public static Target TXT_DATOS_HISTORIA_LABORAL= Target.the("seleccionar a partir de una edad definida")
             .locatedBy("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[2]/*[1]");
@@ -79,8 +66,6 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target BTN_CONTINUAR_REGISTRO_INFORMACION= Target.the("Botón para continuar con el registro de la información")
             .located(By.id("BtnBondModeTwoSubmit"));
 
-
-
     public static Target TXT_FECHA_TRASLADO= Target.the("campo fecha de la fecha de traslado")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[2]/div[1]/div[2]/div[1]/section[1]/div[1]/article[1]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
 
@@ -114,13 +99,11 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target OPCT_DIA_INICIAL= Target.the("caja de texto del dia inicial")
             .locatedBy("//td[@class=\"CalendarDay CalendarDay_1 CalendarDay__default CalendarDay__default_2\"][1][contains(text(),'12')]");
 
-
     public static Target TXT_FECHA_FINAL= Target.the("campo fecha final")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
 
     public static Target OPCT_MES_FINAL_BONO= Target.the("campo fecha final")
             .located(By.xpath("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]"));
-
 
     public static Target OPCT_DIA_FINAL= Target.the("caja de texto del dia final")
             .locatedBy("//td[@class=\"CalendarDay CalendarDay_1 CalendarDay__default CalendarDay__default_2\"][2][contains(text(),'5')]");
@@ -130,8 +113,6 @@ public class IngresarEdadDefinidaPage extends PageObject {
 
     public static Target BTN_CONTINUAR_REGISTRO_BONO_MODALIDA_UNO= Target.the("Botón para continuar con el registro de la información del bono modalidad uno")
             .located(By.id("BtnBondModeOneFormSubmit"));
-
-
 
     public static Target TXT_A_RPM_NO_BONO= Target.the("caja de texto de RPM no bono")
             .located(By.id("BasicDataCard--form-container-item-summaryWeeks-rpmNoBonusWeekNumber"));
@@ -145,20 +126,6 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target TXT_MES_FECHA_FINAL_RPM= Target.the("campo fecha final")
             .located(By.xpath("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]"));
 
-
-
-    public static Target TXT_ANO_FINAL_RPM= Target.the("caja de texto del año final")
-            .locatedBy("(//select[@id='selectYear'])[2]");
-
-    public static Target OPCT_ANO_FINAL_RPM= Target.the("caja de texto del año final")
-            .locatedBy("(//select[@id='selectYear'])[2]//option[@value='2021']");
-
-    public static Target TXT_MES_FINAL= Target.the("caja de texto del mes final")
-            .locatedBy("(//select[@id='selectMonth'])[2]");
-
-    public static Target OPCT_MES_FINAL= Target.the("caja de texto del mes final")
-            .locatedBy("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]");
-
     public static Target OPCT_DIA_FINAL_RPM= Target.the("caja de texto del dia inicial")
             .locatedBy("(//td[text()='12'])[2]"); //ojooooooo...................................................................
 
@@ -167,11 +134,6 @@ public class IngresarEdadDefinidaPage extends PageObject {
 
     public static Target BTN_CONTINUAR_APORTES_NO_BONO= Target.the("Botón para continuar con los aportes a semanas de RPM no bono")
             .located(By.id("BtnRPMNoBonoFormSubmit"));
-
-    public static Target BTN_INFORMACION_IMPORTANTE= Target.the("Botón para aceptar la información importante")
-            .located(By.id("BtnModalPrimary"));
-
-
 
     public static Target TXT_PARENTESCO_BENEFICIARIO= Target.the("caja de texto para seleccionar el parentesco")
             .located(By.id("BasicDataCard--form-container-item-Parentesco Beneficiario 1"));
@@ -182,11 +144,8 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target OPCT_GENERO_BENEFICIARIO= Target.the("caja de texto para seleccionar el genero del beneficiario")
             .locatedBy("(//option[@id='M'])");
 
-
-
     public static Target TXT_FECHA_NACIMIENTO_BENEFICIARIO= Target.the("campo fecha de nacimiento del beneficiario")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[1]/div[1]/div[2]/div[1]/section[4]/article[3]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
-
 
     public static Target TXT_ANO_NACIMIENTO_BENEFICIARIO= Target.the("caja de texto del año de nacimiento del beneficiario")
             .locatedBy("(//select[@id='selectYear'])[2]");
@@ -200,12 +159,7 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target OPCT_DIA_NACIMIENTO_BENEFICIARIO= Target.the("caja de texto del dia de nacimiento del beneficiario")
             .locatedBy("//td[@class=\"CalendarDay CalendarDay_1 CalendarDay__default CalendarDay__default_2\"][1][contains(text(),'29')]");
 
-    public static Target TXT_VALIDACION_DOBLE_ASESORIA= Target.the("Texto de validación proyección edad definida")
-            .locatedBy("//h1[contains(text(),'Proyección de tu pensión en el régimen de ahorro i')]");
 
-
-    // public static Target BTN_CONTINUAR= Target.the("Botón continuar con datos basicos")
-         //   .located(By.id("BtnaBasicDataForm"));
 }
 
 

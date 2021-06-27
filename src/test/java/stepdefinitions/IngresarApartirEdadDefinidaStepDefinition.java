@@ -1,17 +1,12 @@
 package stepdefinitions;
 
 import cucumber.api.java.es.Cuando;
-import cucumber.api.java.es.Entonces;
-import questions.IngresarEdadDefinida.PuedeVisualizarLaProyeccion;
 import tasks.IngresarApartirEdadDefinida.CambiarFidelidadAPartirEdadDefinida;
 import tasks.IngresarApartirEdadDefinida.CambiarFidelidadAPartirEdadDefinidaBono;
 import tasks.IngresarApartirEdadDefinida.IngresarAPartirEdadDefinidaBeneficiario;
 import tasks.IngresarEdadDefinida.IngresarAPartirEdadDefinida;
 import tasks.IngresarEdadDefinida.IngresarAPartirEdadDefinidaBono;
-
 import java.util.List;
-
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class IngresarApartirEdadDefinidaStepDefinition {
@@ -42,10 +37,7 @@ public class IngresarApartirEdadDefinidaStepDefinition {
         theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinidaBono.paraRealizarLaProyeccion(datos));
     }
 
-    @Entonces("^puede visualizar el texto (.*)$")
-    public void puedeVisualizarElTexto(String texto) {
-        theActorInTheSpotlight().should(seeThat(PuedeVisualizarLaProyeccion.aEdadDefinida(texto)));
-    }
+
 
 
 

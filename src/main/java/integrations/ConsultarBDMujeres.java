@@ -8,13 +8,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PoolQueryMujeres {
+public class ConsultarBDMujeres {
 
     public List<DatosInicio> list = new ArrayList<>();
 
     private ConexionASeries obj = new ConexionASeries();
 
-    public PoolQueryMujeres() {
+    public ConsultarBDMujeres() {
 
         try {
             Class.forName("com.ibm.as400.access.AS400JDBCDriver");

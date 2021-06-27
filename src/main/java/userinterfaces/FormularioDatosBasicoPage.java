@@ -84,21 +84,6 @@ public class FormularioDatosBasicoPage extends PageObject {
     public static Target TXT_VALOR_CUENTA_INDIVIDUAL= Target.the("Caja de texto para ingersar el valor de la cuenta individual")
             .located(By.id("BasicDataCard--form-container-item-individualAccountValue"));
 
-    public static Target RBN_SELECCIONAR_TODOS_LOS_PERIODOS= Target.the("Radiobutton seleccionar todos los periodos")
-            .located(By.xpath("//label[contains(text(),'Seleccionar todos los periodos')]"));
-
-    public static Target BTN_CALCULAR_IBL= Target.the("Botón calcular IBL")
-            .located(By.id("BtnCalculateIBLSubmit"));
-
-    public static Target BTN_REALIZAR_SIMULACION2= Target.the("Botón realizar simulación")
-            .located(By.id("BtnGenerateReport"));
-
-    public static Target RBN_PLAN_AHORRO= Target.the("Radiobutton para seelccionar plan ahorro")
-            .located(By.xpath("//label[contains(text(),'Plan de Ahorro:')]"));
-
-    public static Target RBN_PENSION_META= Target.the("Radiobutton spara seleccionar pension meta")
-            .located(By.xpath("//label[contains(text(),'Pensión Meta:')]"));
-
     public static Target TXT_FECHA_EMISION_BONO = Target.the("Campo fecha de emision bono")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[3]/div[1]/div[2]/div[1]/section[3]/article[2]/article[1]/div[1]/div[1]/div[1]/button[1]"));
 

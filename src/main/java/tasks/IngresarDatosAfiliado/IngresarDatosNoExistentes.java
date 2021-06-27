@@ -1,7 +1,7 @@
 package tasks.IngresarDatosAfiliado;
 
 import Utils.exceldata.CreateModels;
-import integrations.PoolQueryMujeres;
+import integrations.ConsultarBDMujeres;
 import interactions.Espera;
 import interactions.SeleccionarOpcionCliente;
 import models.DatosAfiliado;
@@ -16,7 +16,7 @@ import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
 
 public class IngresarDatosNoExistentes implements Task {
 
-    private final PoolQueryMujeres obj = new PoolQueryMujeres();
+    private final ConsultarBDMujeres obj = new ConsultarBDMujeres();
     private final int posicion;
     private final DatosAfiliado datosAfiliado;
 
@@ -34,7 +34,7 @@ public class IngresarDatosNoExistentes implements Task {
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()+datosAfiliado.getEdadDefinida()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
-                Espera.cantidadDeMiliSegundos(3000)
+                Espera.cantidadDeMiliSegundos(5000)
                 );
 
     }

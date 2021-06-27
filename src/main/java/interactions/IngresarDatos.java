@@ -1,7 +1,7 @@
 package interactions;
 
 import Utils.exceldata.CreateModels;
-import integrations.PoolQueryMujeres;
+import integrations.ConsultarBDMujeres;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
@@ -15,7 +15,7 @@ import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL
 
 public class IngresarDatos implements Interaction {
 
-    private final PoolQueryMujeres obj = new PoolQueryMujeres();
+    private final ConsultarBDMujeres obj = new ConsultarBDMujeres();
 
     private final int posicion;
     private final DatosAfiliado datosAfiliado;

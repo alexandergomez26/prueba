@@ -2,7 +2,6 @@ package integrations;
 
 import Utils.ConexionASeries;
 import models.DatosInicio;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -28,7 +27,6 @@ public class ConsultarBDBonoEnCustodia {
             while (resultSet.next()) {
                 DatosInicio persona = new DatosInicio();
                 persona.setCedula(resultSet.getString(2));
-
 
                 list.add(persona);
             }
