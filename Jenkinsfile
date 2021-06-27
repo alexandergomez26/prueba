@@ -29,6 +29,8 @@ pipeline {
       }
     }
 
+
+
 stage('Ejecutar Pruebas'){
       steps{
        script {
@@ -51,6 +53,7 @@ stage('Ejecutar Pruebas'){
       }
     }
 }
+
 
     stage('Generar evidencia'){
             steps{
