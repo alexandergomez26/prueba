@@ -20,7 +20,7 @@ public class AceptarBono implements Interaction {
                         forNoMoreThan(20).seconds(),
                 Click.on(BTN_CONTINUAR_FORM_DATOS_BASICOS),
                 Click.on(BTN_ACEPTAR_INFO_BONO),
-                Espera.cantidadDeMiliSegundos(3000)
+                Espera.cantidadDeMiliSegundos(4000)
                 );
     }
 

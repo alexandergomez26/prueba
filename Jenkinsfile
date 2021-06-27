@@ -29,8 +29,6 @@ pipeline {
       }
     }
 
-
-
 stage('Ejecutar Pruebas'){
       steps{
        script {

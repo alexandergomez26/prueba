@@ -23,8 +23,8 @@ public class IngresarDatosBonoEnCustodia implements Task {
         actor.attemptsTo(
                 SeleccionarCliente.actual(),
                 interactions.ConsultarAfiliadoBonoEnCustodia.enClienteActual(Collections.singletonList(datos)),
-                AceptarBono.enElAplicativo(),
-                Espera.cantidadDeMiliSegundos(5000)
+                AceptarBono.enElAplicativo()
+
         );
 
     }

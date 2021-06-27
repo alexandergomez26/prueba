@@ -42,7 +42,6 @@ public class IngresarAPartirEdadDefinida implements Task {
                         forNoMoreThan(300).seconds(),
                 Click.on(PESTANA2),
                 Click.on(PESTANA5)
-
         );
 
         System.out.println("La fecha de nacimiento es: " + FECHA_NACIMIENTO_2.resolveFor(actor).getTextValue());
@@ -58,8 +57,6 @@ public class IngresarAPartirEdadDefinida implements Task {
         System.out.println("La fecha de la cuenta individual: " + FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getText());
         System.out.println("");
 
-
-
         DatosPension datosPension = new DatosPension(
                 FECHA_NACIMIENTO_2.resolveFor(actor).getTextValue(),
                 SEMANAS_TOTALES_COTIZADAS_2.resolveFor(actor).getTextValue(),
@@ -72,7 +69,6 @@ public class IngresarAPartirEdadDefinida implements Task {
                 VALOR_MESADA_A_PARTIR.resolveFor(actor).getTextValue(),
                 BONO_A_PARTIR_EDAD_DEFINIDA.resolveFor(actor).getTextValue(),
                 FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getTextValue()
-
         );
 
         ServiceExcelDrive.enterToAllExcel(ConstantesGenerales.EXCEL_JSON,ConstantesGenerales.DATA_TO_TEST_SHEET_JASON);
@@ -94,14 +90,10 @@ public class IngresarAPartirEdadDefinida implements Task {
         json.put("D8", "");
         json.put("D9", "");
 
-
-
         System.out.println("Jasonnnnn: " + json);
         ServiceExcelDrive.setDataCell(json);
 
-
         System.out.println("Valor Pension Json: " + ServiceExcelDrive.getDataCell("D36"));
-
     }
     public static IngresarAPartirEdadDefinida paraRealizarLaProyeccion(List<String>datos){
         return Tasks.instrumented(IngresarAPartirEdadDefinida.class, datos.get(0));

@@ -18,10 +18,10 @@ public class FormularioDatosBasicoPage extends PageObject {
     public static Target TXT_FECHA_NACIMIENTO = Target.the("Campo fecha de nacimiento")
             .located(By.id("datePicker"));
 
-    public static Target TXT_AÑO = Target.the("Caja de texto de año")
+    public static Target TXT_ANIO = Target.the("Caja de texto de año")
             .locatedBy("(//select[@id='selectYear'])[2]");
 
-    public static Target OPCT_AÑO_NACIMIENTO = Target.the("Opción año nacimiento")
+    public static Target OPCT_ANIO_NACIMIENTO = Target.the("Opción año nacimiento")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='1960']");
 
     public static Target TXT_MES = Target.the("Caja de texto de mes")
@@ -51,7 +51,10 @@ public class FormularioDatosBasicoPage extends PageObject {
     public static Target TXT_FECHA_TRASLADO = Target.the("Campo fecha de traslado")
             .locatedBy("(//input[@id='datePicker'])[4]");
 
-    public static Target OPCT_AÑO_FECHA_TRASLADO = Target.the("Opción año fecha de traslado")
+    public static Target TXT_A_FECHA_DE_TRASLADO= Target.the("Caja de texto para ingresar la edad definida")
+            .located(By.id("BasicDataCard--form-container-item-summaryWeeks-transferWeekNumber"));
+
+    public static Target OPCT_ANIO_FECHA_TRASLADO = Target.the("Opción año fecha de traslado")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='1994']");
 
     public static Target OPCT_MES_FECHA_TRASLADO = Target.the("Opción mes fecha de traslado")
@@ -60,10 +63,10 @@ public class FormularioDatosBasicoPage extends PageObject {
     public static Target TXT_FECHA_PRIMERA_COTIZACION= Target.the("Campo fecha de la primera cotización")
             .locatedBy("(//input[@id='datePicker'])[5]");
 
-    public static Target OPCT_AÑO_FECHA_PRIMERA_COTIZACION = Target.the("Opción año fecha de la primera cotización")
+    public static Target OPCT_ANIO_FECHA_PRIMERA_COTIZACION = Target.the("Opción año fecha de la primera cotización")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='1995']");
 
-    public static Target OPCT_AÑO_FECHA_PRIMERA_COTIZACION_SISTEMA = Target.the("Opción año fecha de la primera cotización")
+    public static Target OPCT_ANIO_FECHA_PRIMERA_COTIZACION_SISTEMA = Target.the("Opción año fecha de la primera cotización")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='1991']");
 
     public static Target OPCT_MES_FECHA_PRIMERA_COTIZACION = Target.the("Opción mes fecha de la primera cotización")
@@ -99,14 +102,11 @@ public class FormularioDatosBasicoPage extends PageObject {
     public static Target TXT_FECHA_EMISION_BONO = Target.the("Campo fecha de emision bono")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[3]/div[1]/div[2]/div[1]/section[3]/article[2]/article[1]/div[1]/div[1]/div[1]/button[1]"));
 
-
-    public static Target OPCT_AÑO_FECHA_EMISION_BONO = Target.the("Opción año fecha de emision del bono")
+    public static Target OPCT_ANIO_FECHA_EMISION_BONO = Target.the("Opción año fecha de emision del bono")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='2000']");
 
     public static Target OPCT_MES_EMISION_BONO = Target.the("Opción año fecha de emision del bono")
             .locatedBy("(//select[@id='selectMonth'])[2]//option[text()='Mayo']");
-
-
 
     public static Target OPCT_DIA_EMISION_BONO= Target.the("Opción dia de emision del bono")
             .located(By.xpath("//td[contains(text(),'31')]"));

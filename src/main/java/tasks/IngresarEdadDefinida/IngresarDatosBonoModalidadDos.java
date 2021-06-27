@@ -40,7 +40,6 @@ public class IngresarDatosBonoModalidadDos implements Task {
                 Click.on(BTN_CALCULAR_VALOR_BASICO_BONO),
                 Espera.cantidadDeMiliSegundos(4000),
                 Click.on(BTN_CONTINUAR_REGISTRO_INFORMACION));
-                System.out.println("Esperando");
                 actor.attemptsTo(
                 Espera.cantidadDeMiliSegundos(6000)
                 );

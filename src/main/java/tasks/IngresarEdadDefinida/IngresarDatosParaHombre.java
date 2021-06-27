@@ -2,6 +2,7 @@ package tasks.IngresarEdadDefinida;
 
 import Utils.exceldata.CreateModels;
 import integrations.ConsultarBDHombres;
+import interactions.Espera;
 import interactions.SeleccionarCliente;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
@@ -27,7 +28,6 @@ public class IngresarDatosParaHombre implements Task {
         datosAfiliado = CreateModels.setDatosAfiliado(pos);
     }
 
-
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -37,7 +37,9 @@ public class IngresarDatosParaHombre implements Task {
                 Enter.theValue(hombre.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
-                Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO)
+                Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO),
+                Espera.cantidadDeMiliSegundos(5000)
+
                 //WaitUntil.the(TXT_TEXTO_DATOS_BASICOS, WebElementStateMatchers.isVisible()).
                         //forNoMoreThan(20).seconds());
         //actor.attemptsTo(

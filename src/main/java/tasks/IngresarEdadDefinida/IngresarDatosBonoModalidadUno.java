@@ -1,6 +1,7 @@
 package tasks.IngresarEdadDefinida;
 
 import Utils.exceldata.CreateModels;
+import interactions.Espera;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -43,7 +44,9 @@ public class IngresarDatosBonoModalidadUno implements Task {
                 Click.on(OPCT_MES_FINAL_BONO),
                 Click.on(OPCT_DIA_FINAL),
                 Enter.theValue(datosAfiliado.getSalarioActual()).into(TXT_SALARIO),
-                Click.on(BTN_CONTINUAR_REGISTRO_BONO_MODALIDA_UNO)
+                Click.on(BTN_CONTINUAR_REGISTRO_BONO_MODALIDA_UNO),
+                Espera.cantidadDeMiliSegundos(5000)
+
         );
     }
     public static IngresarDatosBonoModalidadUno enElAplicativo(List<String> datos){

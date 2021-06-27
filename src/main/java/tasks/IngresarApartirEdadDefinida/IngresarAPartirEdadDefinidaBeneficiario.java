@@ -15,7 +15,6 @@ import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.json.JSONObject;
 import java.util.List;
-
 import static userinterfaces.AutorizacionPage.*;
 import static userinterfaces.AutorizacionPage.VALOR_MESADA_A_PARTIR;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
@@ -46,7 +45,6 @@ public class IngresarAPartirEdadDefinidaBeneficiario implements Task {
                         forNoMoreThan(300).seconds(),
                 Click.on(PESTANA2),
                 Click.on(PESTANA5)
-
         );
 
         System.out.println("La fecha de nacimiento es: " + FECHA_NACIMIENTO_2.resolveFor(actor).getTextValue());
@@ -62,8 +60,6 @@ public class IngresarAPartirEdadDefinidaBeneficiario implements Task {
         System.out.println("Fecha Nacimiento Beneficiario: " + FECHA_NACIMIENTO_BENEFICIARIO.resolveFor(actor).getText());
         System.out.println("Genero Beneficiario.: " + GENERO_BENEFICIARIO.resolveFor(actor).getText());
 
-
-
         DatosPension datosPension = new DatosPension(
                 FECHA_NACIMIENTO_2.resolveFor(actor).getTextValue(),
                 SEMANAS_TOTALES_COTIZADAS_2.resolveFor(actor).getTextValue(),
@@ -78,8 +74,6 @@ public class IngresarAPartirEdadDefinidaBeneficiario implements Task {
                 FECHA_NACIMIENTO_BENEFICIARIO.resolveFor(actor).getTextValue(),
                 GENERO_BENEFICIARIO.resolveFor(actor).getTextValue(),
                 FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getTextValue()
-
-
                 );
 
         ServiceExcelDrive.enterToAllExcel(ConstantesGenerales.EXCEL_JSON,ConstantesGenerales.DATA_TO_TEST_SHEET_JASON);
@@ -101,13 +95,10 @@ public class IngresarAPartirEdadDefinidaBeneficiario implements Task {
         json.put("D16", "0");
         json.put("B19", "0");
 
-
         System.out.println("Jasonnnnn: " + json);
         ServiceExcelDrive.setDataCell(json);
 
-
         System.out.println("Valor Pension Json: " + ServiceExcelDrive.getDataCell("D36"));
-
     }
     public static IngresarAPartirEdadDefinidaBeneficiario paraRealizarLaProyeccion(List<String> datos){
         return Tasks.instrumented(IngresarAPartirEdadDefinidaBeneficiario.class, datos.get(0));

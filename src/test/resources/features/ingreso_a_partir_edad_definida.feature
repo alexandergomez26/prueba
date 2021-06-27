@@ -1,8 +1,6 @@
 # language: es
 Característica: Como asesor de Proteccion deseo ingresar a partir de una edad definida
 
-
-
   @IngresoAPartirEdadDefinidaClActualMujer
   Esquema del escenario: Ingresar a partir de una edad definida cliente actual exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
@@ -14,8 +12,6 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Ejemplos:
       | testCase |
       |7|
-
-
 
   @IngresoAPartirEdadDefinidaClActualHombre
   Esquema del escenario: Ingresar A partir de una edad definida en cliente actual exitosamente

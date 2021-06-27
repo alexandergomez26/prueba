@@ -24,8 +24,7 @@ public class IngresarDatosBonoEmitido implements Task {
         actor.attemptsTo(
                 SeleccionarCliente.actual(),
                 interactions.ConsultarAfiliadoBonoEmitido.enClienteActual(Collections.singletonList(datos)),
-                AceptarBono.enElAplicativo(),
-                Espera.cantidadDeMiliSegundos(5000)
+                AceptarBono.enElAplicativo()
         );
 
     }

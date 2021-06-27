@@ -1,6 +1,5 @@
 package tasks.FormularioDatosBasicos;
 
-
 import interactions.AceptarBono;
 import interactions.IngresarDatosBasicosClientePotencial;
 import net.serenitybdd.screenplay.Actor;

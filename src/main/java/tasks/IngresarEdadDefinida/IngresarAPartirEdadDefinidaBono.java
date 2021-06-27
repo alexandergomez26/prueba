@@ -14,9 +14,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.json.JSONObject;
-
 import java.util.List;
-
 import static userinterfaces.AutorizacionPage.*;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
 import static userinterfaces.IngresarEdadDefinidaPage.BTN_REALIZAR_SIMULACION;
@@ -59,8 +57,6 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
         System.out.println("Valor Bono: " + VALOR_BONO_MODALIDAD2_A_PARTIR_EDAD_DEFINIDA.resolveFor(actor).getText());
         System.out.println("Fecha Cuenta Individual: " + FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getText());
 
-
-
         DatosPension datosPension = new DatosPension(
                 FECHA_NACIMIENTO_2.resolveFor(actor).getTextValue(),
                 SEMANAS_TOTALES_COTIZADAS_2.resolveFor(actor).getTextValue(),
@@ -73,11 +69,9 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
                 VALOR_MESADA_MODALIDAD2_A_PARTIR_EDAD_DEFINIDA.resolveFor(actor).getTextValue(),
                 VALOR_BONO_MODALIDAD2_A_PARTIR_EDAD_DEFINIDA.resolveFor(actor).getTextValue(),
                 FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getTextValue()
-
         );
 
         ServiceExcelDrive.enterToAllExcel(ConstantesGenerales.EXCEL_JSON,ConstantesGenerales.DATA_TO_TEST_SHEET_JASON);
-
 
         JSONObject json = new JSONObject();
         json.put("B4", datosPension.getFechaNacimiento());
@@ -99,7 +93,6 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
         ServiceExcelDrive.setDataCell(json);
 
         System.out.println("Valor Pension Json: " + ServiceExcelDrive.getDataCell("D36"));
-
     }
     public static IngresarAPartirEdadDefinidaBono paraRealizarLaProyeccion(List<String> datos){
         return Tasks.instrumented(IngresarAPartirEdadDefinidaBono.class, datos.get(0));

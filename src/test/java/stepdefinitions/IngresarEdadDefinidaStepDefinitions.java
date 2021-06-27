@@ -22,21 +22,13 @@ public class IngresarEdadDefinidaStepDefinitions {
     public static void inicializar() {
         setTheStage(new OnlineCast());
         theActor(ACTOR_DEFAULT);
-
-
     }
-
-
-
-
-
 
     @Entonces("^puede visualizar su resultado$")
     public void puedeVisualizarSuResultado() {
         theActorInTheSpotlight().should(seeThat(CompararResultados.pension(), is(true)));
         System.out.println("SuccessFul");
     }
-
 
     @Cuando("^ingresa los datos de cliente potencial (.*)$")
     public void ingresaLosDatosDeClientePotencial(List<String>datos) {
@@ -53,8 +45,6 @@ public class IngresarEdadDefinidaStepDefinitions {
         theActorInTheSpotlight().attemptsTo(IngresarDatosClientePotencialConBonoEmitido.EnClientePotencial(datos));
     }
 
-
-
     @Cuando("^registra un beneficiario (.*)$")
     public void registraUnBeneficiario(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(IngresarBeneficiario.enElAplicativo(datos));
@@ -64,6 +54,5 @@ public class IngresarEdadDefinidaStepDefinitions {
     public void ingresaLosDatosDelClientePotencialConBeneficiario(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(IngresarDatosBeneficiario.EnClientePotencial(datos));
     }
-
 
 }
