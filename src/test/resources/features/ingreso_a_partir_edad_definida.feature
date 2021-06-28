@@ -115,7 +115,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
       | testCase |
       |2|
 
-  @IngresoEdadDefinidaClPotencialDespues
+  @IngresoAPartirEdadDefinidaClPotencialDespues
   Esquema del escenario: Ingresar A partir de una edad definida en cliente potencial exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos no existentes en cliente potencial <testCase>
@@ -128,7 +128,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
       | testCase  |
       |3|
 
-  @IngresoEdadDefinidaClPotencialIngresoAntes
+  @IngresoAPartirEdadDefinidaClPotencialIngresoAntes
   Esquema del escenario: Ingresar A partir de una edad definida en cliente potencial exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos no existentes en cliente potencial <testCase>
@@ -141,7 +141,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
       | testCase  |
       |9|
 
-  @IngresoEdadDefinidaClPotencialBonoEmitido
+  @IngresoAPartirEdadDefinidaClPotencialBonoEmitido
   Esquema del escenario: Ingresar A partir de una edad definida en cliente potencial exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos no existentes en cliente potencial <testCase>
@@ -155,7 +155,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
       |14|
 
 
-  @IngresoEdadDefinidaClPotencialBeneficiario
+  @IngresoAPartirEdadDefinidaClPotencialBeneficiario
   Esquema del escenario: Ingresar A partir de una edad definida en cliente potencial exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos no existentes en cliente potencial <testCase>

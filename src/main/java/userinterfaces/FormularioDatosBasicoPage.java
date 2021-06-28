@@ -22,7 +22,7 @@ public class FormularioDatosBasicoPage extends PageObject {
             .locatedBy("(//select[@id='selectYear'])[2]");
 
     public static Target OPCT_ANIO_NACIMIENTO = Target.the("Opción año nacimiento")
-            .locatedBy("(//select[@id='selectYear'])[2]//option[@value='1960']");
+            .locatedBy("(//select[@id='selectYear'])[2]//option[@value='1968']");
 
     public static Target TXT_MES = Target.the("Caja de texto de mes")
             .locatedBy("(//select[@id='selectMonth'])[2]");

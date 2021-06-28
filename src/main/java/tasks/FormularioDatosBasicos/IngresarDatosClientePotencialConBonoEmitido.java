@@ -61,7 +61,8 @@ public class IngresarDatosClientePotencialConBonoEmitido implements Task {
                 Click.on(OPCT_MES_EMISION_BONO),
                 Click.on(OPCT_DIA_EMISION_BONO),
                 Enter.theValue(datosAfiliado.getSalarioActual()).into(TXT_VALOR_BONO),
-                AceptarBono.enElAplicativo()
+                Click.on(BTN_CONTINUAR_FORM_DATOS_BASICOS),
+                Espera.cantidadDeMiliSegundos(4000)
         );
 
     }
