@@ -3,10 +3,13 @@ package stepdefinitions;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
+import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
+import tasks.AbrirNavegador;
 import tasks.IngresarDatosAfiliado.IngresarDatosExistentes;
 import tasks.IngresarDatosAfiliado.IngresarDatosNoExistentes;
 import tasks.IngresarEdadDefinida.*;
@@ -15,6 +18,7 @@ import userinterfaces.IniciarSesionPage;
 import java.util.List;
 import static Utils.Constants.ActorConstants.ACTOR_DEFAULT;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
+import static userinterfaces.SeleccionarUrlPage.ASPEN;
 
 public class Hook {
     @Managed(driver = "chrome")
@@ -22,22 +26,29 @@ public class Hook {
 
     @Before
     public static void inicializar() {
-        setTheStage(new OnlineCast());
-        theActor(ACTOR_DEFAULT);
+        OnStage.setTheStage(new OnlineCast());
+        theActorCalled(ACTOR_DEFAULT);
     }
-
 
     @Dado("^que el (.*) se encuentre en la pagina de ASPEN$")
     public void queElUsuarioSeEncuentreEnLaPaginaDeASPEN(String actor) {
         theActor(actor).attemptsTo(Open.browserOn(new IniciarSesionPage()));
     }
 
-
     @Dado("^que el (.*) se encuentre logueado en la pagina de ASPEN (.*)$")
-    public void queElUsuarioSeEncuentreLogueadoEnLaPaginaDeASPEN(String actor ,List<String> datos ) {
-        theActor(actor).attemptsTo(Open.browserOn(new IniciarSesionPage()));
+    public void queElUsuarioSeEncuentreLogueadoEnLaPaginaDeASPEN(String actor, List<String> datos ) {
+        theActorInTheSpotlight().wasAbleTo(AbrirNavegador.en(ASPEN));
         theActorInTheSpotlight().attemptsTo(IniciarSesion.enElAplicativo(1));
     }
+/*
+    @Dado("^que el (.*) se encuentre logueado en la pagina de ASPEN (.*)$")
+    public void queElUsuarioSeEncuentreLogueadoEnLaPaginaDeASPEN(String actor ,List<String> datos ) {
+        theActor(actor).can(BrowseTheWeb.with(driver)).attemptsTo(Open.browserOn(new IniciarSesionPage()));
+        theActorInTheSpotlight().attemptsTo(IniciarSesion.enElAplicativo(1));
+    }
+
+ */
+
 
     @Cuando("^ingresa datos existentes en cliente actual (.*)$")
     public void ingresaDatosExistentesEnClienteActual(List<String>datos) {
