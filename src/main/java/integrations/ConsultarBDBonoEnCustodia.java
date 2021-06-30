@@ -19,7 +19,10 @@ public class ConsultarBDBonoEnCustodia {
         try {
             Class.forName("com.ibm.as400.access.AS400JDBCDriver");
 
-            String query = "SELECT * FROM fpoblida.afiarc, FPOBLIDA.CUPARC WHERE AFIES2= 'ACT' AND AFIC01= CUPNRO AND CUPTIP= AFITI1 AND CUPEST= 'CUS' AND AFINUM < 145000 AND CUPVA6>0";
+            String query = "SELECT * FROM (\n" +
+                    "\tSELECT * FROM fpoblida.afiarc WHERE AFIES2= 'ACT' ORDER BY afinum\n" +
+                    ") afiarc, fpoblida.cuparc WHERE afiarc.AFIC01= CUPNRO\n" +
+                    "AND CUPTIP = afiarc.AFITI1 AND CUPEST= 'CUS' AND CUPVA6 > 0 ORDER BY afiarc.afinum LIMIT 80";
 
             Statement statement = obj.conectar().createStatement();
             ResultSet resultSet = statement.executeQuery(query);

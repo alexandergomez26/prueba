@@ -13,7 +13,7 @@ public class CompararResultados implements Question<Boolean> {
 
         System.out.println("Ingresó a la Question");
 
-        resultadoExcel = ServiceExcelDrive.getDataCell("D36");
+        resultadoExcel = ServiceExcelDrive.getDataCell("F47");
 
 
         System.out.println("Valor Excel Simulador: " + resultadoExcel);

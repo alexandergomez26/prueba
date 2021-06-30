@@ -37,8 +37,7 @@ public class IngresarDatosParaHombre implements Task {
                 Enter.theValue(hombre.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
-                Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO),
-                Espera.cantidadDeMiliSegundos(5000)
+                Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO)
 
                 //WaitUntil.the(TXT_TEXTO_DATOS_BASICOS, WebElementStateMatchers.isVisible()).
                         //forNoMoreThan(20).seconds());

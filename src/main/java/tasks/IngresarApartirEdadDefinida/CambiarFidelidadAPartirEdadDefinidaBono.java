@@ -15,6 +15,8 @@ import static userinterfaces.AutorizacionPage.FIDELIDAD_PERSONALIZADA_A_PARTIR_U
 
 public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
 
+    String valor;
+
     @Override
     public <T extends Actor> void performAs(T actor) {
 
@@ -52,12 +54,15 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
         System.out.println("");
 
+        valor = ServiceExcelDrive.getDataCell("D45");
+        json.put("A47", valor);
+        ServiceExcelDrive.setDataCell(json);
+
         DatosPension datosPension2 = new DatosPension(
                 VALOR_PENSION_A_PARTIR_EDAD_DEFINIDA_50.resolveFor(actor).getTextValue(),
                 VALOR_MESADA_A_PARTIR_EDAD_DEFINIDA_50.resolveFor(actor).getTextValue(),
                 FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_50.resolveFor(actor).getTextValue(),
                 1
-
         );
 
         json.put("E2", datosPension2.getValorPensionNumero());
@@ -71,6 +76,10 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         System.out.println("Mesada Simulador 50%: " + ServiceExcelDrive.getDataCell("D33"));
         System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
         System.out.println("");
+
+        valor = ServiceExcelDrive.getDataCell("D45");
+        json.put("B47", valor);
+        ServiceExcelDrive.setDataCell(json);
 
         DatosPension datosPension3 = new DatosPension(
                 VALOR_PENSION_A_PARTIR_EDAD_DEFINIDA_12.resolveFor(actor).getTextValue(),
@@ -92,6 +101,10 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
         System.out.println("");
 
+        valor = ServiceExcelDrive.getDataCell("D45");
+        json.put("C47", valor);
+        ServiceExcelDrive.setDataCell(json);
+
         DatosPension datosPension4 = new DatosPension(
                 VALOR_PENSION_A_PARTIR_EDAD_DEFINIDA_0.resolveFor(actor).getTextValue(),
                 VALOR_MESADA_A_PARTIR_EDAD_DEFINIDA_0.resolveFor(actor).getTextValue(),
@@ -109,6 +122,10 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         System.out.println("Mesada Simulador 0%: " + ServiceExcelDrive.getDataCell("D33"));
         System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
         System.out.println("");
+
+        valor = ServiceExcelDrive.getDataCell("D45");
+        json.put("D47", valor);
+        ServiceExcelDrive.setDataCell(json);
 
         DatosPension datosPension5 = new DatosPension(
                 VALOR_PENSION_A_PARTIR.resolveFor(actor).getTextValue(),
@@ -129,7 +146,10 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
         System.out.println("");
 
+        valor = ServiceExcelDrive.getDataCell("D45");
+        json.put("E47", valor);
         ServiceExcelDrive.setDataCell(json);
+
     }
 
     public static CambiarFidelidadAPartirEdadDefinidaBono enElAplicativo(List<String> datos){

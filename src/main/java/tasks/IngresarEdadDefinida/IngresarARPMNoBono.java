@@ -1,6 +1,7 @@
 package tasks.IngresarEdadDefinida;
 
 import Utils.exceldata.CreateModels;
+import com.ibm.as400.util.commtrace.ESP;
 import interactions.Espera;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
@@ -8,6 +9,8 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
 
@@ -16,11 +19,9 @@ import static userinterfaces.IngresarEdadDefinidaPage.*;
 
 public class IngresarARPMNoBono implements Task {
 
-    private DatosAfiliado datosAfiliado;
-    private String datos;
+    private final DatosAfiliado datosAfiliado;
 
     public IngresarARPMNoBono(String datos) {
-        this.datos = datos;
         int pos=Integer.parseInt(datos);
         datosAfiliado = CreateModels.setDatosAfiliado(pos);
     }
@@ -28,13 +29,11 @@ public class IngresarARPMNoBono implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                //Espera.cantidadDeMiliSegundos(10),
-               // SeleccionarCliente.actual(),
-               // IngresarDatos.cliente(Collections.singletonList(datos)),
+                WaitUntil.the(TXT_A_RPM_NO_BONO, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(20).seconds(),
                 Enter.theValue(datosAfiliado.getBono()).into(TXT_A_RPM_NO_BONO),
                 Click.on(BTN_CONTINUAR_DATOS_BASICOS),
-                Click.on(BTN_ACEPTAR_INFO_BONO),
-                //Click.on(BTN_INFORMACION_IMPORTANTE), ///NUEVO Eliminar
+                Espera.cantidadDeMiliSegundos(4000),
                 Click.on(TXT_FECHA_INICIAL_RPM),
                 Click.on(TXT_ANO_INICIAL),
                 Click.on(OPCT_ANO_INICIAL),

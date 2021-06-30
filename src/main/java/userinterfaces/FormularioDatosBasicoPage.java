@@ -9,7 +9,7 @@ public class FormularioDatosBasicoPage extends PageObject {
     public static Target TXT_NOMBRE = Target.the("Caja de texto para ingresar nombre")
             .located(By.id("BasicDataCard--form-container-item-Nombre"));
 
-    public static Target BTN_ACEPTAR_INFO_BONO= Target.the("Botón para aceptar la info del bono")
+    public static Target BTN_ACEPTAR_INFO_BONO= Target.the("Botón para aceptar la informacion del bono")
             .located(By.id("BtnModalPrimary"));
 
     public static Target BTN_CONTINUAR_FORM_DATOS_BASICOS= Target.the("Botón para continuar a seleccioanr la opción de pensión")

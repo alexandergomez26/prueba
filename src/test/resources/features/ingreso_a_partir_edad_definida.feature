@@ -91,7 +91,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
       | testCase |
       |2|
 
-  @RPMNoBonoHombre
+  @RPMNoBonoHombre ##OK
   Esquema del escenario: Ingresar edad definida cliente actual exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de hombres en cliente actual <testCase>
@@ -195,7 +195,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
       |31|
 
 
-  @IngresoAPartirEdadDefinidaClActualBonoEnCustodia
+  @IngresoAPartirEdadDefinidaClActualBonoEnCustodia ##
   Esquema del escenario: Ingresar a partir de una edad definida cliente actual exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de afiliados con bono en custodia en cliente actual <testCase>
@@ -205,7 +205,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
 
     Ejemplos:
       | testCase |
-      |30|
+      |69|
 
 
 
