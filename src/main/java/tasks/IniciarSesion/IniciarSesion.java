@@ -26,8 +26,7 @@ public class IniciarSesion implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(TXT_CORREO, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(20).seconds(),
+              Espera.cantidadDeMiliSegundos(5000),
         Enter.theValue(datosInicioSesion.getCorreo()).into(TXT_CORREO),
         Click.on(BTN_SIGUIENTE),
         (WaitUntil.the(TXT_CONTRASENIA, WebElementStateMatchers.isVisible()).

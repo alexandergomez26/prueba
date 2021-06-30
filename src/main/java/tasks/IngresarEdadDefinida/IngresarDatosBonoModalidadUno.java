@@ -23,19 +23,21 @@ public class IngresarDatosBonoModalidadUno implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                //SeleccionarCliente.actual(),
-               // IngresarDatos.cliente(Collections.singletonList(datos)),
                 Enter.theValue(datosAfiliado.getSemanasBono()).into(TXT_A_FECHA_DE_TRASLADO),
                 Click.on(INGRESO_A_LA_VIDA_LABORAL),
                 Click.on(DESPUES_DE_JUNIO),
                 Click.on(TXT_FECHA_TRASLADO),
+                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANO_TRASLADO),
+                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_ANO_TRASLADO),
                 Click.on(TXT_MES_TRASLADO),
                 Click.on(OPCT_DIA_TRASLADO),
                 Click.on(BTN_CONTINUAR_DATOS_BASICOS),
                 Click.on(TXT_FECHA_INICIAL),
+                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANO_INICIAL),
+                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_ANO_INICIAL),
                 Click.on(TXT_MES_INICIAL),
                 Click.on(OPCT_MES_INICIAL),
