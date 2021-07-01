@@ -47,7 +47,8 @@ dependencies {
     compile "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
    // compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
 
-
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: '2.0.11'
+    testImplementation group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: '2.0.81'
 
 
     compile group: 'dk.kewill.thirdpartymavencentral', name: 'jt400-full', version: '7.10'

@@ -31,22 +31,8 @@ public class IniciarSesion implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
-        System.out.println("----------------------------------------------------------------------------------------------------------");
-        System.out.println(html2);
-        System.out.println("----------------------------------------------------------------------------------------------------------");
-
         actor.attemptsTo(
-                Enter.theValue(datosInicioSesion.getCorreo()).into(TXT_CORREO));
-
-        BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        String html3 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
-        System.out.println("----------------------------------------------------------------------------------------------------------");
-        System.out.println(html3);
-        System.out.println("----------------------------------------------------------------------------------------------------------");
-
-        actor.attemptsTo(
+                Enter.theValue(datosInicioSesion.getCorreo()).into(TXT_CORREO),
                 Click.on(BTN_SIGUIENTE),
                 (WaitUntil.the(TXT_CONTRASENIA, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(10).seconds()),

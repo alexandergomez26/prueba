@@ -4,6 +4,7 @@ import Utils.Constants.ConstantesGenerales;
 import Utils.exceldata.CreateModels;
 import Utils.exceldata.ServiceExcelDrive;
 import interactions.Espera;
+import models.ConsumoDatos;
 import models.DatosAfiliado;
 import models.DatosPension;
 import net.serenitybdd.screenplay.Actor;
@@ -21,6 +22,7 @@ import static userinterfaces.IngresarEdadDefinidaPage.*;
 
 public class IngresarAPartirEdadDefinida implements Task {
 
+    //private ConsumoDatos consumoDatosP;
     private final DatosAfiliado datosAfiliado;
 
     public IngresarAPartirEdadDefinida(String datos) {
@@ -90,10 +92,21 @@ public class IngresarAPartirEdadDefinida implements Task {
         json.put("D8", "");
         json.put("D9", "");
 
-        System.out.println("Jasonnnnn: " + json);
         ServiceExcelDrive.setDataCell(json);
 
-        System.out.println("Valor Pension Json: " + ServiceExcelDrive.getDataCell("D36"));
+       /*
+         consumoDatosP = actor.recall("consumoDatos");
+
+        System.out.println("Inflacion: " + consumoDatosP.getInflacion());
+
+        json.put("F1", consumoDatosP.getDeslizamiento());
+        json.put("F2", consumoDatosP.getFactorComision());
+        json.put("F3", consumoDatosP.getFactorGasto());
+        json.put("F4", consumoDatosP.getInflacion());
+        json.put("F5", consumoDatosP.getFactorSeguridad());
+        json.put("F6", consumoDatosP.getTasaInteresTecnico());
+
+        ServiceExcelDrive.setDataCell(json); */
     }
     public static IngresarAPartirEdadDefinida paraRealizarLaProyeccion(List<String>datos){
         return Tasks.instrumented(IngresarAPartirEdadDefinida.class, datos.get(0));

@@ -22,7 +22,16 @@ public class ConstantesGenerales {
     public static final String VALOR_PENSION = "Capital Total";
     public static final String MESADA = "Mesada";
     public static final String DATA_TO_TEST_LOGIN = "Prueba2";
-
+    public static final String BASE_URL_AUTENTICACION = "https://login.microsoftonline.com/f47dcce4-02e7-4d88-a659-a2d0bbe170e7/";
+    public static final String GET_AUTENTICACION = "oauth2/token";
+    public static final String BASE_URL_PARAMETROS_TECNICOS = "https://internal-ALBEKSQA2-351068326.us-east-1.elb.amazonaws.com:8501/";
+    public static final String GET_PARAMETROS_TECNICOS = "api/simulador/valores-tecnicos";
+    public static final String CONTENT_TYPE = "application/x-www-form-urlencoded";
+    public static final String GRANT_TYPE = "client_credentials";
+    public static final String CLIENT_ID = "d1c3637c-591e-4507-834d-6373e29395ce";
+    public static final String CLIENT_SECRET= ".4seUV2nl.a2Dtr0uQ9.0y52WESi-B_xUL";
+    public static final String SCOPE= "scope";
+    public static final String RESOURCE= "https://proteccion.onmicrosoft.com/gei_pruebas";
 
 
 }
