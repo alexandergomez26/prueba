@@ -25,7 +25,7 @@ public class IngresarEdadDefinidaPage extends PageObject {
             .locatedBy("div.App section.Home--content section.Home--transaction section.CalculationTypes.mt-4 div.expandable.EnterPensionAge__card.expandable--external.prot-border-top.card div.expandable__card-body.card-body div.collapse-body.EnterPensionAge__card-body.collapse.show div.row.align-items-center.border-box:nth-child(2) div.col-4 label.control.control--radio.control__radio--with_label > div.control__indicator:nth-child(3)");
 
     public static Target TXT_DATOS_HISTORIA_LABORAL= Target.the("seleccionar a partir de una edad definida")
-            .locatedBy("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[2]/*[1]");
+            .locatedBy("(//*[@id=\"card-title-icon-chevron\"])[2]");
 
     public static Target TXT_A_FECHA_DE_TRASLADO= Target.the("Caja de texto para ingresar la edad definida")
             .located(By.id("BasicDataCard--form-container-item-summaryWeeks-transferWeekNumber"));

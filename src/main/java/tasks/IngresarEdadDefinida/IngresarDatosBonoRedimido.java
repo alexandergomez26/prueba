@@ -1,5 +1,6 @@
 package tasks.IngresarEdadDefinida;
 
+import interactions.AceptarBono;
 import interactions.Espera;
 import interactions.SeleccionarCliente;
 import net.serenitybdd.screenplay.Actor;
@@ -24,9 +25,8 @@ public class IngresarDatosBonoRedimido implements Task {
         actor.attemptsTo(
                 SeleccionarCliente.actual(),
                 interactions.ConsultarAfiliadoBonoRedimido.enClienteActual(Collections.singletonList(datos)),
-                Click.on(BTN_CONTINUAR_FORM_DATOS_BASICOS),
-                Espera.cantidadDeMiliSegundos(5000)
-                );
+                AceptarBono.enElAplicativo()
+        );
 
     }
     public static IngresarDatosBonoRedimido enClienteActual(List<String> datos){

@@ -34,6 +34,7 @@ public class IngresarDatos implements Interaction {
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
+                Espera.cantidadDeMiliSegundos(3000),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO)
                 );

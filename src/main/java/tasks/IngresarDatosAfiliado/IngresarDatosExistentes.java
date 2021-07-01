@@ -24,9 +24,6 @@ public class IngresarDatosExistentes implements Task {
                 SeleccionarCliente.actual(),
                 IngresarDatos.cliente(Collections.singletonList(datos)),
                 Espera.cantidadDeMiliSegundos(5000)
-
-                //AceptarBono.enElAplicativo(),
-                //Espera.cantidadDeMiliSegundos(10000)
                 );
 
     }
