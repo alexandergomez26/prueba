@@ -192,7 +192,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
 
     Ejemplos:
       | testCase |
-      |5|
+      |4|
 
 
   @IngresoAPartirEdadDefinidaClActualBonoEnCustodia

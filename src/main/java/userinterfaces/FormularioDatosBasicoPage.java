@@ -85,16 +85,19 @@ public class FormularioDatosBasicoPage extends PageObject {
             .located(By.id("BasicDataCard--form-container-item-individualAccountValue"));
 
     public static Target TXT_FECHA_EMISION_BONO = Target.the("Campo fecha de emision bono")
-            .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[3]/div[1]/div[2]/div[1]/section[3]/article[2]/article[1]/div[1]/div[1]/div[1]/button[1]"));
+            .located(By.xpath("(//*[@id=\"datePicker\"])[7]"));
 
     public static Target OPCT_ANIO_FECHA_EMISION_BONO = Target.the("Opción año fecha de emision del bono")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='2000']");
+
+    public static Target TXT_ANIOS = Target.the("Caja de texto de año")
+            .locatedBy(".BasicDataCard--form-container__row:nth-child(3) svg");
 
     public static Target OPCT_MES_EMISION_BONO = Target.the("Opción año fecha de emision del bono")
             .locatedBy("(//select[@id='selectMonth'])[2]//option[text()='Mayo']");
 
     public static Target OPCT_DIA_EMISION_BONO= Target.the("Opción dia de emision del bono")
-            .located(By.xpath("//td[contains(text(),'31')]"));
+            .located(By.xpath("(//td[text()='5'])[2]"));
 
     public static Target TXT_VALOR_BONO= Target.the("Opción dia de emision del bono")
             .located(By.xpath("//input[@id='BasicDataCard--form-container-item-bonusValueToday ']"));
