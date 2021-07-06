@@ -3,7 +3,11 @@ package tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static userinterfaces.IniciarSesionPage.TXT_CORREO;
+
 import net.serenitybdd.screenplay.actions.Open;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import userinterfaces.SeleccionarUrlPage;
 
 public class AbrirNavegador implements Task {
@@ -17,7 +21,9 @@ public class AbrirNavegador implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Open.url(seleccionarUrlPage.url())
+                Open.url(seleccionarUrlPage.url()),
+                WaitUntil.the(TXT_CORREO, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(40).seconds()
         );
     }
 

@@ -40,7 +40,7 @@ public class IngresarEdadDefinidaPage extends PageObject {
             .located(By.id("despues3092"));
 
     public static Target TXT_FECHA_PRIMERA_COTIZACION= Target.the("campo fecha de la primera cotizacion")
-            .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[2]/div[1]/div[2]/div[1]/section[1]/div[1]/div[2]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
+            .locatedBy(".col-md-6 > .item:nth-child(3) svg");
 
     public static Target TXT_ANO_PRIMERA_COTIZACION= Target.the("caja de texto del año de la primera cotizacion")
             .locatedBy("(//select[@id='selectYear'])[2]");
@@ -67,7 +67,7 @@ public class IngresarEdadDefinidaPage extends PageObject {
             .located(By.id("BtnBondModeTwoSubmit"));
 
     public static Target TXT_FECHA_TRASLADO= Target.the("campo fecha de la fecha de traslado")
-            .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[2]/div[1]/div[2]/div[1]/section[1]/div[1]/article[1]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
+            .locatedBy("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/section[1]/form[1]/div[2]/div[1]/div[2]/div[1]/section[1]/div[1]/article[1]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]");
 
     public static Target TXT_ANO_TRASLADO= Target.the("caja de texto del año de traslado")
             .locatedBy("(//select[@id='selectYear'])[2]");
@@ -106,7 +106,7 @@ public class IngresarEdadDefinidaPage extends PageObject {
             .located(By.xpath("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]"));
 
     public static Target OPCT_DIA_FINAL= Target.the("caja de texto del dia final")
-            .locatedBy("//td[@class=\"CalendarDay CalendarDay_1 CalendarDay__default CalendarDay__default_2\"][2][contains(text(),'5')]");
+            .locatedBy("(//td[text()='5'])[2]");
 
     public static Target TXT_SALARIO= Target.the("caja de texto del salario")
             .located(By.id("RPMNoBono--form-container-item-contributionPeriods-quotationSalary"));
@@ -145,7 +145,7 @@ public class IngresarEdadDefinidaPage extends PageObject {
             .locatedBy("(//option[@id='M'])");
 
     public static Target TXT_FECHA_NACIMIENTO_BENEFICIARIO= Target.the("campo fecha de nacimiento del beneficiario")
-            .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/div[1]/div[1]/div[2]/div[1]/section[4]/article[3]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
+            .located(By.xpath("(//*[@id=\"datePicker\"])[2]"));
 
     public static Target TXT_ANO_NACIMIENTO_BENEFICIARIO= Target.the("caja de texto del año de nacimiento del beneficiario")
             .locatedBy("(//select[@id='selectYear'])[2]");

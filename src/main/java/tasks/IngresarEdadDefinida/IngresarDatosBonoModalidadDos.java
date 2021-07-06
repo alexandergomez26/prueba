@@ -37,6 +37,7 @@ public class IngresarDatosBonoModalidadDos implements Task {
                 Click.on(OPCT_DIA_PRIMERA_COTIZACION),
                 Click.on(BTN_CONTINUAR_DATOS_BASICOS),
                 Enter.theValue(datosAfiliado.getSalarioActual()).into(TXT_SALARIO_A_JUNIO_30),
+                Espera.cantidadDeMiliSegundos(5000),
                 Click.on(BTN_CALCULAR_VALOR_BASICO_BONO),
                 Espera.cantidadDeMiliSegundos(4000),
                 Click.on(BTN_CONTINUAR_REGISTRO_INFORMACION));
