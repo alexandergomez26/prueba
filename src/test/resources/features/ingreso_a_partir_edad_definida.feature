@@ -6,7 +6,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de mujeres existentes en cliente actual <testCase>
     Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -18,7 +18,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de hombres existentes en cliente actual <testCase>
     Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -31,7 +31,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Cuando ingresa datos existentes en cliente actual <testCase>
     Y selecciona ingreso a la vida laboral antes de junio 30/92 <testCase>
     Y por cliente actual ingresa en modalidad bono la edad a partir de edad definida <testCase>
-    #Y por cliente actual con bono modifica la fidelidad <testCase>
+    Y por cliente actual con bono modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -44,7 +44,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Cuando ingresa datos de hombres en cliente actual <testCase>
     Y selecciona ingreso a la vida laboral antes de junio 30/92 <testCase>
     Y por cliente actual ingresa en modalidad bono la edad a partir de edad definida <testCase>
-    #Y por cliente actual con bono modifica la fidelidad <testCase>
+    Y por cliente actual con bono modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -58,7 +58,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Cuando ingresa datos existentes en cliente actual <testCase>
     Y selecciona ingreso a la vida laboral despues de junio 30/92 <testCase>
     Y por cliente actual ingresa en modalidad bono la edad a partir de edad definida <testCase>
-    #Y por cliente actual con bono modifica la fidelidad <testCase>
+    Y por cliente actual con bono modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -71,7 +71,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Cuando ingresa datos de hombres en cliente actual <testCase>
     Y selecciona ingreso a la vida laboral despues de junio 30/92 <testCase>
     Y por cliente actual ingresa en modalidad bono la edad a partir de edad definida <testCase>
-   # Y por cliente actual con bono modifica la fidelidad <testCase>
+    Y por cliente actual con bono modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -84,8 +84,8 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos existentes en cliente actual <testCase>
     Y ingresa a RPM no bono <testCase>
-    Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente ingresa la edad definida en RPM no bono <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
     Ejemplos:
       | testCase |
@@ -96,8 +96,8 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de hombres en cliente actual <testCase>
     Y ingresa a RPM no bono <testCase>
-    Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente ingresa la edad definida en RPM no bono <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
     Ejemplos:
       | testCase |
@@ -108,7 +108,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando registra un beneficiario <testCase>
     Y por cliente actual despues de ingresar beneficiario ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -121,7 +121,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Cuando ingresa datos no existentes en cliente potencial <testCase>
     Y ingresa los datos de cliente potencial <testCase>
     Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -134,7 +134,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Cuando ingresa datos no existentes en cliente potencial <testCase>
     Y ingresa datos de cliente potencial con ingreso a la vida laboral antes de junio 30 <testCase>
     Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -147,7 +147,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Cuando ingresa datos no existentes en cliente potencial <testCase>
     Y ingresa datos de cliente potencial con bono emitido <testCase>
     Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -161,7 +161,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Cuando ingresa datos no existentes en cliente potencial <testCase>
     Y ingresa los datos del cliente potencial con beneficiario <testCase>
     Y por cliente actual despues de ingresar beneficiario ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual modifica la fidelidad <testCase>
+    Y por cliente actual modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -174,7 +174,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de afiliados con bono emitido en cliente actual <testCase>
     Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual con bono modifica la fidelidad <testCase>
+    Y por cliente actual con bono modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
@@ -187,12 +187,12 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de afiliados con bono redimido en cliente actual <testCase>
     Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual con bono modifica la fidelidad <testCase>
+    Y por cliente actual con bono modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:
       | testCase |
-      |4|
+      |1|
 
 
   @IngresoAPartirEdadDefinidaClActualBonoEnCustodia
@@ -200,7 +200,7 @@ Característica: Como asesor de Proteccion deseo ingresar a partir de una edad d
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de afiliados con bono en custodia en cliente actual <testCase>
     Y por cliente actual ingresa la edad a partir de edad definida <testCase>
-    #Y por cliente actual con bono modifica la fidelidad <testCase>
+    Y por cliente actual con bono modifica la fidelidad <testCase>
     Entonces puede visualizar su resultado
 
     Ejemplos:

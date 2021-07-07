@@ -24,8 +24,7 @@ public class IngresarDatosBonoRedimido implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 SeleccionarCliente.actual(),
-                interactions.ConsultarAfiliadoBonoRedimido.enClienteActual(Collections.singletonList(datos)),
-                AceptarBono.enElAplicativo()
+                interactions.ConsultarAfiliadoBonoRedimido.enClienteActual(Collections.singletonList(datos))
         );
 
     }

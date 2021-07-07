@@ -6,6 +6,8 @@ import tasks.IngresarApartirEdadDefinida.CambiarFidelidadAPartirEdadDefinidaBono
 import tasks.IngresarApartirEdadDefinida.IngresarAPartirEdadDefinidaBeneficiario;
 import tasks.IngresarEdadDefinida.IngresarAPartirEdadDefinida;
 import tasks.IngresarEdadDefinida.IngresarAPartirEdadDefinidaBono;
+import tasks.IngresarEdadDefinida.IngresarAPartirEdadDefinidaRPMNoBono;
+
 import java.util.List;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -14,6 +16,11 @@ public class IngresarApartirEdadDefinidaStepDefinition {
     @Cuando("^por cliente actual ingresa la edad a partir de edad definida (.*)$")
     public void porClienteActualIngresaLaEdadApartirDeEdadDefinida(List<String> datos) {
         theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinida.paraRealizarLaProyeccion(datos));
+    }
+
+    @Cuando("^por cliente ingresa la edad definida en RPM no bono (.*)$")
+    public void porClienteIngresaLaEdadDefinidaEnRPMNoBono(List<String>datos) {
+        theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinidaRPMNoBono.paraRealizarLaProyeccion(datos));
     }
 
     @Cuando("^por cliente actual modifica la fidelidad (.*)$")

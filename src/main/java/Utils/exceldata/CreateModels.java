@@ -58,6 +58,7 @@ public class CreateModels {
             datosAfiliado.setSemanasBono(listData.get(posicion).get(ConstantesGenerales.SEMANAS_BONO));
             datosAfiliado.setSemanasNBono(listData.get(posicion).get(ConstantesGenerales.SEMANAS_NBONO));
             datosAfiliado.setBono(listData.get(posicion).get(ConstantesGenerales.BONO));
+            datosAfiliado.setAportesObligatorios(listData.get(posicion).get(ConstantesGenerales.APORTES_OBLIGATORIOS));
             datosAfiliado.setResultadoSimulador(listData.get(posicion).get(ConstantesGenerales.VALOR_PENSION));
             datosAfiliado.setMesada(listData.get(posicion).get(ConstantesGenerales.MESADA));
         }

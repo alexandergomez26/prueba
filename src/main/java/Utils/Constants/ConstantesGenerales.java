@@ -19,6 +19,7 @@ public class ConstantesGenerales {
     public static final String SEMANAS_BONO = "Semanas Bono";
     public static final String SEMANAS_NBONO = "Semanas Nbono";
     public static final String BONO = "Bono";
+    public static final String APORTES_OBLIGATORIOS = "Aportes Obligatorios";
     public static final String VALOR_PENSION = "Capital Total";
     public static final String MESADA = "Mesada";
     public static final String DATA_TO_TEST_LOGIN = "Prueba2";

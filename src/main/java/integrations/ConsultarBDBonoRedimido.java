@@ -21,7 +21,9 @@ public class ConsultarBDBonoRedimido {
         try {
             Class.forName("com.ibm.as400.access.AS400JDBCDriver");
 
-            String query = "SELECT * FROM fpoblida.afiarc, FPOBLIDA.CUPARC WHERE AFIES2= 'ACT' AND AFIC01= CUPNRO AND CUPTIP= AFITI1 AND CUPEST= 'RED' AND AFINUM < 160000 AND CUPVA6>0";
+            String query = "SELECT * FROM fpoblida.afiarc, FPOBLIDA.CUPARC WHERE AFIES2= 'ACT' \n" +
+                    "AND AFIC01= CUPNRO AND CUPTIP= AFITI1  \n" +
+                    "AND CUPEST= 'RED' AND CUPVA6>0 AND AFIFEC>=19660101";
 
             Statement statement = obj.conectar().createStatement();
             ResultSet resultSet = statement.executeQuery(query);

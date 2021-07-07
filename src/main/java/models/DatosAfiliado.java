@@ -11,9 +11,18 @@ public class DatosAfiliado {
     private String semanasBono ;
     private String SemanasNBono ;
     private String Bono ;
+    private String aportesObligatorios ;
     private String resultadoSimulador ;
     private String datos;
     private String mesada;
+
+    public String getAportesObligatorios() {
+        return aportesObligatorios;
+    }
+
+    public void setAportesObligatorios(String aportesObligatorios) {
+        this.aportesObligatorios = aportesObligatorios;
+    }
 
     public String getMesada() {
         return mesada;

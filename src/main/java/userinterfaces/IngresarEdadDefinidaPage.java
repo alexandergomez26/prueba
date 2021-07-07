@@ -54,6 +54,9 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target OPCT_DIA_PRIMERA_COTIZACION= Target.the("caja de texto del dia de la primera cotizacion")
             .locatedBy("//td[contains(text(),'31')]");
 
+    public static Target OPCT_APORTES_OBLIGATORIOS= Target.the("caja de texto para el valor de los aportes obligatorios")
+            .located(By.id("BasicDataCard--form-container-item-contributions-required"));
+
     public static Target BTN_CONTINUAR_DATOS_BASICOS= Target.the("Botón continuar con los datos basicos")
             .located(By.id("BtnaBasicDataForm"));
 

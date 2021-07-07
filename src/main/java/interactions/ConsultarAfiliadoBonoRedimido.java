@@ -11,8 +11,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import java.util.List;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_A_FECHA_DE_TRASLADO;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
+import static userinterfaces.IngresarEdadDefinidaPage.*;
 
 
 public class ConsultarAfiliadoBonoRedimido implements Interaction {
@@ -39,8 +38,17 @@ public class ConsultarAfiliadoBonoRedimido implements Interaction {
                 Click.on(BTN_CONTINUAR),
                 Espera.cantidadDeMiliSegundos(4000),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
-                Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_FECHA_DE_TRASLADO)
-
+                Click.on(TXT_FECHA_PRIMERA_COTIZACION),
+                Espera.cantidadDeMiliSegundos(2000),
+                Click.on(TXT_ANO_PRIMERA_COTIZACION),
+                Espera.cantidadDeMiliSegundos(2000),
+                Click.on(OPCT_ANO_PRIMERA_COTIZACION),
+                Espera.cantidadDeMiliSegundos(2000),
+                Click.on(OPCT_MES_PRIMERA_COTIZACION),
+                Click.on(OPCT_DIA_PRIMERA_COTIZACION),
+                Enter.theValue(datosAfiliado.getAportesObligatorios()).into(OPCT_APORTES_OBLIGATORIOS),
+                Click.on(BTN_CONTINUAR_DATOS_BASICOS),
+                Espera.cantidadDeMiliSegundos(4000)
         );
 
     }

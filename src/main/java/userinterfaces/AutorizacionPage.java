@@ -117,4 +117,7 @@ public class AutorizacionPage extends PageObject {
 
     public static Target FECHA_CUENTA_INDIVIDUAL = Target.the("")
             .located(By.xpath("//*[@id=\"IndividualAccount--intern-card\"]/div/div[2]/section/div[2]/label[2]"));
+
+    public static Target VALOR_APORTES_RPM_NO_BONO = Target.the("")
+            .located(By.xpath("//*[@id=\"IndividualAccount--intern-card\"]/div/div[2]/section/div[5]/label[2]"));
 }

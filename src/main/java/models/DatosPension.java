@@ -21,6 +21,8 @@ public class DatosPension {
     private String fechaCuentaIndividual;
     private String fidelidadPersonalizada;
     private String fidelidadPropia;
+    private String valorAportesRPMNoBono;
+
 
 
     public DatosPension(String valorPension, String mesada, String fidelidadPropia, int var) {
@@ -42,6 +44,23 @@ public class DatosPension {
         this.mesadaModalidadDos = mesadaModalidadDos;
         this.bono = bono;
         this.fechaCuentaIndividual = fechaCuentaIndividual;
+    }
+
+    public DatosPension(String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud,
+                        String genero, String edad, String valorPension, String mesadaModalidadDos, String bono, String fechaCuentaIndividual, String valorAportesRPMNoBono) {
+        this.fechaNacimiento = fechaNacimiento;
+        this.semanasCotizadas = semanasCotizadas;
+        this.saldoCai = saldoCai;
+        this.salarioBasico = salarioBasico;
+        this.fechaPrimeraSolicitud = fechaPrimeraSolicitud;
+        this.genero = genero;
+        this.edad = edad;
+        this.valorPension = valorPension;
+        this.mesadaModalidadDos = mesadaModalidadDos;
+        this.bono = bono;
+        this.fechaCuentaIndividual = fechaCuentaIndividual;
+        this.valorAportesRPMNoBono = valorAportesRPMNoBono;
+
     }
 
     public DatosPension(String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud,
@@ -307,6 +326,19 @@ public class DatosPension {
     public String getFidelidadPropia2() {
         fidelidadPropia = fidelidadPropia.replace(".", "," ).split(" ")[5];
         return fidelidadPropia;
+    }
+
+    public String getValorAportesRPMNoBono() {
+        return valorAportesRPMNoBono;
+    }
+
+    public void setValorAportesRPMNoBono(String valorAportesRPMNoBono) {
+        this.valorAportesRPMNoBono = valorAportesRPMNoBono;
+    }
+
+    public String getValorAportesRPMNoBonoNumero () {
+        valorAportesRPMNoBono = valorAportesRPMNoBono.replace("$", "").replace(".", "").split(",")[0];
+        return valorAportesRPMNoBono;
     }
 
     public void setFidelidadPropia(String fidelidadPropia) {

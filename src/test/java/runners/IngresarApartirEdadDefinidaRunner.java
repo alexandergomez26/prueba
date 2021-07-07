@@ -5,6 +5,7 @@ import Utils.exceldata.DataToFeature;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import java.io.IOException;
 
@@ -23,5 +24,9 @@ public class IngresarApartirEdadDefinidaRunner {
     @BeforeSuite
     public static void test() throws IOException, InvalidFormatException {
         DataToFeature.overrideFeatureFiles("src/test/resources/features/ingreso_a_partir_edad_definida.feature");
+    }
+    @AfterClass
+    public static void finalTest() throws IOException {
+        DataToFeature.overwriteOriginalFeature("src/test/resources/features/ingreso_a_partir_edad_definida.feature");
     }
 }
