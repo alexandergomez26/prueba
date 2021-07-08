@@ -18,6 +18,9 @@ public class FormularioDatosBasicoPage extends PageObject {
     public static Target TXT_FECHA_NACIMIENTO = Target.the("Campo fecha de nacimiento")
             .located(By.id("datePicker"));
 
+    public static Target TEXTO2= Target.the("Radiobutton spara seleccionar pension meta")
+            .located(By.xpath("//*[@id=\"BasicDataForm\"]/h1"));
+
     public static Target TXT_ANIO = Target.the("Caja de texto de año")
             .locatedBy("(//select[@id='selectYear'])[2]");
 

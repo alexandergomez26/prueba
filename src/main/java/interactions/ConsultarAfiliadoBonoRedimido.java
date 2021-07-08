@@ -8,6 +8,9 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+
 import java.util.List;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
@@ -36,7 +39,8 @@ public class ConsultarAfiliadoBonoRedimido implements Interaction {
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
-                Espera.cantidadDeMiliSegundos(4000),
+                WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(320).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Click.on(TXT_FECHA_PRIMERA_COTIZACION),
                 Espera.cantidadDeMiliSegundos(2000),
