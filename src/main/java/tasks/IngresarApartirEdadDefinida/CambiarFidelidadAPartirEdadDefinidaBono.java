@@ -51,7 +51,7 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
 
         System.out.println("Capital Simulador 75%: " + ServiceExcelDrive.getDataCell("D23"));
         System.out.println("Mesada Simulador 75%: " + ServiceExcelDrive.getDataCell("D33"));
-        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
+        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D45"));
         System.out.println("");
 
         valor = ServiceExcelDrive.getDataCell("D45");
@@ -74,7 +74,7 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
 
         System.out.println("Capital Simulador 50%: " + ServiceExcelDrive.getDataCell("D23"));
         System.out.println("Mesada Simulador 50%: " + ServiceExcelDrive.getDataCell("D33"));
-        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
+        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D45"));
         System.out.println("");
 
         valor = ServiceExcelDrive.getDataCell("D45");
@@ -98,7 +98,7 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
 
         System.out.println("Capital Simulador P: " + ServiceExcelDrive.getDataCell("D23"));
         System.out.println("Mesada Simulador P: " + ServiceExcelDrive.getDataCell("D33"));
-        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
+        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D45"));
         System.out.println("");
 
         valor = ServiceExcelDrive.getDataCell("D45");
@@ -120,7 +120,7 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
 
         System.out.println("Capital Simulador 0%: " + ServiceExcelDrive.getDataCell("D23"));
         System.out.println("Mesada Simulador 0%: " + ServiceExcelDrive.getDataCell("D33"));
-        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
+        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D45"));
         System.out.println("");
 
         valor = ServiceExcelDrive.getDataCell("D45");
@@ -143,7 +143,7 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
 
         System.out.println("Capital Simulador 100%: " + ServiceExcelDrive.getDataCell("D23"));
         System.out.println("Mesada Simulador 100%: " + ServiceExcelDrive.getDataCell("D33"));
-        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D36"));
+        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D45"));
         System.out.println("");
 
         valor = ServiceExcelDrive.getDataCell("D45");

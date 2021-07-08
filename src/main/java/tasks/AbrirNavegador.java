@@ -23,7 +23,7 @@ public class AbrirNavegador implements Task {
         actor.attemptsTo(
                 Open.url(seleccionarUrlPage.url()),
                 WaitUntil.the(TXT_CORREO, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(40).seconds()
+                        forNoMoreThan(120).seconds()
         );
     }
 
