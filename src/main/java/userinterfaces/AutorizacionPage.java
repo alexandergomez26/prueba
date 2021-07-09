@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 public class AutorizacionPage extends PageObject {
 
     public static Target TXT_TRANSACCIONES = Target.the("Menú transacciones")
-            .located(By.id("menu__section-1"));
+            .located(By.xpath("//*[@id=\"menu__section-1\"]"));
 
     public static Target TXT_CLIENTE_ACTUAL = Target.the("texto cliente actual")
             .located(By.id("md-list-0__item-0"));
@@ -38,7 +38,6 @@ public class AutorizacionPage extends PageObject {
 
     public static Target VALOR_MESADA_A_PARTIR = Target.the("")
             .located(By.xpath("//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[5]/span"));
-
 
     public static Target PESTANA = Target.the("")
             .located(By.xpath("(//div[@class='collapse-title__icon'])[6]"));

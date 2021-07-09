@@ -40,7 +40,7 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),
-                WaitUntil.the(PESTANA, WebElementStateMatchers.isVisible()).
+                WaitUntil.the(PESTANA2, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(240).seconds(),
                 Click.on(PESTANA2)
         );
