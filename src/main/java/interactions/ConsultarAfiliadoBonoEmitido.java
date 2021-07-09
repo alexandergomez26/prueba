@@ -39,7 +39,7 @@ public class ConsultarAfiliadoBonoEmitido implements Interaction {
                 Enter.theValue(obj.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(320).seconds(),
+                        forNoMoreThan(420).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO)
         );

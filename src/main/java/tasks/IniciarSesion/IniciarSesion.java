@@ -35,7 +35,7 @@ public class IniciarSesion implements Task {
                 Enter.theValue(datosInicioSesion.getCorreo()).into(TXT_CORREO),
                 Click.on(BTN_SIGUIENTE),
                 (WaitUntil.the(TXT_CONTRASENIA, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(10).seconds()),
+                        forNoMoreThan(300).seconds()),
                 Enter.theValue(datosInicioSesion.getContrasenia()).into(TXT_CONTRASENIA),
                 Click.on(BTN_INICIAR_SESION),
                 Check.whether(BTN_NO_MANTENER_SESION_INICIADA.resolveFor(actor).

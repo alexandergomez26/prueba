@@ -40,7 +40,8 @@ public class IngresarAPartirEdadDefinida implements Task {
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),
-                WaitUntil.the(PESTANA2, WebElementStateMatchers.isVisible()).
+                Espera.cantidadDeMiliSegundos(5000),
+        WaitUntil.the(PESTANA2, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(300).seconds(),
                 Click.on(PESTANA2),
                 Click.on(PESTANA5)
