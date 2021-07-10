@@ -14,6 +14,7 @@ import java.util.List;
 import static userinterfaces.AutorizacionPage.FECHA;
 import static userinterfaces.FormularioDatosBasicoPage.*;
 import static userinterfaces.FormularioDatosBasicoPage.TXT_VALOR_CUENTA_INDIVIDUAL;
+import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
 
 
 public class IngresarDatosBasicosClientePotencial implements Interaction {
@@ -40,7 +41,7 @@ public class IngresarDatosBasicosClientePotencial implements Interaction {
                 Click.on(OPCT_DIA),
                 Click.on(BTN_INGRESO_VIDA_LABORAL),
                 Click.on(RBN_INGRESO_VIDA_LABORAL_DESPUES_JUNIO),
-                Click.on(BTN_DATOS_HISTORIA_LABORAL),
+                Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Click.on(TXT_FECHA_TRASLADO),
                 Click.on(TXT_ANIO),
                 Click.on(OPCT_ANIO_FECHA_TRASLADO),

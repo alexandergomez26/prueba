@@ -14,7 +14,7 @@ public class SeleccionarCliente implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                Espera.cantidadDeMiliSegundos(15000),
+                Espera.cantidadDeMiliSegundos(8000),
                 Click.on(TXT_TRANSACCIONES));
                 new Actions(BrowseTheWeb.as(actor).getDriver()).
                         moveToElement(TXT_TRANSACCIONES.resolveFor(actor)).build().perform();

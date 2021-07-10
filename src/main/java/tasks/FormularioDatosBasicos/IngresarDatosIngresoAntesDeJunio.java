@@ -15,6 +15,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import java.util.List;
 
 import static userinterfaces.FormularioDatosBasicoPage.*;
+import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
 
 public class IngresarDatosIngresoAntesDeJunio implements Task {
 
@@ -49,9 +50,9 @@ public class IngresarDatosIngresoAntesDeJunio implements Task {
                 //Click.on(BTN_INGRESO_VIDA_LABORAL),
                // Click.on(RBN_INGRESO_VIDA_LABORAL_ANTES_JUNIO),
 
-                Scroll.to(BTN_DATOS_HISTORIA_LABORAL),
+                Scroll.to(TXT_DATOS_HISTORIA_LABORAL),
 
-                Click.on(BTN_DATOS_HISTORIA_LABORAL),
+                Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Click.on(TXT_FECHA_TRASLADO),
                 //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANIO),
@@ -63,7 +64,7 @@ public class IngresarDatosIngresoAntesDeJunio implements Task {
                 Click.on(OPCT_MES_FECHA_TRASLADO),
                 Click.on(OPCT_DIA),
 
-                Scroll.to(BTN_DATOS_HISTORIA_LABORAL),
+                Scroll.to(TXT_DATOS_HISTORIA_LABORAL),
 
                 Click.on(TXT_FECHA_PRIMERA_COTIZACION),
                 //Espera.cantidadDeMiliSegundos(2000),

@@ -42,10 +42,10 @@ public class IngresarAPartirEdadDefinidaRPMNoBono implements Task {
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),
-                WaitUntil.the(PESTANA2, WebElementStateMatchers.isVisible()).
+                WaitUntil.the(PESTANA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(300).seconds(),
-                Click.on(PESTANA2),
-                Click.on(PESTANA5)
+                Click.on(PESTANA_CUENTA_INDIVIDUAL)
+                //Click.on(PESTANA_EDAD_DEFINIDA)
         );
 
         System.out.println("La fecha de nacimiento es: " + FECHA_NACIMIENTO_2.resolveFor(actor).getTextValue());

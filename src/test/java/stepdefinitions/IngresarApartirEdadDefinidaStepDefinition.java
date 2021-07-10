@@ -18,8 +18,8 @@ public class IngresarApartirEdadDefinidaStepDefinition {
         theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinida.paraRealizarLaProyeccion(datos));
     }
 
-    @Cuando("^por cliente ingresa la edad definida en RPM no bono (.*)$")
-    public void porClienteIngresaLaEdadDefinidaEnRPMNoBono(List<String>datos) {
+    @Cuando("^por cliente ingresa a partir de la edad definida en RPM no bono (.*)$")
+    public void porClienteIngresaAPartirDeLaEdadDefinidaEnRPMNoBono(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinidaRPMNoBono.paraRealizarLaProyeccion(datos));
     }
 

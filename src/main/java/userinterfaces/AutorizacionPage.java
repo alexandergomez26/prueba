@@ -39,14 +39,14 @@ public class AutorizacionPage extends PageObject {
     public static Target VALOR_MESADA_A_PARTIR = Target.the("")
             .located(By.xpath("//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[5]/span"));
 
-    public static Target PESTANA = Target.the("")
-            .located(By.xpath("(//div[@class='collapse-title__icon'])[6]"));
+    public static Target PESTANA_CUENTA_INDIVIDUAL = Target.the("pestana de cuenta individual")
+            .located(By.id("card-title-icon-chevron-individualAccount"));
 
-    public static Target PESTANA2 = Target.the("")
-            .located(By.xpath("(//div[@class='collapse-title__icon'])[5]"));
+    public static Target PESTANA_EDAD_DEFINIDA = Target.the("pestana de edad definida")
+            .located(By.id("card-title-icon-chevron-anticipadedPensionAge-definedAge"));
 
-    public static Target PESTANA5 = Target.the("")
-            .located(By.xpath("(//div[@class='collapse-title__icon'])[3]"));
+    public static Target PESTANA_BENEFICIARIO = Target.the("")
+            .located(By.id("card-title-icon-chevron-beneficiares"));
 
     public static Target FECHA_NACIMIENTO_2 = Target.the("")
             .located(By.xpath("(//label[@class='body-regular-fc-medium body-regular-fc-primary d-block'])[4]"));
@@ -115,8 +115,8 @@ public class AutorizacionPage extends PageObject {
             .located(By.xpath("(//*[@id=\"ResultsTableFromAgeDefined--intern-card\"]/div/div[1]/div[1]/h5)[4]"));
 
     public static Target FECHA_CUENTA_INDIVIDUAL = Target.the("")
-            .located(By.xpath("//*[@id=\"IndividualAccount--intern-card\"]/div/div[2]/section/div[2]/label[2]"));
+            .located(By.id("individualAccountDate"));
 
     public static Target VALOR_APORTES_RPM_NO_BONO = Target.the("")
-            .located(By.xpath("//*[@id=\"IndividualAccount--intern-card\"]/div/div[2]/section/div[5]/label[2]"));
+            .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[4]/div/div[2]/section/div[5]/label[2]"));
 }
