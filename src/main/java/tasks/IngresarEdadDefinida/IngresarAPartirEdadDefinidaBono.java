@@ -9,12 +9,18 @@ import models.DatosPension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.json.JSONObject;
+import org.openqa.selenium.By;
+
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static userinterfaces.AutorizacionPage.*;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
 import static userinterfaces.IngresarEdadDefinidaPage.BTN_REALIZAR_SIMULACION;
@@ -41,7 +47,15 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
                         forNoMoreThan(60).seconds(),
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
-                Click.on(BTN_REALIZAR_SIMULACION),
+                Click.on(BTN_REALIZAR_SIMULACION));
+
+                BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.println(html2);
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+
+        actor.attemptsTo(
                 WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(120).seconds(),
                 Click.on(TARJETA_CUENTA_INDIVIDUAL)

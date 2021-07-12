@@ -6,6 +6,8 @@ import cucumber.api.java.es.Dado;
 import integrations.ObtenerParametros;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.WebDriver;
 import tasks.AbrirNavegador;
 import tasks.IngresarDatosAfiliado.IngresarDatosExistentes;
 import tasks.IngresarDatosAfiliado.IngresarDatosNoExistentes;
@@ -17,6 +19,8 @@ import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static userinterfaces.SeleccionarUrlPage.ASPEN;
 
 public class Hook {
+    @Managed(driver = "chrome")
+    WebDriver driver;
 
     @Before
     public static void inicializar() {
