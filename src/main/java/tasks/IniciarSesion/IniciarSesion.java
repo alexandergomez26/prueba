@@ -7,10 +7,16 @@ import models.DatosInicioSesion;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.openqa.selenium.By;
+
+import java.util.concurrent.TimeUnit;
+
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static userinterfaces.IniciarSesionPage.*;
 
 public class IniciarSesion implements Task {
@@ -39,6 +45,12 @@ public class IniciarSesion implements Task {
                 Click.on(BTN_NO_MANTENER_SESION_INICIADA),
                 Espera.cantidadDeMiliSegundos(5000)
         );
+
+        BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.println(html2);
+        System.out.println("----------------------------------------------------------------------------------------------------------");
     }
 
     public static IniciarSesion enElAplicativo(int datos){

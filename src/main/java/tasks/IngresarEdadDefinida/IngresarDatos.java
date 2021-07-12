@@ -25,12 +25,6 @@ public class IngresarDatos implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
-        String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
-        System.out.println("----------------------------------------------------------------------------------------------------------");
-        System.out.println(html2);
-        System.out.println("----------------------------------------------------------------------------------------------------------");
-
         actor.attemptsTo(
                 SeleccionarCliente.actual(),
                 interactions.IngresarDatos.cliente(Collections.singletonList(datos)),
