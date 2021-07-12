@@ -13,8 +13,6 @@ import static userinterfaces.IngresarEdadDefinidaPage.*;
 import java.util.Collections;
 import java.util.List;
 
-
-
 public class IngresarBeneficiario implements Task {
 
     private final String datos;

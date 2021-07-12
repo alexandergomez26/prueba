@@ -42,14 +42,8 @@ public class FormularioDatosBasicoPage extends PageObject {
     public static Target RBN_INGRESO_VIDA_LABORAL_DESPUES_JUNIO= Target.the("Radiobutton Ingreso a la Vida Laboral despues de Junio 3092")
             .locatedBy("(//label[@id='radioButtonProduct']/div)[3]");
 
-    public static Target RBN_INGRESO_VIDA_LABORAL_ANTES_JUNIO= Target.the("Radiobutton Ingreso a la Vida Laboral antes de Junio 3092")
-            .locatedBy("(//label[@id='radioButtonProduct']/div)[2]");
-
     public static Target RBN_INGRESO_VIDA_LABORAL_CON_BONO_EMITIDO= Target.the("Radiobutton Ingreso a la Vida Laboral con bono emitido")
             .locatedBy("(//label[@id='radioButtonProduct']/div)[1]");
-
-    //public static Target BTN_DATOS_HISTORIA_LABORAL= Target.the("Botón desplegable Datos Historia Laboral")
-           // .located(By.cssSelector("#WorkingHistoryCard--card #card-title-icon-chevron"));
 
     public static Target TXT_FECHA_TRASLADO = Target.the("Campo fecha de traslado")
             .locatedBy("(//input[@id='datePicker'])[4]");

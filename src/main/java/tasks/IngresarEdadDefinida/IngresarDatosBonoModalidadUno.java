@@ -8,6 +8,9 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+
 import java.util.List;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
 
@@ -27,32 +30,23 @@ public class IngresarDatosBonoModalidadUno implements Task {
                 Click.on(INGRESO_A_LA_VIDA_LABORAL),
                 Click.on(DESPUES_DE_JUNIO),
                 Click.on(TXT_FECHA_TRASLADO),
-                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANO_TRASLADO),
-                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_ANO_TRASLADO),
-                Espera.cantidadDeMiliSegundos(2000),
+                Click.on(TXT_MES_INICIAL),
                 Click.on(TXT_MES_TRASLADO),
                 Click.on(OPCT_DIA_TRASLADO),
                 Click.on(BTN_CONTINUAR_DATOS_BASICOS),
                 Click.on(TXT_FECHA_INICIAL),
-                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANO_INICIAL),
-                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_ANO_INICIAL),
-                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_MES_INICIAL),
-                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_MES_INICIAL),
                 Click.on(OPCT_DIA_INICIAL),
                 Click.on(TXT_FECHA_FINAL),
-                Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_MES_FINAL_BONO),
                 Click.on(OPCT_DIA_FINAL),
                 Enter.theValue(datosAfiliado.getSalarioActual()).into(TXT_SALARIO),
-                Click.on(BTN_CONTINUAR_REGISTRO_BONO_MODALIDA_UNO),
-                Espera.cantidadDeMiliSegundos(5000)
-
+                Click.on(BTN_CONTINUAR_REGISTRO_BONO_MODALIDA_UNO)
         );
     }
     public static IngresarDatosBonoModalidadUno enElAplicativo(List<String> datos){

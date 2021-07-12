@@ -22,8 +22,7 @@ public class IngresarDatosExistentes implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 SeleccionarCliente.actual(),
-                IngresarDatos.cliente(Collections.singletonList(datos)),
-                Espera.cantidadDeMiliSegundos(5000)
+                IngresarDatos.cliente(Collections.singletonList(datos))
                 );
 
     }

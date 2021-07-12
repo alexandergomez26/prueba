@@ -33,9 +33,6 @@ public class IngresarEdadDefinidaPage extends PageObject {
     public static Target INGRESO_A_LA_VIDA_LABORAL= Target.the("Seleccionar ingreso a la vida laboral")
             .located(By.id("BasicDataCard--form-container-item-entryWorkingLife"));
 
-    public static Target ANTES_DE_JUNIO= Target.the("Seleccionar antes de junio 30/92")
-            .located(By.id("antes3092"));
-
     public static Target DESPUES_DE_JUNIO= Target.the("Seleccionar despues de junio 30/92")
             .located(By.id("despues3092"));
 
@@ -130,7 +127,7 @@ public class IngresarEdadDefinidaPage extends PageObject {
             .located(By.xpath("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]"));
 
     public static Target OPCT_DIA_FINAL_RPM= Target.the("caja de texto del dia inicial")
-            .locatedBy("(//td[text()='12'])[2]"); //ojooooooo...................................................................
+            .locatedBy("(//td[text()='12'])[2]");
 
     public static Target TXT_SALARIO_RPM= Target.the("caja de texto del salario")
             .located(By.id("RPMNoBono--form-container-item-contributionPeriods-quotationSalary"));

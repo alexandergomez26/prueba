@@ -35,24 +35,22 @@ public class ConsultarAfiliadoBonoRedimido implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
+                WaitUntil.the(LBL_TIPO_DOCUMENTO, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(60).seconds(),
                 Click.on(LBL_TIPO_DOCUMENTO),
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(120).seconds(),
+                        forNoMoreThan(60).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Click.on(TXT_FECHA_PRIMERA_COTIZACION),
-               // Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANO_PRIMERA_COTIZACION),
-               // Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_ANO_PRIMERA_COTIZACION),
-               // Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_MES_PRIMERA_COTIZACION),
                 Click.on(OPCT_DIA_PRIMERA_COTIZACION),
                 Enter.theValue(datosAfiliado.getAportesObligatorios()).into(OPCT_APORTES_OBLIGATORIOS),
-                Click.on(BTN_CONTINUAR_DATOS_BASICOS),
-                Espera.cantidadDeMiliSegundos(4000)
+                Click.on(BTN_CONTINUAR_DATOS_BASICOS)
         );
 
     }

@@ -12,12 +12,13 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.json.JSONObject;
 import java.util.List;
 import static userinterfaces.AutorizacionPage.*;
-import static userinterfaces.AutorizacionPage.SALDO_CAI_2;
+import static userinterfaces.AutorizacionPage.SALDO_CAI;
 import static userinterfaces.IngresarEdadDefinidaPage.*;
 
 public class IngresarAPartirEdadDefinida implements Task {
@@ -31,28 +32,26 @@ public class IngresarAPartirEdadDefinida implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(RBTN_PENSION_VEJEZ),
-                Espera.cantidadDeMiliSegundos(2000));
-        actor.attemptsTo(WaitUntil.the(CHECK_SELECCIONADO, WebElementStateMatchers.isVisible()).
-                forNoMoreThan(20).seconds());
         actor.attemptsTo(
+                WaitUntil.the(RBTN_PENSION_VEJEZ, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(60).seconds(),
+                Click.on(RBTN_PENSION_VEJEZ),
                 Click.on(BTN_CALCULAR),
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),
-                Espera.cantidadDeMiliSegundos(5000),
-        WaitUntil.the(PESTANA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(300).seconds(),
-                Click.on(PESTANA_CUENTA_INDIVIDUAL)
-                //Click.on(PESTANA_EDAD_DEFINIDA)
+                Espera.cantidadDeMiliSegundos(10000),
+                WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(120).seconds(),
+                Click.on(TARJETA_CUENTA_INDIVIDUAL)
         );
 
-        System.out.println("La fecha de nacimiento es: " + FECHA_NACIMIENTO_2.resolveFor(actor).getTextValue());
-        System.out.println("Genero: " + GENERO_2.resolveFor(actor).getTextValue());
-        System.out.println("Semanas cotizadas: " + SEMANAS_TOTALES_COTIZADAS_2.resolveFor(actor).getTextValue());
-        System.out.println("Fecha primera solicitud: " + FECHA_PRIMERA_SOLICITUD_2.resolveFor(actor).getTextValue());
-        System.out.println("SBC: " + SBC_2.resolveFor(actor).getTextValue());
-        System.out.println("Saldo CAI: " + SALDO_CAI_2.resolveFor(actor).getTextValue());
+        System.out.println("La fecha de nacimiento es: " + FECHA_NACIMIENTO.resolveFor(actor).getTextValue());
+        System.out.println("Genero: " + GENERO.resolveFor(actor).getTextValue());
+        System.out.println("Semanas cotizadas: " + SEMANAS_TOTALES_COTIZADAS.resolveFor(actor).getTextValue());
+        System.out.println("Fecha primera solicitud: " + FECHA_PRIMERA_SOLICITUD.resolveFor(actor).getTextValue());
+        System.out.println("SBC: " + SBC.resolveFor(actor).getTextValue());
+        System.out.println("Saldo CAI: " + SALDO_CAI.resolveFor(actor).getTextValue());
         System.out.println("Edad: " + datosAfiliado.getEdadDefinida());
         System.out.println("Valor Pension: " + VALOR_PENSION_A_PARTIR.resolveFor(actor).getText());
         System.out.println("Valor de la Mesada: " + VALOR_MESADA_A_PARTIR.resolveFor(actor).getText());
@@ -61,12 +60,12 @@ public class IngresarAPartirEdadDefinida implements Task {
         System.out.println("");
 
         DatosPension datosPension = new DatosPension(
-                FECHA_NACIMIENTO_2.resolveFor(actor).getTextValue(),
-                SEMANAS_TOTALES_COTIZADAS_2.resolveFor(actor).getTextValue(),
-                SALDO_CAI_2.resolveFor(actor).getTextValue(),
-                SBC_2.resolveFor(actor).getTextValue(),
-                FECHA_PRIMERA_SOLICITUD_2.resolveFor(actor).getTextValue(),
-                GENERO_2.resolveFor(actor).getTextValue(),
+                FECHA_NACIMIENTO.resolveFor(actor).getTextValue(),
+                SEMANAS_TOTALES_COTIZADAS.resolveFor(actor).getTextValue(),
+                SALDO_CAI.resolveFor(actor).getTextValue(),
+                SBC.resolveFor(actor).getTextValue(),
+                FECHA_PRIMERA_SOLICITUD.resolveFor(actor).getTextValue(),
+                GENERO.resolveFor(actor).getTextValue(),
                 datosAfiliado.getEdadDefinida(),
                 VALOR_PENSION_A_PARTIR.resolveFor(actor).getTextValue(),
                 VALOR_MESADA_A_PARTIR.resolveFor(actor).getTextValue(),

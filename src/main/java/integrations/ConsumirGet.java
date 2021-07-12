@@ -29,13 +29,7 @@ public class ConsumirGet implements Task {
                                     .param("resource", RESOURCE)
                                     .relaxedHTTPSValidation()));
 
-       /* ResponseBody responseBody = SerenityRest.lastResponse().getBody();
-        String body = responseBody.asString();
-        JSONObject jsonObject = new JSONObject(body);*/
         actor.remember("token", SerenityRest.lastResponse().body().jsonPath().get("access_token").toString());
-
-        System.out.println("Token: "+ SerenityRest.lastResponse().body().prettyPrint());
-
     }
 
     public static void main(String[] args) {

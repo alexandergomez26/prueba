@@ -30,55 +30,34 @@ public class IngresarDatosIngresoAntesDeJunio implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 WaitUntil.the(TXT_NOMBRE, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(120).seconds(),
+                        forNoMoreThan(60).seconds(),
                 Enter.theValue(datosAfiliado.getNombre()).into(TXT_NOMBRE),
-
                 Scroll.to(TEXTO2),
-
                 WaitUntil.the(TXT_FECHA_NACIMIENTO, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(120).seconds(),
+                        forNoMoreThan(60).seconds(),
                 Click.on(TXT_FECHA_NACIMIENTO),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANIO),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_ANIO_NACIMIENTO),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_MES),
-               // Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_MES_NACIMIENTO),
                 Click.on(OPCT_DIA),
-                //Click.on(BTN_INGRESO_VIDA_LABORAL),
-               // Click.on(RBN_INGRESO_VIDA_LABORAL_ANTES_JUNIO),
-
                 Scroll.to(TXT_DATOS_HISTORIA_LABORAL),
-
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Click.on(TXT_FECHA_TRASLADO),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANIO),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_ANIO_FECHA_TRASLADO),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_MES),
-               // Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_MES_FECHA_TRASLADO),
                 Click.on(OPCT_DIA),
-
                 Scroll.to(TXT_DATOS_HISTORIA_LABORAL),
-
                 Click.on(TXT_FECHA_PRIMERA_COTIZACION),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_ANIO),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_ANIO_FECHA_PRIMERA_COTIZACION_SISTEMA),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(TXT_MES),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_MES_FECHA_PRIMERA_COTIZACION),
                 Click.on(OPCT_DIA),
                 Enter.theValue(datosAfiliado.getSalarioActual()).into(TXT_SALARIO_ACTUAL),
                 Click.on(TXT_FECHA_VALOR_CUENTA_INDIVIDUAL),
-                //Espera.cantidadDeMiliSegundos(2000),
                 Click.on(OPCT_DIA_FECHA_VALOR_CUENTA_INDIVIDUAL),
                 Enter.theValue(datosAfiliado.getValorCuentaIndividual()).into(TXT_VALOR_CUENTA_INDIVIDUAL),
                 AceptarBono.enElAplicativo()

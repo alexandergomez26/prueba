@@ -2,7 +2,6 @@ package tasks.IngresarDatosAfiliado;
 
 import Utils.exceldata.CreateModels;
 import integrations.ConsultarBDMujeres;
-import interactions.Espera;
 import interactions.SeleccionarOpcionCliente;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
@@ -10,6 +9,9 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+
 import java.util.List;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
@@ -30,11 +32,12 @@ public class IngresarDatosNoExistentes implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 SeleccionarOpcionCliente.Potencial(),
+                WaitUntil.the(LBL_TIPO_DOCUMENTO, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(60).seconds(),
                 Click.on(LBL_TIPO_DOCUMENTO),
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()+datosAfiliado.getEdadDefinida()).into(TXT_NUMERO_DOCUMENTO),
-                Click.on(BTN_CONTINUAR),
-                Espera.cantidadDeMiliSegundos(5000)
+                Click.on(BTN_CONTINUAR)
                 );
 
     }

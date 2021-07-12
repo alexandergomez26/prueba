@@ -10,7 +10,6 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-
 import java.util.List;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarEdadDefinidaPage.TXT_A_RPM_NO_BONO;
@@ -33,12 +32,14 @@ public class IngresarDatos implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
+                WaitUntil.the(LBL_TIPO_DOCUMENTO, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(60).seconds(),
                 Click.on(LBL_TIPO_DOCUMENTO),
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(320).seconds(),
+                        forNoMoreThan(60).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO)
                 );

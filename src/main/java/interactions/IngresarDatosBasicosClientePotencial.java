@@ -29,6 +29,8 @@ public class IngresarDatosBasicosClientePotencial implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                WaitUntil.the(FECHA, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(60).seconds(),
                 Scroll.to(FECHA),
                 Enter.theValue(datosAfiliado.getNombre()).into(TXT_NOMBRE),
                 WaitUntil.the(TXT_FECHA_NACIMIENTO, WebElementStateMatchers.isVisible()).
