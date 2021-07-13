@@ -1,5 +1,6 @@
 package tasks;
 
+import interactions.Espera;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -19,7 +20,8 @@ public class AbrirNavegador implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Open.url(seleccionarUrlPage.url())
+                Open.url(seleccionarUrlPage.url()),
+                Espera.cantidadDeMiliSegundos(5000)
         );
 
         BrowseTheWeb.as(actor).getDriver().navigate().refresh();

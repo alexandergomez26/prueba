@@ -44,7 +44,8 @@ public class IngresarAPartirEdadDefinida implements Task {
                 Click.on(BTN_CALCULAR),
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
-                Click.on(BTN_REALIZAR_SIMULACION));
+                Click.on(BTN_REALIZAR_SIMULACION),
+                Espera.cantidadDeMiliSegundos(5000));
 
                 BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
