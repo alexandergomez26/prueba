@@ -40,7 +40,7 @@ public class AutorizacionPage extends PageObject {
             .located(By.xpath("//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[5]/span"));
 
     public static Target TARJETA_CUENTA_INDIVIDUAL = Target.the("tarjeta expandible de cuenta individual")
-            .located(By.id("card-title-icon-chevron-individualAccount"));
+            .located(By.id("card-title__icon-div-chevron-individualAccount"));
 
     public static Target TARJETA_BENEFICIARIO = Target.the("tarjeta expandible beneficiario")
             .located(By.id("card-title-icon-chevron-beneficiares"));
@@ -97,19 +97,19 @@ public class AutorizacionPage extends PageObject {
             .located(By.xpath("(//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[5]/span)[5]"));
 
     public static Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_100 = Target.the("fidelidad")
-            .located(By.xpath("(//*[@id=\"ResultsTableFromAgeDefined--intern-card\"]/div/div[1]/div[1]/h5)[1]"));
+            .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[5]/div/div[1]/div[1]/h5"));
 
     public static Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_75 = Target.the("fidelidad")
-            .located(By.xpath("(//*[@id=\"ResultsTableFromAgeDefined--intern-card\"]/div/div[1]/div[1]/h5)[2]"));
+            .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[6]/div/div[1]/div[1]/h5"));
 
     public static Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_50 = Target.the("fidelidad")
-            .located(By.xpath("(//*[@id=\"ResultsTableFromAgeDefined--intern-card\"]/div/div[1]/div[1]/h5)[3]"));
+            .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[7]/div/div[1]/div[1]/h5"));
 
     public static Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_0 = Target.the("fidelidad")
-            .located(By.xpath("(//*[@id=\"ResultsTableFromAgeDefined--intern-card\"]/div/div[1]/div[1]/h5)[5]"));
+            .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[9]/div/div[1]/div[1]/h5"));
 
     public static Target FIDELIDAD_PROPIA_A_PARTIR_UNA_EDAD = Target.the("fidelidad")
-            .located(By.xpath("(//*[@id=\"ResultsTableFromAgeDefined--intern-card\"]/div/div[1]/div[1]/h5)[4]"));
+            .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[8]/div/div[1]/div[1]/h5"));
 
     public static Target FECHA_CUENTA_INDIVIDUAL = Target.the("fecha de cuenta individual")
             .located(By.id("individualAccountDate"));

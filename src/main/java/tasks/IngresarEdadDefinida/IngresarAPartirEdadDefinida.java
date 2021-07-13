@@ -29,7 +29,6 @@ import static userinterfaces.IngresarEdadDefinidaPage.*;
 
 public class IngresarAPartirEdadDefinida implements Task {
 
-    //private ConsumoDatos consumoDatosP;
     private final DatosAfiliado datosAfiliado;
 
     public IngresarAPartirEdadDefinida(String datos) {
@@ -52,6 +51,7 @@ public class IngresarAPartirEdadDefinida implements Task {
         System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println(html2);
         System.out.println("----------------------------------------------------------------------------------------------------------");
+
 
         actor.attemptsTo(
                 WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
@@ -107,19 +107,21 @@ public class IngresarAPartirEdadDefinida implements Task {
 
         ServiceExcelDrive.setDataCell(json);
 
-       /*
-         consumoDatosP = actor.recall("consumoDatos");
+        ConsumoDatos consumoDatosP = actor.recall("consumoDatos");
 
         System.out.println("Inflacion: " + consumoDatosP.getInflacion());
 
-        json.put("F1", consumoDatosP.getDeslizamiento());
-        json.put("F2", consumoDatosP.getFactorComision());
-        json.put("F3", consumoDatosP.getFactorGasto());
-        json.put("F4", consumoDatosP.getInflacion());
-        json.put("F5", consumoDatosP.getFactorSeguridad());
-        json.put("F6", consumoDatosP.getTasaInteresTecnico());
+        json.put("G7", consumoDatosP.getDeslizamiento());
+        json.put("G8", consumoDatosP.getFactorComision());
+        json.put("G3", consumoDatosP.getFactorGasto());
+        json.put("G4", consumoDatosP.getInflacion());//
+        float inflacion = consumoDatosP.getInflacion() - 1;
+        System.out.println("inflacion es .....: "+ inflacion);
+        json.put("G5", consumoDatosP.getFactorSeguridad());
+        json.put("G6", consumoDatosP.getTasaInteresTecnico());
+        json.put("B27", inflacion);
 
-        ServiceExcelDrive.setDataCell(json); */
+        ServiceExcelDrive.setDataCell(json);
     }
     public static IngresarAPartirEdadDefinida paraRealizarLaProyeccion(List<String>datos){
         return Tasks.instrumented(IngresarAPartirEdadDefinida.class, datos.get(0));

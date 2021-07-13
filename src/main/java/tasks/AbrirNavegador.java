@@ -3,6 +3,8 @@ package tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import userinterfaces.SeleccionarUrlPage;
 
@@ -19,6 +21,8 @@ public class AbrirNavegador implements Task {
         actor.attemptsTo(
                 Open.url(seleccionarUrlPage.url())
         );
+
+        BrowseTheWeb.as(actor).getDriver().navigate().refresh();
     }
 
     public static AbrirNavegador en(SeleccionarUrlPage seleccionarUrlPage){
