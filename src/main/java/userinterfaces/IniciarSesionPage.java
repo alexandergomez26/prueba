@@ -13,7 +13,7 @@ public class IniciarSesionPage extends PageObject {
             .located(By.id("idSIButton9"));
 
     public static Target TXT_CONTRASENIA = Target.the("Campo de texto para digitar contraseña")
-            .located(By.id("passwd"));
+            .located(By.id("i0118"));
 
     public static Target BTN_INICIAR_SESION = Target.the("Botón para iniciar sesión")
             .located(By.id("idSIButton9"));
