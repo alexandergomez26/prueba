@@ -24,7 +24,7 @@ public class AbrirNavegador implements Task {
                 Espera.cantidadDeMiliSegundos(5000)
         );
 
-        BrowseTheWeb.as(actor).getDriver().navigate().refresh();
+       // BrowseTheWeb.as(actor).getDriver().navigate().refresh();
     }
 
     public static AbrirNavegador en(SeleccionarUrlPage seleccionarUrlPage){
