@@ -2,6 +2,7 @@ package tasks.IngresarDatosAfiliado;
 
 import Utils.exceldata.CreateModels;
 import integrations.ConsultarBDMujeres;
+import interactions.Espera;
 import interactions.SeleccionarOpcionCliente;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
@@ -37,7 +38,8 @@ public class IngresarDatosNoExistentes implements Task {
                 Click.on(LBL_TIPO_DOCUMENTO),
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()+datosAfiliado.getEdadDefinida()).into(TXT_NUMERO_DOCUMENTO),
-                Click.on(BTN_CONTINUAR)
+                Click.on(BTN_CONTINUAR),
+                Espera.cantidadDeMiliSegundos(4000)
                 );
 
     }

@@ -6,11 +6,17 @@ import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.openqa.selenium.By;
+
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarEdadDefinidaPage.TXT_A_RPM_NO_BONO;
 import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
@@ -38,6 +44,15 @@ public class IngresarDatos implements Interaction {
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
+                Espera.cantidadDeMiliSegundos(7000));
+
+        BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        String html = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.println(html);
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+
+        actor.attemptsTo(
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),

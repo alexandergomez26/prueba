@@ -2,6 +2,7 @@ package tasks.IngresarEdadDefinida;
 
 import Utils.exceldata.CreateModels;
 import integrations.ConsultarBDHombres;
+import interactions.Espera;
 import interactions.SeleccionarCliente;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
@@ -39,6 +40,7 @@ public class IngresarDatosParaHombre implements Task {
                 Click.on(OPT_CC),
                 Enter.theValue(hombre.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
+                Espera.cantidadDeMiliSegundos(7000),
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),

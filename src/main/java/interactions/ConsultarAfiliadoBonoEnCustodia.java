@@ -40,6 +40,7 @@ public class ConsultarAfiliadoBonoEnCustodia implements Interaction {
                 Click.on(OPT_CC),
                 Enter.theValue(obj.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
+                Espera.cantidadDeMiliSegundos(7000),
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
