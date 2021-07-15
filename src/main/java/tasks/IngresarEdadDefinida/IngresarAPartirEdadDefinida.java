@@ -13,7 +13,6 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.json.JSONObject;
@@ -45,14 +44,14 @@ public class IngresarAPartirEdadDefinida implements Task {
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),
-                Espera.cantidadDeMiliSegundos(5000));
+                Espera.cantidadDeMiliSegundos(10000)
+        );
 
                 BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println(html2);
         System.out.println("----------------------------------------------------------------------------------------------------------");
-
 
         actor.attemptsTo(
                 WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
@@ -101,7 +100,7 @@ public class IngresarAPartirEdadDefinida implements Task {
         json.put("B39", datosPension.getMesadaModalidadDosNumero());
         json.put("D16", datosPension.getBonoNumero());
         json.put("D25", datosPension.getFechaCuentaIndividual());
-        json.put("B19", "0");
+        json.put("B19", datosAfiliado.getSemanasNBono());
         json.put("B8", "");
         json.put("D8", "");
         json.put("D9", "");

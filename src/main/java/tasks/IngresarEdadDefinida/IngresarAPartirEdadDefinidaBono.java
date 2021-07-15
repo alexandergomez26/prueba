@@ -47,7 +47,9 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
                         forNoMoreThan(60).seconds(),
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
-                Click.on(BTN_REALIZAR_SIMULACION));
+                Click.on(BTN_REALIZAR_SIMULACION),
+                Espera.cantidadDeMiliSegundos(10000)
+        );
 
                 BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
@@ -101,7 +103,7 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
         json.put("B39", datosPension.getMesadaModalidadDosNumero());
         json.put("D16", datosPension.getBonoNumero());
         json.put("D25", datosPension.getFechaCuentaIndividual());
-        json.put("B19", "0");
+        json.put("B19", datosAfiliado.getSemanasNBono());
         json.put("B8", "");
         json.put("D8", "");
         json.put("D9", "");

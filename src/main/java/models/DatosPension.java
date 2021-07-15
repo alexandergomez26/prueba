@@ -23,8 +23,6 @@ public class DatosPension {
     private String fidelidadPropia;
     private String valorAportesRPMNoBono;
 
-
-
     public DatosPension(String valorPension, String mesada, String fidelidadPropia, int var) {
         this.valorPension = valorPension;
         this.mesada = mesada;
@@ -60,7 +58,6 @@ public class DatosPension {
         this.bono = bono;
         this.fechaCuentaIndividual = fechaCuentaIndividual;
         this.valorAportesRPMNoBono = valorAportesRPMNoBono;
-
     }
 
     public DatosPension(String fechaNacimiento, String semanasCotizadas, String saldoCai, String salarioBasico, String fechaPrimeraSolicitud,
@@ -128,11 +125,9 @@ public class DatosPension {
         this.generoBeneficiario = generoBeneficiario;
     }
 
-
-
     public String getMesada2() {
         mesada = mesada.replace("$", "").replace(".", "").replace("(", "").replace(")", "")
-                .replace("N/A", "#N/A").split(",")[0].split(" ")[1];   /// revisar............................Edad Definida
+                .replace("N/A", "#N/A").split(",")[0].split(" ")[1];
         return mesada;
     }
 
