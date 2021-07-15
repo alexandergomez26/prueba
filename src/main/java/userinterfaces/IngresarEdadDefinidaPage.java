@@ -139,7 +139,7 @@ public class IngresarEdadDefinidaPage extends PageObject {
             .located(By.id("BasicDataCard--form-container-item-Parentesco Beneficiario 1"));
 
     public static Target OPCT_PARENTESCO_BENEFICIARIO= Target.the("caja de texto para seleccionar el parentesco")
-            .located(By.id("HIJ"));
+            .located(By.id("HIJO"));
 
     public static Target OPCT_GENERO_BENEFICIARIO= Target.the("caja de texto para seleccionar el genero del beneficiario")
             .locatedBy("(//option[@id='M'])");
