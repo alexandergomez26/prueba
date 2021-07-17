@@ -21,8 +21,8 @@ import java.util.concurrent.TimeUnit;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static userinterfaces.AutorizacionPage.*;
 import static userinterfaces.AutorizacionPage.VALOR_MESADA_A_PARTIR;
-import static userinterfaces.IngresarEdadDefinidaPage.*;
-import static userinterfaces.IngresarEdadDefinidaPage.BTN_REALIZAR_SIMULACION;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.*;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.BTN_REALIZAR_SIMULACION;
 
 public class IngresarAPartirEdadDefinidaBeneficiario implements Task {
 

@@ -1,4 +1,4 @@
-package tasks.IngresarEdadDefinida;
+package tasks.IngresarApartirEdadDefinida;
 
 import Utils.Constants.ConstantesGenerales;
 import Utils.exceldata.CreateModels;
@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static userinterfaces.AutorizacionPage.*;
 import static userinterfaces.AutorizacionPage.SALDO_CAI;
-import static userinterfaces.IngresarEdadDefinidaPage.*;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.*;
 
 public class IngresarAPartirEdadDefinida implements Task {
 

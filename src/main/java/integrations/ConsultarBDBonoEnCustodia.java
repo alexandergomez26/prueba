@@ -12,8 +12,6 @@ public class ConsultarBDBonoEnCustodia {
 
     public List<DatosInicio> list = new ArrayList<>();
 
-    private ConexionASeries obj = new ConexionASeries();
-
     public ConsultarBDBonoEnCustodia() {
 
         try {
@@ -24,6 +22,7 @@ public class ConsultarBDBonoEnCustodia {
                     ") afiarc, fpoblida.cuparc WHERE afiarc.AFIC01= CUPNRO\n" +
                     "AND CUPTIP = afiarc.AFITI1 AND CUPEST= 'CUS' AND CUPVA6 > 0 ORDER BY afiarc.afinum LIMIT 80";
 
+            ConexionASeries obj = new ConexionASeries();
             Statement statement = obj.conectar().createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 

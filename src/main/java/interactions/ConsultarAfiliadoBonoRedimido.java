@@ -14,7 +14,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import java.util.List;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
-import static userinterfaces.IngresarEdadDefinidaPage.*;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.*;
 
 
 public class ConsultarAfiliadoBonoRedimido implements Interaction {

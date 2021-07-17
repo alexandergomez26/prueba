@@ -2,7 +2,6 @@ package integrations;
 
 import Utils.ConexionASeries;
 import models.DatosInicio;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -14,8 +13,6 @@ public class ConsultarBDBonoRedimido {
 
     public List<DatosInicio> list = new ArrayList<>();
 
-    private ConexionASeries obj = new ConexionASeries();
-
     public ConsultarBDBonoRedimido() {
 
         try {
@@ -25,13 +22,13 @@ public class ConsultarBDBonoRedimido {
                     "AND AFIC01= CUPNRO AND CUPTIP= AFITI1  \n" +
                     "AND CUPEST= 'RED' AND CUPVA6>0 AND AFIFEC>=19660101";
 
+            ConexionASeries obj = new ConexionASeries();
             Statement statement = obj.conectar().createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
                 DatosInicio persona = new DatosInicio();
                 persona.setCedula(resultSet.getString(2));
-
 
                 list.add(persona);
             }

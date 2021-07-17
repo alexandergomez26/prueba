@@ -14,8 +14,8 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import java.util.List;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_A_RPM_NO_BONO;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_A_RPM_NO_BONO;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
 
 public class ConsultarAfiliadoBonoEnCustodia implements Interaction {
 

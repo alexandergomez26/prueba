@@ -177,15 +177,12 @@ public class DatosPension {
         return Double.parseDouble(bono);
     }
 
-
-
     public void setValorPension(String valorPension) {
         this.valorPension = valorPension;
     }
 
         public void setIbl (String ibl){
             this.ibl = ibl;
-
         }
 
         public String getEdad () {

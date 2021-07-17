@@ -18,8 +18,8 @@ import java.util.concurrent.TimeUnit;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_A_RPM_NO_BONO;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_A_RPM_NO_BONO;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
 
 public class IngresarDatos implements Interaction {
 

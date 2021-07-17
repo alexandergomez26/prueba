@@ -1,4 +1,4 @@
-package tasks.IngresarEdadDefinida;
+package tasks.IngresarApartirEdadDefinida;
 
 import Utils.exceldata.CreateModels;
 import models.DatosAfiliado;
@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import java.util.List;
-import static userinterfaces.IngresarEdadDefinidaPage.*;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.*;
 
 public class IngresarARPMNoBono implements Task {
 

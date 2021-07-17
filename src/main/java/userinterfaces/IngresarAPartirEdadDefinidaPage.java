@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class IngresarEdadDefinidaPage extends PageObject {
+public class IngresarAPartirEdadDefinidaPage extends PageObject {
 
     public static Target RBTN_PENSION_VEJEZ= Target.the("RadioButton para seleccionar la opción pensión vejez")
             .locatedBy("//label[@id='radioButtonProduct']/span/p");
@@ -158,8 +158,6 @@ public class IngresarEdadDefinidaPage extends PageObject {
 
     public static Target OPCT_DIA_NACIMIENTO_BENEFICIARIO= Target.the("caja de texto del dia de nacimiento del beneficiario")
             .locatedBy("//td[@class=\"CalendarDay CalendarDay_1 CalendarDay__default CalendarDay__default_2\"][1][contains(text(),'29')]");
-
-
 }
 
 

@@ -1,4 +1,4 @@
-package tasks.IngresarEdadDefinida;
+package tasks.IngresarApartirEdadDefinida;
 
 import interactions.AceptarBono;
 import interactions.IngresarDatos;
@@ -9,7 +9,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 import static userinterfaces.AutorizacionPage.FECHA;
-import static userinterfaces.IngresarEdadDefinidaPage.*;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.*;
 import java.util.Collections;
 import java.util.List;
 

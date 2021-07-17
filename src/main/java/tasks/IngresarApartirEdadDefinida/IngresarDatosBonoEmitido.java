@@ -1,7 +1,6 @@
-package tasks.IngresarEdadDefinida;
+package tasks.IngresarApartirEdadDefinida;
 
 import interactions.AceptarBono;
-import interactions.Espera;
 import interactions.SeleccionarCliente;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

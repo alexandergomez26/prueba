@@ -6,8 +6,8 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import static userinterfaces.IngresarEdadDefinidaPage.*;
-import static userinterfaces.IngresarEdadDefinidaPage.OPCT_DIA_NACIMIENTO_BENEFICIARIO;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.*;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.OPCT_DIA_NACIMIENTO_BENEFICIARIO;
 
 public class IngresarBeneficiario implements Interaction {
 

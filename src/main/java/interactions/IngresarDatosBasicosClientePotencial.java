@@ -14,7 +14,7 @@ import java.util.List;
 import static userinterfaces.AutorizacionPage.FECHA;
 import static userinterfaces.FormularioDatosBasicoPage.*;
 import static userinterfaces.FormularioDatosBasicoPage.TXT_VALOR_CUENTA_INDIVIDUAL;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
 
 
 public class IngresarDatosBasicosClientePotencial implements Interaction {

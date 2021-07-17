@@ -1,18 +1,15 @@
-package tasks.IngresarEdadDefinida;
+package tasks.IngresarApartirEdadDefinida;
 
 import Utils.exceldata.CreateModels;
-import interactions.Espera;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
-import static userinterfaces.IngresarEdadDefinidaPage.*;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.*;
 
 public class IngresarDatosBonoModalidadUno implements Task {
 

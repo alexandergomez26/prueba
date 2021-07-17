@@ -20,5 +20,4 @@ public class IniciarSesionPage extends PageObject {
 
     public static Target BTN_NO_MANTENER_SESION_INICIADA = Target.the("Botón para no mantener la sesión iniciada")
             .located(By.id("idBtn_Back"));
-
 }

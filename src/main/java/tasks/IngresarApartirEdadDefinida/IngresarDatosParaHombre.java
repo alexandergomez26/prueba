@@ -1,8 +1,7 @@
-package tasks.IngresarEdadDefinida;
+package tasks.IngresarApartirEdadDefinida;
 
 import Utils.exceldata.CreateModels;
 import integrations.ConsultarBDHombres;
-import interactions.AceptarBono;
 import interactions.Espera;
 import interactions.SeleccionarCliente;
 import models.DatosAfiliado;
@@ -15,23 +14,21 @@ import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import java.util.List;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
-import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_A_RPM_NO_BONO;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_A_RPM_NO_BONO;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
 
-public class IngresarDatosHombre implements Task {
+public class IngresarDatosParaHombre implements Task {
 
     private final ConsultarBDHombres hombre = new ConsultarBDHombres();
 
     private final int posicion;
     private final DatosAfiliado datosAfiliado;
 
-    public IngresarDatosHombre(String datos) {
+    public IngresarDatosParaHombre(String datos) {
         int pos=Integer.parseInt(datos);
         posicion=Integer.parseInt(datos);
         datosAfiliado = CreateModels.setDatosAfiliado(pos);
     }
-
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -47,13 +44,13 @@ public class IngresarDatosHombre implements Task {
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
-                Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO),
-                AceptarBono.enElAplicativo()
+                Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO)
         );
 
     }
-    public static IngresarDatosHombre enClienteActual(List<String> datos){
-        return Tasks.instrumented(IngresarDatosHombre.class, datos.get(0));
+    public static IngresarDatosParaHombre enClienteActual(List<String> datos){
+        return Tasks.instrumented(IngresarDatosParaHombre.class, datos.get(0));
     }
 }
+
 

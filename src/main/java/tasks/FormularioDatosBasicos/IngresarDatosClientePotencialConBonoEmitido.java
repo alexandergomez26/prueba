@@ -1,7 +1,6 @@
 package tasks.FormularioDatosBasicos;
 
 import Utils.exceldata.CreateModels;
-import interactions.*;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -12,7 +11,7 @@ import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import java.util.List;
 import static userinterfaces.FormularioDatosBasicoPage.*;
-import static userinterfaces.IngresarEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
+import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
 
 public class IngresarDatosClientePotencialConBonoEmitido implements Task {
 

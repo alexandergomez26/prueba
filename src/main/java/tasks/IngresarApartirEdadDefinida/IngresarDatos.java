@@ -1,18 +1,13 @@
-package tasks.IngresarEdadDefinida;
+package tasks.IngresarApartirEdadDefinida;
 
 import interactions.AceptarBono;
 import interactions.SeleccionarCliente;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import org.openqa.selenium.By;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class IngresarDatos implements Task {
 
