@@ -52,7 +52,7 @@ public class IngresarApartirEdadDefinidaStepDefinition {
 
     @Cuando("^ingresa los datos del cliente potencial con beneficiario (.*)$")
     public void ingresaLosDatosDelClientePotencialConBeneficiario(List<String>datos) {
-        theActorInTheSpotlight().attemptsTo(IngresarDatosBeneficiario.EnClientePotencial(datos));
+        theActorInTheSpotlight().attemptsTo(IngresarDatosBeneficiario.enClientePotencial(datos));
     }
 
     @Cuando("^por cliente actual ingresa la edad a partir de edad definida (.*)$")

@@ -30,7 +30,7 @@ public class IngresarDatosBeneficiario implements Task {
         );
 
     }
-    public static IngresarDatosBeneficiario EnClientePotencial(List<String> datos){
+    public static IngresarDatosBeneficiario enClientePotencial(List<String> datos){
         return Tasks.instrumented(IngresarDatosBeneficiario.class, datos.get(0));
     }
 }

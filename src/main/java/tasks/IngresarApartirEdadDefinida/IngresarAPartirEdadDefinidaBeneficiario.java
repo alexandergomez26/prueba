@@ -46,12 +46,14 @@ public class IngresarAPartirEdadDefinidaBeneficiario implements Task {
                 Click.on(BTN_REALIZAR_SIMULACION),
                 Espera.cantidadDeMiliSegundos(10000)
         );
-
+/*
                 BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println(html2);
         System.out.println("----------------------------------------------------------------------------------------------------------");
+
+ */
 
         actor.attemptsTo(
                 WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).

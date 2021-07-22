@@ -30,12 +30,14 @@ public class IniciarSesion implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
+/*
         BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String html = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println(html);
         System.out.println("----------------------------------------------------------------------------------------------------------");
+
+ */
 
         actor.attemptsTo(
                 WaitUntil.the(TXT_CORREO, WebElementStateMatchers.isVisible()).
@@ -43,12 +45,14 @@ public class IniciarSesion implements Task {
                 Enter.theValue(datosInicioSesion.getCorreo()).into(TXT_CORREO),
                 Click.on(BTN_SIGUIENTE),
                 Espera.cantidadDeMiliSegundos(10000));
-
+/*
         BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String html1 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println(html1);
         System.out.println("----------------------------------------------------------------------------------------------------------");
+
+ */
 
         actor.attemptsTo(
         WaitUntil.the(TXT_CONTRASENIA, WebElementStateMatchers.isVisible()).
@@ -60,12 +64,14 @@ public class IniciarSesion implements Task {
                 Click.on(BTN_NO_MANTENER_SESION_INICIADA),
                 Espera.cantidadDeMiliSegundos(5000)
         );
-
+/*
         BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println(html2);
         System.out.println("----------------------------------------------------------------------------------------------------------");
+
+ */
 
     }
 

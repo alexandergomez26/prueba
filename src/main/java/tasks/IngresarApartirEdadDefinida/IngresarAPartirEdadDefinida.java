@@ -46,13 +46,15 @@ public class IngresarAPartirEdadDefinida implements Task {
                 Click.on(BTN_REALIZAR_SIMULACION),
                 Espera.cantidadDeMiliSegundos(10000)
         );
-
+/*
                 BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println(html2);
         System.out.println("----------------------------------------------------------------------------------------------------------");
 
+
+ */
         actor.attemptsTo(
                 WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(120).seconds(),
@@ -109,14 +111,14 @@ public class IngresarAPartirEdadDefinida implements Task {
 
         ConsumoDatos consumoDatosP = actor.recall("consumoDatos");
 
-        System.out.println("Inflacion: " + consumoDatosP.getInflacion());
+       // System.out.println("Inflacion: " + consumoDatosP.getInflacion());
 
         json.put("G7", consumoDatosP.getDeslizamiento());
         json.put("G8", consumoDatosP.getFactorComision());
         json.put("G3", consumoDatosP.getFactorGasto());
         json.put("G4", consumoDatosP.getInflacion());//
         float inflacion = consumoDatosP.getInflacion() - 1;
-        System.out.println("inflacion es .....: "+ inflacion);
+       // System.out.println("inflacion es .....: "+ inflacion);
         json.put("G5", consumoDatosP.getFactorSeguridad());
         json.put("G6", consumoDatosP.getTasaInteresTecnico());
         json.put("B27", inflacion);
