@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
@@ -20,7 +21,12 @@ import static userinterfaces.SeleccionarUrlPage.ASPEN;
 
 public class Hook {
     @Managed(driver = "chrome")
-    WebDriver driver;
+    static WebDriver driver;
+
+    @After
+    public static void cerrar(){
+        driver.quit();
+    }
 
     @Before
     public static void inicializar() {

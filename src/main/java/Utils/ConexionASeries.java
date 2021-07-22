@@ -6,17 +6,23 @@ import java.sql.SQLException;
 
 public class ConexionASeries {
 
+    public static Connection conn;
+
     public Connection conectar() throws SQLException {
 
-        Connection conn = DriverManager.getConnection("jdbc:as400://protec2.proteccion.local/protec2;",
-                "extransp", "a1b2c3d4");
+        if(conn == null) {
 
-        if (conn != null) {
-            System.out.println("exitoso.....");
-        } else {
-            System.out.println("Fallo......");
+            conn = DriverManager.getConnection("jdbc:as400://protec2.proteccion.local/protec2;",
+                    "extransp", "a1b2c3d4");
+
+            if (conn != null) {
+                System.out.println("exitoso.....");
+            } else {
+                System.out.println("Fallo......");
+            }
         }
         return conn;
     }
 }
+
 

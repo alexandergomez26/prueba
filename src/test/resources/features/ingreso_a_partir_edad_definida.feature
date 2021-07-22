@@ -53,7 +53,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       |20|
 
 
-  @BonoModalidad1Mujer
+  @BonoModalidad1Mujer5
   Esquema del escenario: Ingresar usuario cliente actual mujer en bono modalidad 1 exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos existentes en cliente actual <testCase>
@@ -66,7 +66,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase |
       |10|
 
-  @BonoModalidad1Hombre
+  @BonoModalidad1Hombre6
   Esquema del escenario: Ingresar usuario cliente actual hombre en bono modalidad 1 exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de hombres en cliente actual <testCase>
@@ -80,7 +80,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       |20|
 
 
-  @RPMNoBonoMujer
+  @RPMNoBonoMujer7
   Esquema del escenario: Ingresar usuario cliente actual mujer en modalidad RPM no bono exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos existentes en cliente actual <testCase>
@@ -92,7 +92,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase |
       |2|
 
-  @RPMNoBonoHombre
+  @RPMNoBonoHombre8
   Esquema del escenario: Ingresar usuario cliente actual hombre en modalidad RPM no bono exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de hombres en cliente actual <testCase>
@@ -104,7 +104,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase |
       |20|
 
-  @IngresoEdadDefinidaClActualBeneficiario
+  @IngresoEdadDefinidaClActualBeneficiario9
   Esquema del escenario: Ingresar usuario cliente actual con beneficiario exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando registra un beneficiario <testCase>
@@ -116,7 +116,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase |
       |2|
 
-  @IngresoAPartirEdadDefinidaClPotencialDespues
+  @IngresoAPartirEdadDefinidaClPotencialDespues10
   Esquema del escenario: Ingresar usuario cliente potencial con ingreso a la vida laboral despues de junio 30 exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos no existentes en cliente potencial <testCase>
@@ -129,7 +129,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase  |
       |3|
 
-  @IngresoAPartirEdadDefinidaClPotencialIngresoAntes
+  @IngresoAPartirEdadDefinidaClPotencialIngresoAntes11
   Esquema del escenario: Ingresar usuario cliente potencial con ingreso a la vida laboral antes de junio 30 exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos no existentes en cliente potencial <testCase>
@@ -142,7 +142,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase  |
       |9|
 
-  @IngresoAPartirEdadDefinidaClPotencialBonoACorte
+  @IngresoAPartirEdadDefinidaClPotencialBonoACorte12
   Esquema del escenario: Ingresar usuario cliente potencial con bono emitido exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos no existentes en cliente potencial <testCase>
@@ -156,7 +156,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       |14|
 
 
-  @IngresoAPartirEdadDefinidaClPotencialBeneficiario
+  @IngresoAPartirEdadDefinidaClPotencialBeneficiario13
   Esquema del escenario: Ingresar usuario cliente potencial con beneficiario exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos no existentes en cliente potencial <testCase>
@@ -170,7 +170,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       |3|
 
 
-  @IngresoAPartirEdadDefinidaClActualBonoEmitido
+  @IngresoAPartirEdadDefinidaClActualBonoEmitido14
   Esquema del escenario: Ingresar usuario cliente actual con bono emitido exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de afiliados con bono emitido en cliente actual <testCase>
@@ -183,7 +183,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       |38|
 
 
-  @IngresoAPartirEdadDefinidaClActualBonoRedimido
+  @IngresoAPartirEdadDefinidaClActualBonoRedimido15
   Esquema del escenario: Ingresar usuario cliente actual con bono redimido exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de afiliados con bono redimido en cliente actual <testCase>
@@ -196,7 +196,7 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       |1|
 
 
-  @IngresoAPartirEdadDefinidaClActualBonoEnCustodia
+  @IngresoAPartirEdadDefinidaClActualBonoEnCustodia16
   Esquema del escenario: Ingresar usuario cliente actual con bono en custodia exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
     Cuando ingresa datos de afiliados con bono en custodia en cliente actual <testCase>
