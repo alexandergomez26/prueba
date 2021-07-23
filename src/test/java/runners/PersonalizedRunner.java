@@ -1,6 +1,6 @@
 package runners;
 
-import Utils.BeforeSuite;
+import utils.BeforeSuite;
 import org.junit.runner.Runner;
 
 import java.io.IOException;

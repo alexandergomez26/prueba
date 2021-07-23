@@ -1,7 +1,7 @@
 package runners;
 
-import Utils.BeforeSuite;
-import Utils.exceldata.DataToFeature;
+import utils.BeforeSuite;
+import utils.exceldata.DataToFeature;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;

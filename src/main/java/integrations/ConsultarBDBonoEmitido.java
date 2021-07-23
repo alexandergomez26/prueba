@@ -1,6 +1,6 @@
 package integrations;
 
-import Utils.ConexionASeries;
+import utils.ConexionASeries;
 import models.DatosInicio;
 import java.sql.ResultSet;
 import java.sql.SQLException;

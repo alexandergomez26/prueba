@@ -1,6 +1,6 @@
 package interactions;
 
-import Utils.exceldata.CreateModels;
+import utils.exceldata.CreateModels;
 import integrations.ConsultarBDBonoEnCustodia;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;

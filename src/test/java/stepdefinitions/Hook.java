@@ -10,12 +10,12 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 import tasks.AbrirNavegador;
-import tasks.IngresarApartirEdadDefinida.*;
-import tasks.IngresarDatosAfiliado.IngresarDatosExistentes;
-import tasks.IngresarDatosAfiliado.IngresarDatosNoExistentes;
-import tasks.IniciarSesion.IniciarSesion;
+import tasks.ingresarapartiredaddefinida.*;
+import tasks.ingresardatosafiliado.IngresarDatosExistentes;
+import tasks.ingresardatosafiliado.IngresarDatosNoExistentes;
+import tasks.iniciarsesion.IniciarSesion;
 import java.util.List;
-import static Utils.Constants.ActorConstants.ACTOR_DEFAULT;
+import static utils.Constants.ActorConstants.ACTOR_DEFAULT;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static userinterfaces.SeleccionarUrlPage.ASPEN;
 

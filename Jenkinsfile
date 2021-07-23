@@ -39,7 +39,7 @@ stage('Ejecutar Pruebas'){
           catchError{
                 echo "RUNNING CLEAN"
                 sh "pwd"
-                sh "chmod +x ./src/test/resources/driver/Linux/chromedriver"
+                sh "chmod +x ./src/test/resources/driver/linux/chromedriver"
                 sh "chmod +x gradlew"
                 echo "RUNNING TEST"
                 sh "./gradlew clean test --tests IngresarApartirEdadDefinidaRunner -i aggregate"

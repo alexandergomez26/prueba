@@ -1,29 +1,29 @@
-package interactions;
+package tasks.ingresardatosafiliado;
 
 import utils.exceldata.CreateModels;
-import integrations.ConsultarBDBonoEmitido;
+import integrations.ConsultarBDMujeres;
+import interactions.Espera;
+import interactions.SeleccionarOpcionCliente;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Interaction;
+import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+
 import java.util.List;
 import static userinterfaces.IngresarDatosAfiliadosPage.*;
 import static userinterfaces.IngresarDatosAfiliadosPage.BTN_CONTINUAR;
-import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_A_RPM_NO_BONO;
-import static userinterfaces.IngresarAPartirEdadDefinidaPage.TXT_DATOS_HISTORIA_LABORAL;
 
-public class ConsultarAfiliadoBonoEmitido implements Interaction {
+public class IngresarDatosNoExistentes implements Task {
 
-    private final ConsultarBDBonoEmitido obj = new ConsultarBDBonoEmitido();
-
+    private final ConsultarBDMujeres obj = new ConsultarBDMujeres();
     private final int posicion;
     private final DatosAfiliado datosAfiliado;
 
-    public ConsultarAfiliadoBonoEmitido(String datos) {
+    public IngresarDatosNoExistentes(String datos) {
         int pos=Integer.parseInt(datos);
         posicion=Integer.parseInt(datos);
         datosAfiliado = CreateModels.setDatosAfiliado(pos);
@@ -31,24 +31,19 @@ public class ConsultarAfiliadoBonoEmitido implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
         actor.attemptsTo(
+                SeleccionarOpcionCliente.Potencial(),
                 WaitUntil.the(LBL_TIPO_DOCUMENTO, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(LBL_TIPO_DOCUMENTO),
                 Click.on(OPT_CC),
-                Enter.theValue(obj.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
+                Enter.theValue(obj.list.get(posicion).getCedula()+datosAfiliado.getEdadDefinida()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
-                Espera.cantidadDeMiliSegundos(7000),
-                WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(60).seconds(),
-                Click.on(TXT_DATOS_HISTORIA_LABORAL),
-                Enter.theValue(datosAfiliado.getSemanasNBono()).into(TXT_A_RPM_NO_BONO)
-        );
+                Espera.cantidadDeMiliSegundos(4000)
+                );
 
     }
-
-    public static ConsultarAfiliadoBonoEmitido enClienteActual(List<String> datos){
-        return Tasks.instrumented(ConsultarAfiliadoBonoEmitido.class, datos.get(0));
+    public static IngresarDatosNoExistentes enClientePotencial(List<String>datos){
+        return Tasks.instrumented(IngresarDatosNoExistentes.class, datos.get(0));
     }
 }
