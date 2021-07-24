@@ -32,7 +32,7 @@ public class IngresarDatosNoExistentes implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                SeleccionarOpcionCliente.Potencial(),
+                SeleccionarOpcionCliente.potencial(),
                 WaitUntil.the(LBL_TIPO_DOCUMENTO, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(LBL_TIPO_DOCUMENTO),

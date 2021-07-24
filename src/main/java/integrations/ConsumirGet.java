@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.rest.abiities.CallAnApi;
 import net.serenitybdd.screenplay.rest.interactions.Post;
 
-import static utils.Constants.ConstantesGenerales.*;
+import static utils.constantes.ConstantesGenerales.*;
 
 public class ConsumirGet implements Task {
 

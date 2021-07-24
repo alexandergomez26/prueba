@@ -1,6 +1,6 @@
 package tasks.iniciarsesion;
 
-import utils.Constants.ConstantesGenerales;
+import utils.constantes.ConstantesGenerales;
 import utils.exceldata.CreateModels;
 import interactions.Espera;
 import models.DatosInicioSesion;

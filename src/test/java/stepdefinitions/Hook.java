@@ -15,7 +15,7 @@ import tasks.ingresardatosafiliado.IngresarDatosExistentes;
 import tasks.ingresardatosafiliado.IngresarDatosNoExistentes;
 import tasks.iniciarsesion.IniciarSesion;
 import java.util.List;
-import static utils.Constants.ActorConstants.ACTOR_DEFAULT;
+import static utils.constantes.ActorConstants.ACTOR_DEFAULT;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static userinterfaces.SeleccionarUrlPage.ASPEN;
 

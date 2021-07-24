@@ -32,7 +32,6 @@ public class IngresarDatosHombre implements Task {
         datosAfiliado = CreateModels.setDatosAfiliado(pos);
     }
 
-
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

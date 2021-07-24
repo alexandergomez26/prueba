@@ -104,12 +104,6 @@ public class ReaderExcel {
                             .getStringCellValue();
                     columnMapData.put(columnHeaderName, Boolean.toString(
                             cell.getBooleanCellValue()));
-                } else if (cell.getCellType() == CellType.FORMULA) {
-                    String columnHeaderName = sheet.getRow(sheet.getFirstRowNum()).
-                            getCell(cell.getColumnIndex())
-                            .getStringCellValue();
-                    columnMapData.put(columnHeaderName, NumberToTextConverter.toText(
-                            cell.getNumericCellValue()));
                 } else if (cell.getCellType() == CellType.ERROR) {
                     String columnHeaderName = sheet.getRow(sheet.getFirstRowNum()).
                             getCell(cell.getColumnIndex())

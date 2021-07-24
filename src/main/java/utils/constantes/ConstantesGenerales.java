@@ -1,4 +1,4 @@
-package utils.Constants;
+package utils.constantes;
 
 public class ConstantesGenerales {
     public static final String EXCEL_FILE_PATH = "./src/test/resources/data_driven/data_resources.xls";
@@ -34,5 +34,6 @@ public class ConstantesGenerales {
     public static final String SCOPE= "scope";
     public static final String RESOURCE= "https://proteccion.onmicrosoft.com/gei_pruebas";
 
-
+    private ConstantesGenerales() {
+    }
 }

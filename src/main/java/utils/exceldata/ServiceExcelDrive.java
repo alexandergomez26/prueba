@@ -39,9 +39,7 @@ public class ServiceExcelDrive {
 			dato = new String(dato.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
 			return dato;
 		} else {
-			// fail("NO EXISTE LA FILA " + row + " O LA COLUMNA " + column + " DEL ARCHIVO
-			// DE DRIVE");
-			return "NADAAAAAAAA";
+			return "NADA";
 		}
 	}
 
@@ -75,17 +73,14 @@ public class ServiceExcelDrive {
 				String url = "https://script.google.com/macros/s/AKfycbyY_yUHWA36F5rgmHWWlSX3U2w9bcxM3yzkpHoaYWfLFEu15Ev2CeNSx8ENMt-iAOA1aw/exec?"
 						+ "key" + "=" + keyG + "&" + params ;
 				URL obj = new URL(url);
-				// System.out.println("URL: " + url); ///////////////////////////////////////////////////////////////
 				HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 				con.setRequestMethod("GET");
 				BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 				String response = in.readLine();
 				dataExcelDrive = new JSONObject(response).getJSONArray("data");
-				//System.out.println("Respuesta Get: " + response); ////////////////////////////////////////////////
 
 			} catch (Exception e) {
 				e.printStackTrace();
-				 //fail("NO ENCONTRO EL SERVICIO: " + e.getMessage());
 			}
 		}
 	}
@@ -103,17 +98,16 @@ public class ServiceExcelDrive {
 			os.write(json.toString().getBytes());
 			os.flush();
 			os.close();
-			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			String response = in.readLine();
-			//System.out.println("Response Set: " + response);  ////////////////////////////////////////////////////
 		} catch (Exception e) {
 			e.printStackTrace();
-			// fail("NO ENCONTRO EL SERVICIO: " + e.getMessage());
 		}
 	}
 
 	// Metodo para crear los parametros para mandar al servicio
 	private static void setParams(String name, String value) {
 		params = params + "&" + name + "=" + value;
+	}
+
+	private ServiceExcelDrive() {
 	}
 }

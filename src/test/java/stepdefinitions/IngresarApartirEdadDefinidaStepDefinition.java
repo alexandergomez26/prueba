@@ -11,7 +11,7 @@ import tasks.formulariodatosbasicos.IngresarDatosClientePotencialConBonoEmitido;
 import tasks.formulariodatosbasicos.IngresarDatosIngresoAntesDeJunio;
 import tasks.ingresarapartiredaddefinida.*;
 import java.util.List;
-import static utils.Constants.ActorConstants.ACTOR_DEFAULT;
+import static utils.constantes.ActorConstants.ACTOR_DEFAULT;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static org.hamcrest.Matchers.is;
@@ -37,12 +37,12 @@ public class IngresarApartirEdadDefinidaStepDefinition {
 
     @Cuando("^ingresa datos de cliente potencial con ingreso a la vida laboral antes de junio 30 (.*)$")
     public void ingresaDatosDeClientePotencialConIngresoALaVidaLaboralAntesDeJunio30(List<String>datos) {
-        theActorInTheSpotlight().attemptsTo(IngresarDatosIngresoAntesDeJunio.EnClientePotencial(datos));
+        theActorInTheSpotlight().attemptsTo(IngresarDatosIngresoAntesDeJunio.enClientePotencial(datos));
     }
 
     @Cuando("^ingresa datos de cliente potencial con bono emitido (.*)$")
     public void ingresaDatosDeClientePotencialConBonoEmitido(List<String>datos) {
-        theActorInTheSpotlight().attemptsTo(IngresarDatosClientePotencialConBonoEmitido.EnClientePotencial(datos));
+        theActorInTheSpotlight().attemptsTo(IngresarDatosClientePotencialConBonoEmitido.enClientePotencial(datos));
     }
 
     @Cuando("^registra un beneficiario (.*)$")

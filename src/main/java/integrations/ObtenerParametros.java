@@ -7,8 +7,8 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.rest.abiities.CallAnApi;
 import net.serenitybdd.screenplay.rest.interactions.Get;
-import static utils.Constants.ConstantesGenerales.BASE_URL_PARAMETROS_TECNICOS;
-import static utils.Constants.ConstantesGenerales.GET_PARAMETROS_TECNICOS;
+import static utils.constantes.ConstantesGenerales.BASE_URL_PARAMETROS_TECNICOS;
+import static utils.constantes.ConstantesGenerales.GET_PARAMETROS_TECNICOS;
 
 public class ObtenerParametros implements Task {
 

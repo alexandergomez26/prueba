@@ -64,7 +64,7 @@ public class IngresarDatosIngresoAntesDeJunio implements Task {
         );
 
     }
-    public static IngresarDatosIngresoAntesDeJunio EnClientePotencial(List<String> datos){
+    public static IngresarDatosIngresoAntesDeJunio enClientePotencial(List<String> datos){
         return Tasks.instrumented(IngresarDatosIngresoAntesDeJunio.class, datos.get(0));
     }
 }

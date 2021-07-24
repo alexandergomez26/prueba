@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConexionASeries {
 
-    public static Connection conn;
+    Connection conn;
 
     public Connection conectar() throws SQLException {
 

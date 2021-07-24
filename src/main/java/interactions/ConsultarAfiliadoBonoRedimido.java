@@ -46,9 +46,9 @@ public class ConsultarAfiliadoBonoRedimido implements Interaction {
                         forNoMoreThan(60).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
                 Click.on(TXT_FECHA_PRIMERA_COTIZACION),
-                Click.on(TXT_ANO_PRIMERA_COTIZACION),
+                Click.on(TXT_ANIO),//
                 Click.on(OPCT_ANO_PRIMERA_COTIZACION),
-                Click.on(OPCT_MES_PRIMERA_COTIZACION),
+                Click.on(OPCT_MES),//
                 Click.on(OPCT_DIA_PRIMERA_COTIZACION),
                 Enter.theValue(datosAfiliado.getAportesObligatorios()).into(OPCT_APORTES_OBLIGATORIOS),
                 Click.on(BTN_CONTINUAR_DATOS_BASICOS)

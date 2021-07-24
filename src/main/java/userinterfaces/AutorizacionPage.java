@@ -18,10 +18,10 @@ public class AutorizacionPage extends PageObject {
     public static final Target FECHA = Target.the("")
             .locatedBy("//h4[contains(text(),'Datos básicos')]");
 
-    public static final Target VALOR_PENSION_MODALIDAD2_A_PARTIR_EDAD_DEFINIDA = Target.the("valor pension")
+    public static final Target VALOR_PENSION_MODALIDAD2_A_PARTIR_EDAD_DEFINIDA = Target.the("valor de la pension")
             .located(By.xpath("(//span[@class='h6-medium-fc-primary'])[2]"));
 
-    public static final Target VALOR_MESADA_MODALIDAD2_A_PARTIR_EDAD_DEFINIDA = Target.the("valor mesada")
+    public static final Target VALOR_MESADA_MODALIDAD2_A_PARTIR_EDAD_DEFINIDA = Target.the("valor de la mesada")
             .located(By.xpath("(//span[@class='h6-medium-fc-primary'])[5]"));
 
     public static final Target VALOR_BONO_MODALIDAD2_A_PARTIR_EDAD_DEFINIDA = Target.the("valor bono")
@@ -36,7 +36,7 @@ public class AutorizacionPage extends PageObject {
     public static final Target VALOR_PENSION_A_PARTIR = Target.the("pension")
             .located(By.xpath("//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[2]/span"));
 
-    public static final Target VALOR_MESADA_A_PARTIR = Target.the("valor mesada")
+    public static final Target VALOR_MESADA_A_PARTIR = Target.the("valor mesada a partir edad")
             .located(By.xpath("//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[5]/span"));
 
     public static final Target TARJETA_CUENTA_INDIVIDUAL = Target.the("tarjeta expandible de cuenta individual")
@@ -72,16 +72,16 @@ public class AutorizacionPage extends PageObject {
     public static final Target GENERO = Target.the("genero")
             .located(By.xpath("(//label[@class='body-regular-fc-medium body-regular-fc-primary d-block'])[7]"));
 
-    public static final Target VALOR_PENSION_A_PARTIR_EDAD_DEFINIDA_75 = Target.the("valor pension")
+    public static final Target VALOR_PENSION_A_PARTIR_EDAD_DEFINIDA_75 = Target.the("valor pension al 75%")
             .located(By.xpath("(//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[2]/span)[2]"));
 
-    public static final Target VALOR_MESADA_A_PARTIR_EDAD_DEFINIDA_75 = Target.the("valor mesada")
+    public static final Target VALOR_MESADA_A_PARTIR_EDAD_DEFINIDA_75 = Target.the("valor mesada al 75%")
             .located(By.xpath("(//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[5]/span)[2]"));
 
-    public static final Target VALOR_PENSION_A_PARTIR_EDAD_DEFINIDA_50 = Target.the("valor pension")
+    public static final Target VALOR_PENSION_A_PARTIR_EDAD_DEFINIDA_50 = Target.the("valor pension al 50%")
             .located(By.xpath("(//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[2]/span)[3]"));
 
-    public static final Target VALOR_MESADA_A_PARTIR_EDAD_DEFINIDA_50 = Target.the("valor mesada")
+    public static final Target VALOR_MESADA_A_PARTIR_EDAD_DEFINIDA_50 = Target.the("valor mesada al 50%")
             .located(By.xpath("(//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[5]/span)[3]"));
 
     public static final Target VALOR_PENSION_A_PARTIR_EDAD_DEFINIDA_12 = Target.the("valor pension")
@@ -96,16 +96,16 @@ public class AutorizacionPage extends PageObject {
     public static final Target VALOR_MESADA_A_PARTIR_EDAD_DEFINIDA_0 = Target.the("valor mesada")
             .located(By.xpath("(//*[@id=\"ResultTableInterFromAgeDefined\"]/tbody/tr[1]/td[5]/span)[5]"));
 
-    public static final Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_100 = Target.the("fidelidad")
+    public static final Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_100 = Target.the("fidelidad al 100%")
             .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[5]/div/div[1]/div[1]/h5"));
 
-    public static final Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_75 = Target.the("fidelidad")
+    public static final Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_75 = Target.the("fidelidad al 75%")
             .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[6]/div/div[1]/div[1]/h5"));
 
-    public static final Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_50 = Target.the("fidelidad")
+    public static final Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_50 = Target.the("fidelidad al 50%")
             .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[7]/div/div[1]/div[1]/h5"));
 
-    public static final Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_0 = Target.the("fidelidad")
+    public static final Target FIDELIDAD_PERSONALIZADA_A_PARTIR_UNA_EDAD_0 = Target.the("fidelidad al 0%")
             .located(By.xpath("//*[@id=\"AnticipatedPensionFromDefinedAge\"]/div/div/section/div/div[9]/div/div[1]/div[1]/h5"));
 
     public static final Target FIDELIDAD_PROPIA_A_PARTIR_UNA_EDAD = Target.the("fidelidad")

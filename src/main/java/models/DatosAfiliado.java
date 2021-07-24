@@ -9,8 +9,8 @@ public class DatosAfiliado {
     private String salarioActual ;
     private String semanas ;
     private String semanasBono ;
-    private String SemanasNBono ;
-    private String Bono ;
+    private String semanasNBono ;
+    private String bono ;
     private String aportesObligatorios ;
     private String resultadoSimulador ;
     private String datos;
@@ -51,11 +51,11 @@ public class DatosAfiliado {
     }
 
     public String getBono() {
-        return Bono;
+        return bono;
     }
 
     public void setBono(String bono) {
-        Bono = bono;
+        this.bono = bono;
     }
 
     public String getSemanas() {
@@ -75,11 +75,11 @@ public class DatosAfiliado {
     }
 
     public String getSemanasNBono() {
-        return SemanasNBono;
+        return semanasNBono;
     }
 
     public void setSemanasNBono(String semanasNBono) {
-        SemanasNBono = semanasNBono;
+        this.semanasNBono = semanasNBono;
     }
 
     public String getValorCuentaIndividual() { return valorCuentaIndividual; }

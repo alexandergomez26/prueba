@@ -66,7 +66,7 @@ public class IngresarDatosClientePotencialConBonoEmitido implements Task {
         );
 
     }
-    public static IngresarDatosClientePotencialConBonoEmitido EnClientePotencial(List<String> datos){
+    public static IngresarDatosClientePotencialConBonoEmitido enClientePotencial(List<String> datos){
         return Tasks.instrumented(IngresarDatosClientePotencialConBonoEmitido.class, datos.get(0));
     }
 }

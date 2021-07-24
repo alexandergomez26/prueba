@@ -27,20 +27,20 @@ public class IngresarDatosBonoModalidadUno implements Task {
                 Click.on(INGRESO_A_LA_VIDA_LABORAL),
                 Click.on(DESPUES_DE_JUNIO),
                 Click.on(TXT_FECHA_TRASLADO),
-                Click.on(TXT_ANO_TRASLADO),
+                Click.on(TXT_ANIO),//
                 Click.on(OPCT_ANO_TRASLADO),
                 Click.on(TXT_MES_INICIAL),
-                Click.on(TXT_MES_TRASLADO),
+                Click.on(OPCT_MES),//
                 Click.on(OPCT_DIA_TRASLADO),
                 Click.on(BTN_CONTINUAR_DATOS_BASICOS),
                 Click.on(TXT_FECHA_INICIAL),
-                Click.on(TXT_ANO_INICIAL),
+                Click.on(TXT_ANIO),//
                 Click.on(OPCT_ANO_INICIAL),
                 Click.on(TXT_MES_INICIAL),
                 Click.on(OPCT_MES_INICIAL),
                 Click.on(OPCT_DIA_INICIAL),
                 Click.on(TXT_FECHA_FINAL),
-                Click.on(OPCT_MES_FINAL_BONO),
+                Click.on(OPCT_MES),//
                 Click.on(OPCT_DIA_FINAL),
                 Enter.theValue(datosAfiliado.getSalarioActual()).into(TXT_SALARIO),
                 Click.on(BTN_CONTINUAR_REGISTRO_BONO_MODALIDA_UNO)

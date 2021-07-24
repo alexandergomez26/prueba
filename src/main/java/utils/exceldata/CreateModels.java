@@ -1,6 +1,6 @@
 package utils.exceldata;
 
-import utils.Constants.ConstantesGenerales;
+import utils.constantes.ConstantesGenerales;
 import models.DatosAfiliado;
 import models.DatosInicioSesion;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;

@@ -29,9 +29,9 @@ public class IngresarDatosBonoModalidadDos implements Task {
         actor.attemptsTo(
                 Enter.theValue(datosAfiliado.getSemanas()).into(TXT_A_FECHA_DE_TRASLADO),
                 Click.on(TXT_FECHA_PRIMERA_COTIZACION),
-                Click.on(TXT_ANO_PRIMERA_COTIZACION),
+                Click.on(TXT_ANIO),//
                 Click.on(OPCT_ANO_PRIMERA_COTIZACION),
-                Click.on(OPCT_MES_PRIMERA_COTIZACION),
+                Click.on(OPCT_MES),//
                 Click.on(OPCT_DIA_PRIMERA_COTIZACION),
                 Click.on(BTN_CONTINUAR_DATOS_BASICOS),
                 WaitUntil.the(TXT_SALARIO_A_JUNIO_30, WebElementStateMatchers.isVisible()).

@@ -20,7 +20,7 @@ public class SeleccionarOpcionCliente implements Interaction {
                 Click.on(TXT_CLIENTE_POTENCIAL));
     }
 
-    public static SeleccionarOpcionCliente Potencial(){
+    public static SeleccionarOpcionCliente potencial(){
         return Tasks.instrumented(SeleccionarOpcionCliente.class);
     }
 }

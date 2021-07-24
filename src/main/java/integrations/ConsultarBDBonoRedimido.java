@@ -33,9 +33,6 @@ public class ConsultarBDBonoRedimido {
                 list.add(persona);
             }
 
-            System.out.println();
-            System.out.println("lista: "+list);
-
         }catch (SQLException | ClassNotFoundException e){
             System.err.println(e);
         }

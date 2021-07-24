@@ -38,6 +38,11 @@ hs_err_pid*
 */.gradle/
 */build/
 
+/build/test-results/test/
+/build/reports/
+/build/test-results/
+/target/site/serenity/
+
 # Ignore Gradle GUI config
 gradle-app.setting
 

@@ -1,6 +1,5 @@
 package tasks.formulariodatosbasicos;
 
-
 import interactions.AceptarBono;
 import interactions.IngresarBeneficiario;
 import interactions.IngresarDatosBasicosClientePotencial;
@@ -17,7 +16,6 @@ public class IngresarDatosBeneficiario implements Task {
 
     public IngresarDatosBeneficiario(String datos) {
         this.datos = datos;
-        int pos=Integer.parseInt(datos);
     }
 
     @Override
@@ -26,7 +24,6 @@ public class IngresarDatosBeneficiario implements Task {
                 IngresarBeneficiario.enElAplicativo(),
                 IngresarDatosBasicosClientePotencial.enElAplicativo(Collections.singletonList(datos)),
                 AceptarBono.enElAplicativo()
-
         );
 
     }

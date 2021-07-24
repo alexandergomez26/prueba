@@ -31,13 +31,13 @@ public class IngresarARPMNoBono implements Task {
                 WaitUntil.the(TXT_FECHA_INICIAL_RPM, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(TXT_FECHA_INICIAL_RPM),
-                Click.on(TXT_ANO_INICIAL),
+                Click.on(TXT_ANIO),//
                 Click.on(OPCT_ANO_INICIAL),
                 Click.on(TXT_MES_INICIAL),
                 Click.on(OPCT_MES_INICIAL),
                 Click.on(OPCT_DIA_INICIAL),
                 Click.on(TXT_FECHA_FINAL_RPM),
-                Click.on(TXT_MES_FECHA_FINAL_RPM),
+                Click.on(OPCT_MES),//
                 Click.on(OPCT_DIA_FINAL_RPM),
                 Enter.theValue(datosAfiliado.getSalarioActual()).into(TXT_SALARIO_RPM),
                 Click.on(BTN_CONTINUAR_APORTES_NO_BONO)

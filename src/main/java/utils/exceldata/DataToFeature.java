@@ -6,8 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import static utils.Constants.ConstantesGenerales.DATA_TO_TEST_SHEET;
-import static utils.Constants.ConstantesGenerales.EXCEL_FILE_PATH;
+import static utils.constantes.ConstantesGenerales.EXCEL_FILE_PATH;
 
 
 public class DataToFeature {
@@ -25,7 +24,6 @@ public class DataToFeature {
                 new InputStreamReader(new BufferedInputStream(new
                         FileInputStream(featureFile)), StandardCharsets.UTF_8))) {
             String data;
-            List<Map<String, String>> datoLogin = new ReaderExcel().getData(EXCEL_FILE_PATH, DATA_TO_TEST_SHEET);
             List<String> originalFeature = new ArrayList<>();
             while ((data = buffReader.readLine()) != null) {
                 List<Map<String, String>> excelData;

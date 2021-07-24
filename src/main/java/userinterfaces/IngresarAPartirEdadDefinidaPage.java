@@ -39,13 +39,13 @@ public class IngresarAPartirEdadDefinidaPage extends PageObject {
     public static final Target TXT_FECHA_PRIMERA_COTIZACION= Target.the("campo fecha de la primera cotizacion")
             .locatedBy(".col-md-6 > .item:nth-child(3) svg");
 
-    public static final Target TXT_ANO_PRIMERA_COTIZACION= Target.the("caja de texto del año de la primera cotizacion")
+    public static final Target TXT_ANIO= Target.the("caja de texto del año de la primera cotizacion")
             .locatedBy("(//select[@id='selectYear'])[2]");
 
     public static final Target OPCT_ANO_PRIMERA_COTIZACION= Target.the("caja de texto del año de la primera cotizacion")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='1991']");
 
-    public static final Target OPCT_MES_PRIMERA_COTIZACION= Target.the("caja de texto del año de traslado")
+    public static final Target OPCT_MES= Target.the("caja de texto del año de traslado")
             .locatedBy("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]");
 
     public static final Target OPCT_DIA_PRIMERA_COTIZACION= Target.the("caja de texto del dia de la primera cotizacion")
@@ -69,23 +69,14 @@ public class IngresarAPartirEdadDefinidaPage extends PageObject {
     public static final Target TXT_FECHA_TRASLADO= Target.the("campo fecha de la fecha de traslado")
             .locatedBy("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[1]/section[1]/form[1]/div[2]/div[1]/div[2]/div[1]/section[1]/div[1]/article[1]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]");
 
-    public static final Target TXT_ANO_TRASLADO= Target.the("caja de texto del año de traslado")
-            .locatedBy("(//select[@id='selectYear'])[2]");
-
     public static final Target OPCT_ANO_TRASLADO= Target.the("caja de texto del año de traslado")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='2000']");
-
-    public static final Target TXT_MES_TRASLADO= Target.the("caja de texto del año de traslado")
-            .locatedBy("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]");
 
     public static final Target OPCT_DIA_TRASLADO= Target.the("caja de texto del dia de traslado")
             .locatedBy("//td[contains(text(),'31')]");
 
     public static final Target TXT_FECHA_INICIAL= Target.the("campo fecha inicial")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
-
-    public static final Target TXT_ANO_INICIAL= Target.the("caja de texto del año inicial")
-            .locatedBy("(//select[@id='selectYear'])[2]");
 
     public static final Target OPCT_ANO_INICIAL= Target.the("caja de texto del año inicial")
             .locatedBy("(//select[@id='selectYear'])[2]//option[@value='2018']");
@@ -99,11 +90,8 @@ public class IngresarAPartirEdadDefinidaPage extends PageObject {
     public static final Target OPCT_DIA_INICIAL= Target.the("caja de texto del dia inicial")
             .locatedBy("//td[@class=\"CalendarDay CalendarDay_1 CalendarDay__default CalendarDay__default_2\"][1][contains(text(),'12')]");
 
-    public static final Target TXT_FECHA_FINAL= Target.the("campo fecha final")
+    public static final Target TXT_FECHA_FINAL= Target.the("campo de la fecha final")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
-
-    public static final Target OPCT_MES_FINAL_BONO= Target.the("campo fecha final")
-            .located(By.xpath("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]"));
 
     public static final Target OPCT_DIA_FINAL= Target.the("caja de texto del dia final")
             .locatedBy("(//td[text()='5'])[2]");
@@ -122,9 +110,6 @@ public class IngresarAPartirEdadDefinidaPage extends PageObject {
 
     public static final Target TXT_FECHA_FINAL_RPM= Target.the("campo fecha final")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/section[1]/section[1]/section[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/article[1]/div[1]/div[1]/div[1]/button[1]/*[1]"));
-
-    public static final Target TXT_MES_FECHA_FINAL_RPM= Target.the("campo fecha final")
-            .located(By.xpath("(//select[@id='selectMonth'])[2]//option[contains(text(),'Mayo')]"));
 
     public static final Target OPCT_DIA_FINAL_RPM= Target.the("caja de texto del dia inicial")
             .locatedBy("(//td[text()='12'])[2]");

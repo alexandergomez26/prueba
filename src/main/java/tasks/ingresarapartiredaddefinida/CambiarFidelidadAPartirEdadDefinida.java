@@ -1,6 +1,6 @@
 package tasks.ingresarapartiredaddefinida;
 
-import utils.Constants.ConstantesGenerales;
+import utils.constantes.ConstantesGenerales;
 import utils.exceldata.ServiceExcelDrive;
 import models.DatosPension;
 import net.serenitybdd.screenplay.Actor;

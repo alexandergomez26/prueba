@@ -13,7 +13,6 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase |
       |7|
 
-
   @IngresoAPartirEdadDefinidaClActualHombre
   Esquema del escenario: Ingresar usuario cliente actual hombre exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
@@ -52,7 +51,6 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase |
       |20|
 
-
   @BonoModalidad1Mujer5
   Esquema del escenario: Ingresar usuario cliente actual mujer en bono modalidad 1 exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
@@ -78,7 +76,6 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
     Ejemplos:
       | testCase |
       |20|
-
 
   @RPMNoBonoMujer7
   Esquema del escenario: Ingresar usuario cliente actual mujer en modalidad RPM no bono exitosamente
@@ -155,7 +152,6 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase  |
       |14|
 
-
   @IngresoAPartirEdadDefinidaClPotencialBeneficiario13
   Esquema del escenario: Ingresar usuario cliente potencial con beneficiario exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
@@ -169,7 +165,6 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase  |
       |3|
 
-
   @IngresoAPartirEdadDefinidaClActualBonoEmitido14
   Esquema del escenario: Ingresar usuario cliente actual con bono emitido exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
@@ -182,7 +177,6 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
       | testCase |
       |38|
 
-
   @IngresoAPartirEdadDefinidaClActualBonoRedimido15
   Esquema del escenario: Ingresar usuario cliente actual con bono redimido exitosamente
     Dado que el usuario se encuentre logueado en la pagina de ASPEN <testCase>
@@ -194,7 +188,6 @@ Característica: Como asesor de Proteccion deseo ingresar a pension vejez a part
     Ejemplos:
       | testCase |
       |1|
-
 
   @IngresoAPartirEdadDefinidaClActualBonoEnCustodia16
   Esquema del escenario: Ingresar usuario cliente actual con bono en custodia exitosamente

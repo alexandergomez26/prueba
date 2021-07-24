@@ -23,7 +23,6 @@ public class IngresarDatosBonoEnCustodia implements Task {
                 SeleccionarCliente.actual(),
                 interactions.ConsultarAfiliadoBonoEnCustodia.enClienteActual(Collections.singletonList(datos)),
                 AceptarBono.enElAplicativo()
-
         );
 
     }
