@@ -98,6 +98,8 @@ public class ServiceExcelDrive {
 			os.write(json.toString().getBytes());
 			os.flush();
 			os.close();
+			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			String response = in.readLine();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
