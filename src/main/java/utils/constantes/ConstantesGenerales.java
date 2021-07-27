@@ -2,7 +2,6 @@ package utils.constantes;
 
 public class ConstantesGenerales {
     public static final String EXCEL_FILE_PATH = "./src/test/resources/data_driven/data_resources.xls";
-    public static final String EXCEL_FILE_PATH_2 = "./src/test/resources/data_driven/Simulador_Pruebas_Aspen Extranet.xls";
     public static final String EXCEL_JSON = "https://docs.google.com/spreadsheets/d/1JfsL5ZFDXU-lVlPPGzuEqHDlXYawmQs21nRqhPLMOnA/edit?usp=sharing";
     public static final String DATA_TO_TEST_SHEET_JASON = "Calculo";
     public static final String DATA_TO_TEST_SHEET = "prueba";

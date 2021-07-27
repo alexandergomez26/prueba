@@ -23,6 +23,163 @@ public class DatosPension {
     private String fidelidadPropia;
     private String valorAportesRPMNoBono;
 
+    public static class Builder{
+
+        private String fechaNacimiento;
+        private String semanasCotizadas;
+        private String saldoCai;
+        private String salarioBasico;
+        private String fechaPrimeraSolicitud;
+        private String genero;
+        private String edad;
+        private String valorPension;
+        private String ibl;
+        private String mesada;
+        private String mesadaColpensiones;
+        private String parentescoBeneficiario;
+        private String fechaNacimientoBeneficiario;
+        private String generoBeneficiario;
+        private String mesadaModalidadDos;
+        private String bono;
+        private String fechaCuentaIndividual;
+        private String fidelidadPersonalizada;
+        private String fidelidadPropia;
+        private String valorAportesRPMNoBono;
+
+        public Builder(String fechaNacimiento){
+            this.fechaNacimiento = fechaNacimiento;
+        }
+
+        public Builder conSemanasCotizadas(String semanasCotizadas){
+            this.semanasCotizadas = semanasCotizadas;
+            return this;
+        }
+
+        public Builder conSaldoCai(String saldoCai){
+            this.saldoCai = saldoCai;
+            return this;
+        }
+
+        public Builder conSalarioBasico(String salarioBasico){
+            this.salarioBasico = salarioBasico;
+            return this;
+        }
+
+        public Builder conFechaPrimeraSolicitud(String fechaPrimeraSolicitud){
+            this.fechaPrimeraSolicitud = fechaPrimeraSolicitud;
+            return this;
+        }
+
+        public Builder conGenero(String genero){
+            this.genero = genero;
+            return this;
+        }
+
+        public Builder conEdad(String edad){
+            this.edad = edad;
+            return this;
+        }
+
+        public Builder conValorPension(String valorPension){
+            this.valorPension = valorPension;
+            return this;
+        }
+
+        public Builder conIbl(String ibl){
+            this.ibl = ibl;
+            return this;
+        }
+
+        public Builder conMesada(String mesada){
+            this.mesada = mesada;
+            return this;
+        }
+
+        public Builder conMesadaColpensiones(String mesadaColpensiones){
+            this.mesadaColpensiones = mesadaColpensiones;
+            return this;
+        }
+
+        public Builder conParentescoBeneficiario(String parentescoBeneficiario){
+            this.parentescoBeneficiario = parentescoBeneficiario;
+            return this;
+        }
+
+        public Builder conFechaNacimientoBeneficiario(String fechaNacimientoBeneficiario){
+            this.fechaNacimientoBeneficiario = fechaNacimientoBeneficiario;
+            return this;
+        }
+
+        public Builder conGeneroBeneficiario(String generoBeneficiario){
+            this.generoBeneficiario = generoBeneficiario;
+            return this;
+        }
+
+        public Builder conMesadaModalidadDos(String mesadaModalidadDos){
+            this.mesadaModalidadDos = mesadaModalidadDos;
+            return this;
+        }
+
+        public Builder conBono(String bono){
+            this.bono = bono;
+            return this;
+        }
+
+        public Builder conFechaCuentaIndividual(String fechaCuentaIndividual){
+            this.fechaCuentaIndividual = fechaCuentaIndividual;
+            return this;
+        }
+
+        public Builder conFidelidadPersonalizada(String fidelidadPersonalizada){
+            this.fidelidadPersonalizada = fidelidadPersonalizada;
+            return this;
+        }
+
+        public Builder conFidelidadPropia(String fidelidadPropia){
+            this.fidelidadPropia = fidelidadPropia;
+            return this;
+        }
+
+        public Builder conValorAportesRPMNoBono(String valorAportesRPMNoBono){
+            this.valorAportesRPMNoBono = valorAportesRPMNoBono;
+            return this;
+        }
+
+        public DatosPension build(){
+            DatosPension datosPension = new DatosPension();
+            datosPension.fechaNacimiento = this.fechaNacimiento;
+            datosPension.semanasCotizadas = this.semanasCotizadas;
+            datosPension.saldoCai = this.saldoCai;
+            datosPension.salarioBasico = this.salarioBasico;
+            datosPension.fechaPrimeraSolicitud = this.fechaPrimeraSolicitud;
+            datosPension.genero = this.genero;
+            datosPension.edad = this.edad;
+            datosPension.valorPension = this.valorPension;
+            datosPension.ibl = this.ibl;
+            datosPension.mesada = this.mesada;
+            datosPension.mesadaColpensiones = this.mesadaColpensiones;
+            datosPension.parentescoBeneficiario = this.parentescoBeneficiario;
+            datosPension.fechaNacimientoBeneficiario = this.fechaNacimientoBeneficiario;
+            datosPension.generoBeneficiario = this.generoBeneficiario;
+            datosPension.mesadaModalidadDos = this.mesadaModalidadDos;
+            datosPension.bono = this.bono;
+            datosPension.fechaCuentaIndividual = this.fechaCuentaIndividual;
+            datosPension.fidelidadPersonalizada = this.fidelidadPersonalizada;
+            datosPension.fidelidadPropia = this.fidelidadPropia;
+            datosPension.valorAportesRPMNoBono = this.valorAportesRPMNoBono;
+
+            return datosPension;
+        }
+    }
+
+    private DatosPension(){
+    }
+
+
+
+
+
+    /*
     public DatosPension(String valorPension, String mesada, String fidelidadPropia, int var) {
         this.valorPension = valorPension;
         this.mesada = mesada;
@@ -77,6 +234,8 @@ public class DatosPension {
         this.generoBeneficiario = generoBeneficiario;
         this.fechaCuentaIndividual = fechaCuentaIndividual;
     }
+
+     */
 
     public String getMedasaModalidadDos() {
         return mesadaModalidadDos;
