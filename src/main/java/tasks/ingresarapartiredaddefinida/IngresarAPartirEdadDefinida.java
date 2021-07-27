@@ -140,15 +140,11 @@ public class IngresarAPartirEdadDefinida implements Task {
         ServiceExcelDrive.setDataCell(json);
 
         ConsumoDatos consumoDatosP = actor.recall("consumoDatos");
-
-       // System.out.println("Inflacion: " + consumoDatosP.getInflacion());
-
         json.put("G7", consumoDatosP.getDeslizamiento());
         json.put("G8", consumoDatosP.getFactorComision());
         json.put("G3", consumoDatosP.getFactorGasto());
         json.put("G4", consumoDatosP.getInflacion());//
         float inflacion = consumoDatosP.getInflacion() - 1;
-       // System.out.println("inflacion es .....: "+ inflacion);
         json.put("G5", consumoDatosP.getFactorSeguridad());
         json.put("G6", consumoDatosP.getTasaInteresTecnico());
         json.put("B27", inflacion);
