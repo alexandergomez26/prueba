@@ -111,7 +111,7 @@ public class IngresarAPartirEdadDefinidaRPMNoBono implements Task {
                 .conGenero(GENERO.resolveFor(actor).getTextValue())
                 .conEdad(datosAfiliado.getEdadDefinida())
                 .conValorPension(VALOR_PENSION_A_PARTIR.resolveFor(actor).getTextValue())
-                .conMesada(VALOR_MESADA_A_PARTIR.resolveFor(actor).getTextValue())
+                .conMesadaModalidadDos(VALOR_MESADA_A_PARTIR.resolveFor(actor).getTextValue())
                 .conBono(BONO_A_PARTIR_EDAD_DEFINIDA.resolveFor(actor).getTextValue())
                 .conFechaCuentaIndividual(FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getTextValue())
                 .conValorAportesRPMNoBono( VALOR_APORTES_RPM_NO_BONO.resolveFor(actor).getTextValue())
