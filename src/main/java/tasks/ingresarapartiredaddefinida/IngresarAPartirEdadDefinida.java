@@ -1,5 +1,7 @@
 package tasks.ingresarapartiredaddefinida;
 
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import org.openqa.selenium.By;
 import utils.constantes.ConstantesGenerales;
 import utils.exceldata.CreateModels;
 import utils.exceldata.ServiceExcelDrive;
@@ -17,9 +19,11 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.json.JSONObject;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static userinterfaces.AutorizacionPage.*;
 import static userinterfaces.IngresarAPartirEdadDefinidaPage.*;
 
@@ -43,9 +47,9 @@ public class IngresarAPartirEdadDefinida implements Task {
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),
-                Espera.cantidadDeMiliSegundos(10000)
+                Espera.cantidadDeMiliSegundos(20000)
         );
-/*
+
                 BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         String html2 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
@@ -53,27 +57,12 @@ public class IngresarAPartirEdadDefinida implements Task {
         System.out.println("----------------------------------------------------------------------------------------------------------");
 
 
- */
+
         actor.attemptsTo(
                 WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(120).seconds(),
                 Click.on(TARJETA_CUENTA_INDIVIDUAL)
         );
-/*
-        System.out.println("La fecha de nacimiento es: " + FECHA_NACIMIENTO.resolveFor(actor).getTextValue());
-        System.out.println("Genero: " + GENERO.resolveFor(actor).getTextValue());
-        System.out.println("Semanas cotizadas: " + SEMANAS_TOTALES_COTIZADAS.resolveFor(actor).getTextValue());
-        System.out.println("Fecha primera solicitud: " + FECHA_PRIMERA_SOLICITUD.resolveFor(actor).getTextValue());
-        System.out.println("SBC: " + SBC.resolveFor(actor).getTextValue());
-        System.out.println("Saldo CAI: " + SALDO_CAI.resolveFor(actor).getTextValue());
-        System.out.println("Edad: " + datosAfiliado.getEdadDefinida());
-        System.out.println("Valor Pension: " + VALOR_PENSION_A_PARTIR.resolveFor(actor).getText());
-        System.out.println("Valor de la Mesada: " + VALOR_MESADA_A_PARTIR.resolveFor(actor).getText());
-        System.out.println("Valor del bono: " + BONO_A_PARTIR_EDAD_DEFINIDA.resolveFor(actor).getText());
-        System.out.println("La fecha de la cuenta individual: " + FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getText());
-        System.out.println("");
-
- */
 
         logger.log(Level.INFO, "La fecha de nacimiento es:"+FECHA_NACIMIENTO.resolveFor(actor).getText());
         logger.log(Level.INFO, "Genero:"+GENERO.resolveFor(actor).getText());
@@ -87,23 +76,6 @@ public class IngresarAPartirEdadDefinida implements Task {
         logger.log(Level.INFO, "Valor del bono:"+BONO_A_PARTIR_EDAD_DEFINIDA.resolveFor(actor).getText());
         logger.log(Level.INFO, "Fecha de Cuenta Individual:"+FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getText());
 
-
-        /*
-        DatosPension datosPension = new DatosPension(
-                FECHA_NACIMIENTO.resolveFor(actor).getTextValue(),
-                SEMANAS_TOTALES_COTIZADAS.resolveFor(actor).getTextValue(),
-                SALDO_CAI.resolveFor(actor).getTextValue(),
-                SBC.resolveFor(actor).getTextValue(),
-                FECHA_PRIMERA_SOLICITUD.resolveFor(actor).getTextValue(),
-                GENERO.resolveFor(actor).getTextValue(),
-                datosAfiliado.getEdadDefinida(),
-                VALOR_PENSION_A_PARTIR.resolveFor(actor).getTextValue(),
-                VALOR_MESADA_A_PARTIR.resolveFor(actor).getTextValue(),
-                BONO_A_PARTIR_EDAD_DEFINIDA.resolveFor(actor).getTextValue(),
-                FECHA_CUENTA_INDIVIDUAL.resolveFor(actor).getTextValue()
-        );
-
-         */
         DatosPension datosPension = new DatosPension.Builder(
                 FECHA_NACIMIENTO.resolveFor(actor).getTextValue())
                 .conSemanasCotizadas(SEMANAS_TOTALES_COTIZADAS.resolveFor(actor).getTextValue())
@@ -138,7 +110,7 @@ public class IngresarAPartirEdadDefinida implements Task {
         json.put("D9", "");
 
         ServiceExcelDrive.setDataCell(json);
-
+/*
         ConsumoDatos consumoDatosP = actor.recall("consumoDatos");
         json.put("G7", consumoDatosP.getDeslizamiento());
         json.put("G8", consumoDatosP.getFactorComision());
@@ -150,6 +122,8 @@ public class IngresarAPartirEdadDefinida implements Task {
         json.put("B27", inflacion);
 
         ServiceExcelDrive.setDataCell(json);
+
+ */
     }
     public static IngresarAPartirEdadDefinida paraRealizarLaProyeccion(List<String>datos){
         return Tasks.instrumented(IngresarAPartirEdadDefinida.class, datos.get(0));

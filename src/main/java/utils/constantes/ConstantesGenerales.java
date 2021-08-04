@@ -2,10 +2,9 @@ package utils.constantes;
 
 public class ConstantesGenerales {
     public static final String EXCEL_FILE_PATH = "./src/test/resources/data_driven/data_resources.xls";
-    public static final String EXCEL_JSON = "https://docs.google.com/spreadsheets/d/1JfsL5ZFDXU-lVlPPGzuEqHDlXYawmQs21nRqhPLMOnA/edit?usp=sharing";
+    public static final String EXCEL_JSON = "https://docs.google.com/spreadsheets/d/1ewBXWIYn2l7PhIYsiXvA5vVEqJ6FmKELpT2sVsyR-I8/edit?usp=sharing";
     public static final String DATA_TO_TEST_SHEET_JASON = "Calculo";
     public static final String DATA_TO_TEST_SHEET = "prueba";
-    public static final String DATA_TO_TEST_SHEET_2 = "Cálculo";
     public static final String ERROR_LOAD_EXCEL = "Error al leer el excel";
     public static final String CORREO = "Correo";
     public static final String CONTRASENIA = "Contrasenia";
