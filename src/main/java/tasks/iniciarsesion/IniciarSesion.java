@@ -38,8 +38,9 @@ public class IniciarSesion implements Task {
                 WaitUntil.the(TXT_CORREO, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Enter.theValue(datosInicioSesion.getCorreo()).into(TXT_CORREO),
-                Click.on(BTN_SIGUIENTE),
-                Espera.cantidadDeMiliSegundos(20000));
+                Click.on(BTN_SIGUIENTE)
+               // Espera.cantidadDeMiliSegundos(20000)
+        );
 /*
         BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String html1 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");

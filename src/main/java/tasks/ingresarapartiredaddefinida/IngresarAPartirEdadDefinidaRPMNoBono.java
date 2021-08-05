@@ -42,13 +42,17 @@ public class IngresarAPartirEdadDefinidaRPMNoBono implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Espera.cantidadDeMiliSegundos(3000),
+                Espera.cantidadDeMiliSegundos(15000),
                 WaitUntil.the(RBTN_PENSION_VEJEZ, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(RBTN_PENSION_VEJEZ),
+                //Espera.cantidadDeMiliSegundos(5000),
                 WaitUntil.the(CHECK_SELECCIONADO, WebElementStateMatchers.isVisible()).
                 forNoMoreThan(20).seconds(),
                 Click.on(BTN_CALCULAR),
+                //Espera.cantidadDeMiliSegundos(20000),
+                WaitUntil.the(CHECK_APARTIR_EDAD_DEFINIDA, WebElementStateMatchers.isVisible()).
+                        forNoMoreThan(20).seconds(),
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),

@@ -37,16 +37,16 @@ public class IngresarAPartirEdadDefinidaBeneficiario implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Espera.cantidadDeMiliSegundos(3000));
+                Espera.cantidadDeMiliSegundos(15000));
         actor.attemptsTo(
                 Click.on(RBTN_PENSION_VEJEZ),
         WaitUntil.the(CHECK_SELECCIONADO, WebElementStateMatchers.isVisible()).
-                forNoMoreThan(20).seconds(),
+                forNoMoreThan(40).seconds(),
                 Click.on(BTN_CALCULAR),
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),
-                Espera.cantidadDeMiliSegundos(10000)
+                Espera.cantidadDeMiliSegundos(20000)
         );
 
         actor.attemptsTo(

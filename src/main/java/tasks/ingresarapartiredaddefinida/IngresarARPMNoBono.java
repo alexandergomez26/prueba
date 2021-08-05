@@ -1,5 +1,6 @@
 package tasks.ingresarapartiredaddefinida;
 
+import interactions.Espera;
 import utils.exceldata.CreateModels;
 import models.DatosAfiliado;
 import net.serenitybdd.screenplay.Actor;
@@ -41,6 +42,7 @@ public class IngresarARPMNoBono implements Task {
                 Click.on(OPCT_DIA_FINAL_RPM),
                 Enter.theValue(datosAfiliado.getSalarioActual()).into(TXT_SALARIO_RPM),
                 Click.on(BTN_CONTINUAR_APORTES_NO_BONO)
+
         );
     }
     public static IngresarARPMNoBono enElAplicativo(List<String> datos){

@@ -40,7 +40,7 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Espera.cantidadDeMiliSegundos(3000),
+                Espera.cantidadDeMiliSegundos(15000),
                 WaitUntil.the(RBTN_PENSION_VEJEZ, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(RBTN_PENSION_VEJEZ),
@@ -52,7 +52,7 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
                 Click.on(CHECK_APARTIR_EDAD_DEFINIDA),
                 Enter.theValue(datosAfiliado.getEdadDefinida()).into(TXT_A_PARTIR_EDAD_DEFINIDA),
                 Click.on(BTN_REALIZAR_SIMULACION),
-                Espera.cantidadDeMiliSegundos(20000)
+                Espera.cantidadDeMiliSegundos(30000)
         );
 /*
                 BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
@@ -67,7 +67,7 @@ public class IngresarAPartirEdadDefinidaBono implements Task {
 
         actor.attemptsTo(
                 WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(120).seconds(),
+                        forNoMoreThan(60).seconds(),
                 Click.on(TARJETA_CUENTA_INDIVIDUAL)
         );
 

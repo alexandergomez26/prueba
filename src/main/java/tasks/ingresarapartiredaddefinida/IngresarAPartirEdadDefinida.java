@@ -40,6 +40,7 @@ public class IngresarAPartirEdadDefinida implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                Espera.cantidadDeMiliSegundos(15000),
                 WaitUntil.the(RBTN_PENSION_VEJEZ, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(RBTN_PENSION_VEJEZ),
