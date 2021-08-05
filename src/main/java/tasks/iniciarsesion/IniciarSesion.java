@@ -39,7 +39,7 @@ public class IniciarSesion implements Task {
                         forNoMoreThan(60).seconds(),
                 Enter.theValue(datosInicioSesion.getCorreo()).into(TXT_CORREO),
                 Click.on(BTN_SIGUIENTE),
-                Espera.cantidadDeMiliSegundos(10000));
+                Espera.cantidadDeMiliSegundos(20000));
 /*
         BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String html1 = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
@@ -51,7 +51,7 @@ public class IniciarSesion implements Task {
 
         actor.attemptsTo(
         WaitUntil.the(TXT_CONTRASENIA, WebElementStateMatchers.isVisible()).
-                        forNoMoreThan(60).seconds(),
+                        forNoMoreThan(40).seconds(),
                 Enter.theValue(datosInicioSesion.getContrasenia()).into(TXT_CONTRASENIA),
                 Click.on(BTN_INICIAR_SESION),
                 WaitUntil.the(BTN_NO_MANTENER_SESION_INICIADA, WebElementStateMatchers.isVisible()).

@@ -54,13 +54,15 @@ public class IngresarAPartirEdadDefinidaRPMNoBono implements Task {
                 Click.on(BTN_REALIZAR_SIMULACION),
                 Espera.cantidadDeMiliSegundos(20000)
         );
-
+/*
         BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String html = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println(html);
         System.out.println("----------------------------------------------------------------------------------------------------------");
 
+
+ */
         actor.attemptsTo(
                 WaitUntil.the(TARJETA_CUENTA_INDIVIDUAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(120).seconds(),

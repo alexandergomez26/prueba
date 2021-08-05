@@ -48,7 +48,7 @@ public class IngresarDatosHombre implements Task {
                 Enter.theValue(hombre.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
                 Espera.cantidadDeMiliSegundos(20000));
-
+/*
         BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String html = BrowseTheWeb.as(theActorInTheSpotlight()).getDriver().findElement(By.cssSelector("html")).getAttribute("innerHTML");
         System.out.println("----------------------------------------------------------------------------------------------------------");
@@ -56,6 +56,8 @@ public class IngresarDatosHombre implements Task {
         System.out.println("----------------------------------------------------------------------------------------------------------");
 
 
+
+ */
         actor.attemptsTo(
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),

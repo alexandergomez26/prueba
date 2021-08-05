@@ -40,7 +40,9 @@ public class IngresarDatosParaHombre implements Task {
                 Click.on(OPT_CC),
                 Enter.theValue(hombre.list.get(posicion).getCedula()).into(TXT_NUMERO_DOCUMENTO),
                 Click.on(BTN_CONTINUAR),
-                Espera.cantidadDeMiliSegundos(7000),
+                Espera.cantidadDeMiliSegundos(7000));
+
+        actor.attemptsTo(
                 WaitUntil.the(TXT_DATOS_HISTORIA_LABORAL, WebElementStateMatchers.isVisible()).
                         forNoMoreThan(60).seconds(),
                 Click.on(TXT_DATOS_HISTORIA_LABORAL),
