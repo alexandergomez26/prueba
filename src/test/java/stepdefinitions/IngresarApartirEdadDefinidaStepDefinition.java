@@ -3,6 +3,7 @@ package stepdefinitions;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import cucumber.api.java.es.Y;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import questions.CompararResultados;
 import tasks.formulariodatosbasicos.IngresarDatos;
@@ -30,12 +31,12 @@ public class IngresarApartirEdadDefinidaStepDefinition {
         System.out.println("SuccessFul");
     }
 
-    @Cuando("^ingresa los datos de cliente potencial (.*)$")
+    @Y("^ingresa los datos de cliente potencial (.*)$")
     public void ingresaLosDatosDeClientePotencial(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(IngresarDatos.clientePotencial(datos));
     }
 
-    @Cuando("^ingresa datos de cliente potencial con ingreso a la vida laboral antes de junio 30 (.*)$")
+    @Y("^ingresa datos de cliente potencial con ingreso a la vida laboral antes de junio 30 (.*)$")
     public void ingresaDatosDeClientePotencialConIngresoALaVidaLaboralAntesDeJunio30(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(IngresarDatosIngresoAntesDeJunio.enClientePotencial(datos));
     }
@@ -50,38 +51,38 @@ public class IngresarApartirEdadDefinidaStepDefinition {
         theActorInTheSpotlight().attemptsTo(IngresarBeneficiario.enElAplicativo(datos));
     }
 
-    @Cuando("^ingresa los datos del cliente potencial con beneficiario (.*)$")
+    @Y("^ingresa los datos del cliente potencial con beneficiario (.*)$")
     public void ingresaLosDatosDelClientePotencialConBeneficiario(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(IngresarDatosBeneficiario.enClientePotencial(datos));
     }
 
-    @Cuando("^por cliente actual ingresa la edad a partir de edad definida (.*)$")
+    @Y("^por cliente actual ingresa la edad a partir de edad definida (.*)$")
     public void porClienteActualIngresaLaEdadApartirDeEdadDefinida(List<String> datos) {
         theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinida.paraRealizarLaProyeccion(datos));
     }
 
-    @Cuando("^por cliente ingresa a partir de la edad definida en RPM no bono (.*)$")
+    @Y("^por cliente ingresa a partir de la edad definida en RPM no bono (.*)$")
     public void porClienteIngresaAPartirDeLaEdadDefinidaEnRPMNoBono(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinidaRPMNoBono.paraRealizarLaProyeccion(datos));
     }
 
-    @Cuando("^por cliente actual modifica la fidelidad (.*)$")
+    @Y("^por cliente actual modifica la fidelidad (.*)$")
     public void porClienteActualModificaLaFidelidad(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(CambiarFidelidadAPartirEdadDefinida.enElAplicativo(datos));
     }
 
-    @Cuando("^por cliente actual con bono modifica la fidelidad (.*)$")
+    @Y("^por cliente actual con bono modifica la fidelidad (.*)$")
     public void porClienteActualConBonoModificaLaFidelidad(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(CambiarFidelidadAPartirEdadDefinidaBono.enElAplicativo(datos));
     }
 
-    @Cuando("^por cliente actual despues de ingresar beneficiario ingresa la edad a partir de edad definida (.*)$")
+    @Y("^por cliente actual despues de ingresar beneficiario ingresa la edad a partir de edad definida (.*)$")
     public void porClienteActualDespuesDeIngresarBeneficiarioIngresaLaEdadApartirDeEdadDefinida(List<String> datos) {
         theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinidaBeneficiario.paraRealizarLaProyeccion(datos));
     }
 
 
-    @Cuando("^por cliente actual ingresa en modalidad bono la edad a partir de edad definida (.*)$")
+    @Y("^por cliente actual ingresa en modalidad bono la edad a partir de edad definida (.*)$")
     public void porClienteActualIngresaEnModalidadBonoLaEdadApartirDeEdadDefinida(List<String> datos) {
         theActorInTheSpotlight().attemptsTo(IngresarAPartirEdadDefinidaBono.paraRealizarLaProyeccion(datos));
     }

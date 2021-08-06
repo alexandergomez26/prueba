@@ -1,5 +1,6 @@
 package tasks.ingresarapartiredaddefinida;
 
+import interactions.Espera;
 import utils.constantes.ConstantesGenerales;
 import utils.exceldata.ServiceExcelDrive;
 import models.DatosPension;
@@ -48,13 +49,11 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         json.put("E2", datosPension.getValorPensionNumero());
         json.put("B39", datosPension.getMesada3());
         json.put("B15", datosPension.getFidelidadPropia());
-
         ServiceExcelDrive.setDataCell(json);
 
         logger.log(Level.INFO, "Capital Simulador 75%:"+ServiceExcelDrive.getDataCell("B23"));
         logger.log(Level.INFO, "Mesada Simulador 75%"+ServiceExcelDrive.getDataCell("D33"));
         logger.log(Level.INFO, "Resultado Final 75%:"+ServiceExcelDrive.getDataCell("D45"));
-
 
         valor = ServiceExcelDrive.getDataCell("D45");
         json.put("A47", valor);
@@ -70,14 +69,7 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         json.put("E2", datosPension2.getValorPensionNumero());
         json.put("B39", datosPension2.getMesada3());
         json.put("B15", datosPension2.getFidelidadPropia());
-
-
         ServiceExcelDrive.setDataCell(json);
-
-        System.out.println("Capital Simulador 50%: " + ServiceExcelDrive.getDataCell("D23"));
-        System.out.println("Mesada Simulador 50%: " + ServiceExcelDrive.getDataCell("D33"));
-        System.out.println("Resultado Final: " + ServiceExcelDrive.getDataCell("D45"));
-        System.out.println("");
 
         logger.log(Level.INFO, "Capital Simulador 50%:"+ServiceExcelDrive.getDataCell("B23"));
         logger.log(Level.INFO, "Mesada Simulador 50%"+ServiceExcelDrive.getDataCell("D33"));
@@ -97,14 +89,11 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         json.put("E2", datosPension3.getValorPensionNumero());
         json.put("B39", datosPension3.getMesada3());
         json.put("B15", datosPension3.getFidelidadPropia2());
-
-
         ServiceExcelDrive.setDataCell(json);
 
         logger.log(Level.INFO, "Capital Simulador Propio:"+ServiceExcelDrive.getDataCell("B23"));
         logger.log(Level.INFO, "Mesada Simulador Propio"+ServiceExcelDrive.getDataCell("D33"));
         logger.log(Level.INFO, "Resultado Final Propio:"+ServiceExcelDrive.getDataCell("D45"));
-
 
         valor = ServiceExcelDrive.getDataCell("D45");
         json.put("C47", valor);
@@ -120,7 +109,6 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         json.put("E2", datosPension4.getValorPensionNumero());
         json.put("B39", datosPension4.getMesada3());
         json.put("B15", datosPension4.getFidelidadPropia());
-
         ServiceExcelDrive.setDataCell(json);
 
         logger.log(Level.INFO, "Capital Simulador 0%:"+ServiceExcelDrive.getDataCell("B23"));
@@ -141,18 +129,19 @@ public class CambiarFidelidadAPartirEdadDefinidaBono implements Task {
         json.put("E2", datosPension5.getValorPensionNumero());
         json.put("B39", datosPension5.getMesada3());
         json.put("B15", datosPension5.getFidelidadPropia());
-
         ServiceExcelDrive.setDataCell(json);
 
         logger.log(Level.INFO, "Capital Simulador 100%:"+ServiceExcelDrive.getDataCell("B23"));
         logger.log(Level.INFO, "Mesada Simulador 100%"+ServiceExcelDrive.getDataCell("D33"));
         logger.log(Level.INFO, "Resultado Final 100%:"+ServiceExcelDrive.getDataCell("D45"));
 
-
         valor = ServiceExcelDrive.getDataCell("D45");
         json.put("E47", valor);
         ServiceExcelDrive.setDataCell(json);
 
+        actor.attemptsTo(
+                Espera.cantidadDeMiliSegundos(3000)
+        );
     }
 
     public static CambiarFidelidadAPartirEdadDefinidaBono enElAplicativo(List<String> datos){

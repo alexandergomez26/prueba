@@ -4,6 +4,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
+import cucumber.api.java.es.Y;
 import integrations.ObtenerParametros;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -82,19 +83,19 @@ public class Hook {
                 IngresarDatosParaHombre.enClienteActual(datos));
     }
 
-    @Cuando("^selecciona ingreso a la vida laboral antes de junio 30/92 (.*)$")
+    @Y("^selecciona ingreso a la vida laboral antes de junio 30/92 (.*)$")
     public void seleccionaIngresoALaVidaLaboralAntesDeJunio30(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(
                 IngresarDatosBonoModalidadDos.enElAplicativo(datos));
     }
 
-    @Cuando("^selecciona ingreso a la vida laboral despues de junio 30/92 (.*)$")
+    @Y("^selecciona ingreso a la vida laboral despues de junio 30/92 (.*)$")
     public void seleccionaIngresoALaVidaLaboralDespuesDeJunio30(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(
                 IngresarDatosBonoModalidadUno.enElAplicativo(datos));
     }
 
-    @Cuando("^ingresa a RPM no bono (.*)$")
+    @Y("^ingresa a RPM no bono (.*)$")
     public void ingresaARPMNoBono(List<String>datos) {
         theActorInTheSpotlight().attemptsTo(
                 IngresarARPMNoBono.enElAplicativo(datos));
