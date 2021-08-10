@@ -48,10 +48,10 @@ public class IniciarSesion implements Task {
                 Espera.cantidadDeMiliSegundos(10000)
         );
 
-        Boolean contrasenia = TXT_CONTRASENIA.resolveFor(actor).isVisible();
+        for (int intento = 1; intento <= 4; intento++) {
+            Boolean contrasenia = TXT_CONTRASENIA.resolveFor(actor).isVisible();
 
-        if (contrasenia.equals(false)) {
-            for (int intento = 1; intento <= 4; intento++) {
+            if (contrasenia.equals(false)) {
                 BrowseTheWeb.as(actor).getDriver().navigate().refresh();
                 actor.attemptsTo(
                         WaitUntil.the(TXT_CORREO, WebElementStateMatchers.isVisible()).
@@ -61,7 +61,6 @@ public class IniciarSesion implements Task {
                         Espera.cantidadDeMiliSegundos(5000));
                 logger.log(Level.INFO, "El resultado es: " + contrasenia + ", Reintento # " + intento);
             }
-
         }
         actor.attemptsTo(
                 WaitUntil.the(TXT_CONTRASENIA, WebElementStateMatchers.isVisible()).
