@@ -2,7 +2,7 @@ package userinterfaces;
 
 public enum SeleccionarUrlPage {
 
-    ASPEN("https://calculospensionalesfront.pruebas.proteccion.com.co:1007/");
+    PLATAFORMA_INGRESO("https://d30vbcfgen7dgz.cloudfront.net/login");
 
     private final String url;
 

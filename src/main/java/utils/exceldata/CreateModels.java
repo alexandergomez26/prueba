@@ -1,7 +1,6 @@
 package utils.exceldata;
 
 import utils.constantes.ConstantesGenerales;
-import models.DatosAfiliado;
 import models.DatosInicioSesion;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.slf4j.Logger;
@@ -17,7 +16,6 @@ public class CreateModels {
 
 
     private static DatosInicioSesion datosInicioSesion;
-    private static DatosAfiliado datosAfiliado;
 
     private CreateModels() {
     }
@@ -44,25 +42,6 @@ public class CreateModels {
         return datosInicioSesion;
     }
 
-    public static DatosAfiliado setDatosAfiliado(int posicion) {
-        listData = setDataModel(ConstantesGenerales.EXCEL_FILE_PATH, ConstantesGenerales.DATA_TO_TEST_SHEET);
-        posicion--;
-        if (listData != null) {
-            datosAfiliado = new DatosAfiliado();
-            datosAfiliado.setNumeroDocumento(listData.get(posicion).get(ConstantesGenerales.CEDULA));
-            datosAfiliado.setEdadDefinida(listData.get(posicion).get(ConstantesGenerales.EDAD_DEFINIDA));
-            datosAfiliado.setSalarioActual(listData.get(posicion).get(ConstantesGenerales.SALARIO_ACTUAL));
-            datosAfiliado.setNombre(listData.get(posicion).get(ConstantesGenerales.NOMBRE));
-            datosAfiliado.setValorCuentaIndividual(listData.get(posicion).get(ConstantesGenerales.VALOR_CUENTA_INDIVIDUAL));
-            datosAfiliado.setSemanas(listData.get(posicion).get(ConstantesGenerales.SEMANAS));
-            datosAfiliado.setSemanasBono(listData.get(posicion).get(ConstantesGenerales.SEMANAS_BONO));
-            datosAfiliado.setSemanasNBono(listData.get(posicion).get(ConstantesGenerales.SEMANAS_NBONO));
-            datosAfiliado.setBono(listData.get(posicion).get(ConstantesGenerales.BONO));
-            datosAfiliado.setAportesObligatorios(listData.get(posicion).get(ConstantesGenerales.APORTES_OBLIGATORIOS));
-            datosAfiliado.setResultadoSimulador(listData.get(posicion).get(ConstantesGenerales.VALOR_PENSION));
-            datosAfiliado.setMesada(listData.get(posicion).get(ConstantesGenerales.MESADA));
-        }
-        return datosAfiliado;
-    }
 
-}
+
+    }

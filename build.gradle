@@ -28,13 +28,9 @@ dependencies {
 
     //Libreria Json
     compile 'org.json:json:20160810'
+
     implementation group: 'org.json', name: 'json', version: '20210307'
-
-    //compile group: 'org.apache.poi', name: 'poi', version: '3.9'
      compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
-    //implementation group: 'org.apache.poi', name: 'poi', version: '5.0.0'
-    //implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
-
     testCompile "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
     testCompile "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
     testCompile('junit:junit:4.12')
@@ -45,7 +41,6 @@ dependencies {
     compile "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
     compile "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
     compile "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
-   // compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
 
     implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: '2.0.11'
     testImplementation group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: '2.0.81'
@@ -60,8 +55,7 @@ dependencies {
     implementation 'org.jdbi:jdbi3-core:3.8.2'
     implementation 'org.jdbi:jdbi:2.78'
 
-// compile group: 'io.appium', name: 'java-client', version: '7.0.0' -- App Mobile
-// https://mvnrepository.com/artifact/org.testng/testng
+
     testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
 
     tasks.withType(JavaCompile) {
@@ -72,7 +66,8 @@ dependencies {
         systemProperty "file.encoding", "UTF-8"
         maxParallelForks = 1
         useJUnit()
-        include('**/IngresarApartirEdadDefinidaRunner*')
+        include('**/PlataformaIngresoRunner*')
+
 
         reports.junitXml.setEnabled(false)
         reports.html.setEnabled(false)

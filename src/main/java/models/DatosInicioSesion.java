@@ -5,6 +5,7 @@ public class DatosInicioSesion {
     private String correo;
     private String contrasenia;
 
+
     public String getCorreo() {
         return correo;
     }
@@ -20,4 +21,6 @@ public class DatosInicioSesion {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
+
+
 }
